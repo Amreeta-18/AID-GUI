@@ -1,17 +1,17 @@
-from GMFormInput import GMFormInput
-from parseDOM import parseDOM
-from CheckRules import CheckRules
-from gensim.summarization import keywords
-import re
+# from GMFormInput import GMFormInput
+# from parseDOM import parseDOM
+# from CheckRules import CheckRules
+# from gensim.summarization import keywords
+# import re
 import openpyxl
 from openpyxl import load_workbook
-import spacy
+# import spacy
 from collections import Counter
 # import xlrd
 
 # This file runs each of the rules for each URL in the input/output file
 
-def MainProcess2(filename):
+def Test(filename):
     wb = openpyxl.load_workbook(filename)
     s = wb.active
     return(s.max_row)
@@ -135,5 +135,3 @@ def MainProcess(filename):
     report.close()
     return "The tool has evaluated the HTML pages. Please check report.txt"
 
-
-#MainProcess('Example_Input.xlsx')
