@@ -42,9 +42,9 @@
     </span>
 
 <!-- Download and Exit button-->
-<button id="saveAndExit" style="float:right; width:150px; height:25px;background-color:#7D1935;color:white;">Download and Exit</button>
+<!-- <button id="saveAndExit" style="float:right; width:150px; height:25px;background-color:#7D1935;color:white;">Download and Exit</button> -->
 <!-- Exit without Downloading button-->
-<button id="justExit" style="float:right; width:100px; height:25px;background-color:#7D1935;color:white;">Exit</button>
+<!-- <button id="justExit" style="float:right; width:100px; height:25px;background-color:#7D1935;color:white;">Exit</button> -->
 
 <!-- <button id="viewPersona">View Personas</button> -->
 
@@ -61,7 +61,7 @@
 			<!--button class="moreOrLess" stateVar=0> See more </button-->
 
 		</div>
-
+		<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
 <!-- 		<div id="getTeam">
 			<br><label id="teamPrompt">First, enter the name of your development team or project</label><br>
 			<input id="teamInput" type="text" placeholder="ex. Mobile Dev Group">
@@ -109,7 +109,7 @@
  -->
 	<p>Please upload .xlsx file with the scenario, subgoals and actions to be performed by the persona and the respective html files. <br>
 		Here is an example file: <a href="/Example_Input.xlsx" download>Download Example_Input.xlsx</a>.</p><br>
-    <form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
+    
       <p><input type=file name=file>
          <input type=submit value=Upload>
     </form>
