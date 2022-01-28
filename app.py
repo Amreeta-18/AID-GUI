@@ -28,10 +28,12 @@ def allowed_file(filename):
 @app.route("/result", methods=['POST'])
 def result():
     if request.method == 'POST':
+        subgoal = request.form['subgoal']
+        action = request.form['action']
         # check if the post request has the file part
-        # if 'file' not in request.files:
-        #     flash('No file part')
-        #     return redirect(request.url)
+        if 'html_file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
         # get file
         file = request.files['html_file']
         # if user does not select file, browser also
@@ -51,7 +53,7 @@ def result():
             # output = str(linkParser.txtForm(file = f"Upload/{filename}"))
             output = str(textParser.textParse2(f"Upload/{filename}"))
             # Download option to end user
-
+            output = f"{output}\nSubgoal: {subgoal} \nAction: {action}"
             # Rerender on html
             return render_template('result.html', output = output)
 
@@ -61,7 +63,7 @@ def home():
     return render_template('index.html')
 
 
-# Functionality page
+# Functionality pages
 @app.route('/uploadpage')
 def uploadpage():
     return render_template('uploadpage.html')
