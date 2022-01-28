@@ -1,13 +1,13 @@
-# from GMFormInput import GMFormInput
-# from parseDOM import parseDOM
-# from CheckRules import CheckRules
-# from gensim.summarization import keywords
-# import re
+from GMFormInput import GMFormInput
+from parseDOM import parseDOM
+from CheckRules import CheckRules
+from gensim.summarization import keywords
+import re
 import openpyxl
 from openpyxl import load_workbook
-# import spacy
+import spacy
 from collections import Counter
-# import xlrd
+import xlrd
 
 # This file runs each of the rules for each URL in the input/output file
 
@@ -19,7 +19,8 @@ def Test(filename):
 def MainProcess(filename):
 
     # filename = "Example_Input.xlsx"      #Name of the file to take input from
-    report = open('report.txt', 'w')  #Output file with the reports
+    # report = open('report.txt', 'w')  #Output file with the reports
+    report = ""
 
     #Loading the English model for spaCy
     nlp = spacy.load('en_core_web_sm')
@@ -58,25 +59,20 @@ def MainProcess(filename):
                 keywords_A.append(token.text)
 
         # print(keywords_S,keywords_A)
-
         P.get_html(url)
         pathname="current_html.html"
-        report.write('URL of webpage evaluated: ')
-        report.write(url)
-        report.write('\n Subgoal: ')
-        report.write(subgoal)
-        report.write('\n Action: ')
-        report.write(action)
+        report = f'URL of webpage evaluated: {url}\nSubgoal: {subgoal}\nAction: {action}\n'
+        
         
        # Rule 1 starts here
         result_1_S = C.checkRule1(pathname, keywords_S, 'Alltext.txt')
         result_1_A = C.checkRule1(pathname, keywords_A, 'Alltext.txt')
         if (result_1_S==1 and result_1_A==1):
             sheet.cell(row+1, 6).value = 0 #"ok"
-            report.write("\n Rule 1 not violated.")
+            report = report + "\n Rule 1 not violated.<br>"
         else:
             sheet.cell(row+1, 6).value = 1 #"violated"
-            report.write("\n Rule 1 violated: Keywords not found on the webpage.")
+            report = report + "\n Rule 1 violated: Keywords not found on the webpage.<br>"
 
         print("Rule 1")
 
@@ -85,12 +81,12 @@ def MainProcess(filename):
             result_2 = C.checkRule2(pathname, row, filename)
             sheet.cell(row+1, 7).value = result_2
             if result_2==1:
-                report.write("\n Rule 2 is violated: Keywords from link-label is not present on the current page.")
+                report = report + "\n Rule 2 is violated: Keywords from link-label is not present on the current page.\n"
             else:
-                report.write("\n Rule 2 not violated.")
+                report = report + "\n Rule 2 not violated.\n"
         else:
             sheet.cell(row+1, 7).value = "N/A"
-            report.write("\n Rule 2 not applicable.")
+            report = report + "\n Rule 2 not applicable.\n"
 
         print("Rule 2")
 
@@ -99,10 +95,10 @@ def MainProcess(filename):
         result_3 = C.checkRule3(pathname)
         if result_3==0:
             sheet.cell(row+1, 8).value = 0
-            report.write("\n Rule 3 not violated.")
+            report= report + "\n Rule 3 not violated.\n"
         else:
             sheet.cell(row+1, 8).value = 1
-            report.write("\n Rule 3 violated: Link is not labelled.")
+            report = report + "\n Rule 3 violated: Link is not labelled.\n"
         print("Rule 3")
          
 
@@ -130,8 +126,10 @@ def MainProcess(filename):
         
         print("Rule 4 + 5")
         workbook.save(filename)
-        report.write("\n\n")
+        
 
-    report.close()
-    return "The tool has evaluated the HTML pages. Please check report.txt"
+    
+    return report
+
+# print(MainProcess("Example_Input.xlsx"))
 

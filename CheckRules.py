@@ -20,8 +20,8 @@ from urllib.parse import unquote
 import shlex
 
 
-userName = ' ' #Insert Github username
-token = ' ' #Insert Personal access token
+# userName = ' ' #Insert Github username
+# token = ' ' #Insert Personal access token
 
 nlp = spacy.load('en_core_web_sm')
 
