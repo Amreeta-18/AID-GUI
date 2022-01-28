@@ -101,30 +101,6 @@ def MainProcess(filename):
             report = report + "\n Rule 3 violated: Link is not labelled.\n"
         print("Rule 3")
          
-
-        #  #Rule 5 and 6 start here
-        # results_4 = C.checkRule4(url)
-        # # print(results_5, results_6, url)
-        # if (results_4 == -999):
-        #     sheet.cell(row+1, 9).value = 0 #N/A 
-        #     sheet.cell(row+1, 10).value = 0 #N/A
-        #     report.write("\n Rule 4 and 5 not applicable.")
-        # elif (results_4 == 0):
-        #     sheet.cell(row+1, 9).value = 1
-        #     sheet.cell(row+1, 10).value = 1
-        #     report.write("\n Rule 4 and 5 violated: no labels on issues. ")
-        # elif results_4>0:
-        #     report.write("\n Rule 4 not violated.")
-        #     results_5 = C.checkRule5(url)
-        #     sheet.cell(row+1, 9).value = 0
-        #     if (results_5 == 0):
-        #         sheet.cell(row+1, 10).value = 1
-        #         report.write("\n Rule 5 violated: no newcomer labels on issues. ")
-        #     elif (results_5 > 0):
-        #         sheet.cell(row+1, 10).value = 0
-        #         report.write("\n Rule 5 not violated. ")
-        
-        print("Rule 4 + 5")
         workbook.save(filename)
         
 
