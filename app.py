@@ -45,7 +45,7 @@ def result():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             # Backend output
-            output = str(MainTool.Test(f"Upload/{filename}"))
+            output = str(MainTool.MainProcess(f"Upload/{filename}"))
             # Download option to end user
 
             # Rerender on html
