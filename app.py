@@ -66,5 +66,9 @@ def home():
 def uploadpage():
     return render_template('uploadpage.html')
 
+@app.route('/highlight')
+def highlightpage():
+    return render_template('Highlight/changed.html')
+
 if __name__=="__main__":
     app.run(debug=True)

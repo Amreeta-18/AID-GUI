@@ -32,8 +32,9 @@ def textParse2(filename):
 	for tag in tags:
 		tag['placeholder'] = "I changed You!"
 
-	with open("Upload/changed.html", "w") as file:
-		file.write(str(doc))
+	file = open("Upload/changed.html", "w", encoding="utf-8")
+	file.write(str(doc))
+	file.close()
 	return 'PASSED'
 
 
