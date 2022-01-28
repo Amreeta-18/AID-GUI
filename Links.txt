@@ -1,0 +1,200 @@
+------Source------
+Link: Upload/index3.html
+-----Destinations-------
+
+------------
+Destination 1:
+
+Key: 1 /courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm
+Link Label: None
+Preceeding Text: 
+
+
+
+    Course Sequences
+   
+
+    This course is the first part of a three-course sequence. The sequence continues in
+    
+
+      6.046J Design and Analysis of Algorithms
+     
+
+Region: 
+    This course is the first part of a three-course sequence. The sequence continues in
+    
+
+      6.046J Design and Analysis of Algorithms
+     
+
+    .
+   
+------------
+
+------------
+Destination 2:
+
+Key: 2 /courses/intro-programming
+Link Label: 
+      Introductory Programming Courses
+     
+Preceeding Text: 
+    .
+   
+
+    Course Collections
+   
+
+    See related courses in the following collections:
+   
+
+    Cross-Disciplinary Lists
+   
+
+
+
+      Introductory Programming Courses
+     
+Region: 
+
+      Introductory Programming Courses
+     
+
+------------
+
+------------
+Destination 3:
+
+Key: 3 /courses/find-by-topic/#cat=engineering&subcat=computerscience&spec=algorithmsanddatastructures
+Link Label: 
+      Computer Science > Algorithms and Data Structures
+     
+Preceeding Text: 
+
+
+
+    Find Courses by Topic
+   
+
+
+
+      Computer Science &gt; Algorithms and Data Structures
+     
+Region: 
+
+      Computer Science &gt; Algorithms and Data Structures
+     
+
+------------
+
+------------
+Destination 4:
+
+Key: 4 /courses/find-by-topic/#cat=engineering&subcat=computerscience&spec=algorithmsanddatastructures
+Link Label: 
+      Test List Item
+     
+Preceeding Text: 
+
+
+
+    Find Courses by Topic
+   
+
+
+
+      Computer Science &gt; Algorithms and Data Structures
+     
+Region: 
+
+      Test List Item
+     
+
+------------
+
+------------
+Destination 5:
+
+Key: 5 /courses/find-by-topic/#cat=engineering&subcat=computerscience&spec=algorithmsanddatastructures
+Link Label: 
+      Test List Item 2
+     
+Preceeding Text: 
+
+
+
+    Find Courses by Topic
+   
+
+
+
+      Computer Science &gt; Algorithms and Data Structures
+     
+Region: 
+
+      Test List Item 2
+     
+
+------------
+
+------------
+Destination 6:
+
+Key: 6 http://crosslinks.mit.edu/topics/?query=subject6.006&utm_source=ocw&utm_medium=CHP&utm_campaign=Crosslinks
+Link Label: 
+     MIT Crosslinks
+    
+Preceeding Text: 
+
+
+
+    MIT Crosslinks
+   
+
+    Explore the topics covered in this course with
+    
+     MIT Crosslinks
+    
+Region: 
+    Explore the topics covered in this course with
+    
+     MIT Crosslinks
+    
+    , a website that highlights connections among select MIT undergraduate STEM
+    
+    courses and recommends specific study materials from OCW and others.
+    
+     Learn more
+    
+    .
+   
+------------
+
+------------
+Destination 7:
+
+Key: 7 /courses/crosslinks/
+Link Label: 
+     Learn more
+    
+Preceeding Text: 
+    , a website that highlights connections among select MIT undergraduate STEM
+    
+    courses and recommends specific study materials from OCW and others.
+    
+     Learn more
+    
+Region: 
+    Explore the topics covered in this course with
+    
+     MIT Crosslinks
+    
+    , a website that highlights connections among select MIT undergraduate STEM
+    
+    courses and recommends specific study materials from OCW and others.
+    
+     Learn more
+    
+    .
+   
+------------

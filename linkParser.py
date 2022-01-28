@@ -123,14 +123,14 @@ def txtForm(url = None, file= None):
 		return ""
 	if url:
 		nodes = parseLink(url = url)
-	elif src_file:
+	elif file:
 		nodes = parseLink(file=file)
 	else:
 		print("Empty Parameters")
 		return ""
 	f = open("Links.txt", "w")
 	f.write("------Source------\n")
-	f.write(f"Link: {src_file}\n")
+	f.write(f"Link: {file}\n")
 	f.write("-----Destinations-------\n")
 	cnt = 1
 	for n in nodes:
@@ -144,6 +144,7 @@ def txtForm(url = None, file= None):
 		f.write("\n------------\n")
 
 	f.close()
+	return f"PASSED"
 
 def csvForm(url = None, file = None):
 	if url and file:

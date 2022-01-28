@@ -7,13 +7,13 @@
 
     <body>
 
-        <img src="Abi.png" alt="Abi persona" width="500" height="600">
+        <img src="{{ url_for('static', filename='Abi.png') }}" alt="Abi persona" width="500" height="600">
 
         <!-- Result -->
         <div class="results">
             <p> {{ output }} </p>
         </div>
-
+        <a href="{{ url_for('changed') }}">Click</a>
     </body>
 </html>
 

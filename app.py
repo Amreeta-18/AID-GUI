@@ -6,12 +6,14 @@ import requests
 
 # Backend Integration
 import MainTool
+import textParser
+import linkParser
 
 # Server upload location
 UPLOAD_FOLDER = 'Upload'
 
 # Allowed file types
-ALLOWED_EXTENSIONS = {'xlsx'}
+ALLOWED_EXTENSIONS = {'xlsx', 'html'}
 
 # Flask Configuration
 app = Flask(__name__)
@@ -27,11 +29,11 @@ def allowed_file(filename):
 def result():
     if request.method == 'POST':
         # check if the post request has the file part
-        if 'file' not in request.files:
-            flash('No file part')
-            return redirect(request.url)
+        # if 'file' not in request.files:
+        #     flash('No file part')
+        #     return redirect(request.url)
         # get file
-        file = request.files['file']
+        file = request.files['html_file']
         # if user does not select file, browser also
         # submit a empty part without filename
         if file.filename == '':
@@ -45,7 +47,9 @@ def result():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             # Backend output
-            output = str(MainTool.MainProcess(f"Upload/{filename}"))
+            # output = str(MainTool.MainProcess(f"Upload/{filename}"))
+            # output = str(linkParser.txtForm(file = f"Upload/{filename}"))
+            output = str(textParser.textParse2(f"Upload/{filename}"))
             # Download option to end user
 
             # Rerender on html

@@ -24,3 +24,16 @@ def textParse(filename):
 
 	return text
 
+def textParse2(filename):
+	with open(filename, "r") as f:
+		doc = BeautifulSoup(f, "html.parser")
+	# Modify tags and save html
+	tags = doc.find_all("input", type = "text")
+	for tag in tags:
+		tag['placeholder'] = "I changed You!"
+
+	with open("Upload/changed.html", "w") as file:
+		file.write(str(doc))
+	return 'PASSED'
+
+

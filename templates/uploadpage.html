@@ -111,20 +111,26 @@
  	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
  		<div>
  			<label for="usecase">Use Case</label>
- 			<input type="text" usecase="usecase" id="usecase" required>
+ 			<input type="text" usecase="usecase" id="usecase" >
  		</div>
  		 <div>
  			<label for="subgoal">Subgoal</label>
- 			<input type="text" subgoal="subgoal" id="subgoal" required>
+ 			<input type="text" subgoal="subgoal" id="subgoal" >
  		</div>
  		 <div>
  			<label for="action">Action</label>
- 			<input type="text" subgoal="action" id="action" required>
+ 			<input type="text" subgoal="action" id="action" >
  		</div>
+
  		<div>
  		<p>Please upload .xlsx file with the scenario, subgoals and actions to be performed by the persona and the respective html files. <br>
- 			 <label for="file">Excel file</label>
- 		     <input type=file name=file>
+ 			 <label for="html_file">HTML file</label>
+ 		     <input type=file name=html_file>
+ 		</div>
+
+ 		<div>
+ 			 <label for="xl_file">Excel file</label>
+ 		     <input type=file name=xl_file>
  		</div>
 
  		<button type="submit">Submit</button>
