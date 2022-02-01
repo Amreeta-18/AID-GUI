@@ -5,9 +5,7 @@ from werkzeug.utils import secure_filename
 import requests
 
 # Backend Integration
-import MainTool
-import textParser
-import linkParser
+import AID
 
 # Server upload location
 UPLOAD_FOLDER = 'Upload'
@@ -51,9 +49,10 @@ def result():
             # Backend output
             # output = str(MainTool.MainProcess(f"Upload/{filename}"))
             # output = str(linkParser.txtForm(file = f"Upload/{filename}"))
-            output = str(textParser.textParse2(f"Upload/{filename}"))
+            output = AID.MainProcess(subgoal, action, f"Upload/{filename}")
+            # output = str(textParser.textParse2(f"Upload/{filename}"))
             # Download option to end user
-            output = f"{output}\nSubgoal: {subgoal} \nAction: {action}"
+            # output = f"{output}\nSubgoal: {subgoal} \nAction: {action}"
             # Rerender on html
             return render_template('result.html', output = output)
 

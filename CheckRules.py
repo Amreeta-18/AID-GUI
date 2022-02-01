@@ -48,67 +48,55 @@ class CheckRules():
         return is_issue_page
 
     # Check Rule 1
-    def checkRule1(self, pathname, keywords, fname):
+    def checkRule1(self, keywords, text):
         found=0
-
-        term1 = 'issue'
-        term2 = 'issues'
-        if (term1 in keywords) or (term2 in keywords):
-            is_issue_list = self.is_issue_page(pathname)
-            if is_issue_list==1:
-                return 1
-
-        # Create the Alltext.txt file
-        P.get_text_local(pathname)
         if len(keywords)==0:
             #print(keywords)
             return 1
 
-        with open(fname) as f:
-            text = f.read()
-            about_doc = nlp(text)
+        about_doc = nlp(text)
 
-            for keyword in keywords:
-                #print(keyword)
-                sentences = []
-                if(any(keyword in line for line in text.splitlines()))==False:
-                    continue
-                else:
-                    if(len(keywords)==1):
-                        found=1
-                        return found
+        for keyword in keywords:
+            #print(keyword)
+            sentences = []
+            if(any(keyword in line for line in text.splitlines()))==False:
+                continue
+            else:
+                if(len(keywords)==1):
+                    found=1
+                    return found
 
-                    custom_nlp = spacy.load('en_core_web_sm')
-                    custom_nlp.add_pipe(set_custom_boundaries, before='parser')
-                    about_doc = custom_nlp(text)
-                    sents = list(about_doc.sents)
+                custom_nlp = spacy.load('en_core_web_sm')
+                custom_nlp.add_pipe(set_custom_boundaries, before='parser')
+                about_doc = custom_nlp(text)
+                sents = list(about_doc.sents)
 
-                    for sent in sents:
-                        s = str(sent)
-                        s = re.sub('\n', ' ', s)
-                        if keyword in s:
-                            sentences.append(s)
+                for sent in sents:
+                    s = str(sent)
+                    s = re.sub('\n', ' ', s)
+                    if keyword in s:
+                        sentences.append(s)
 
-                    if(len(sentences))>0:
-            # #             #3.Find the subtree of the keyword in each sentence
-                        for sentence in sentences:
-                            sentence = str(sentence)
-                            # print(sentence)
-                            one_sentence = nlp(sentence)
-                            pos = self.index_of_keyword(keyword, sentence)
-                            if(pos!=None):
-                                subtree = list(one_sentence[pos].subtree)
-                                for word in keywords:
-                                    # print(sentence)
-                                    # print(keyword, "keyword")
-                                    # print(subtree)
-                                    if ((word!=keyword)):
-                                        for x in subtree:
-                                            #print(word)
-                                            # print("Subtree word:", x)
-                                            if (self.check_if_equal(word, x)==1):
-                                                # print("found:", x, "in subtree of:", keyword, subtree)
-                                                return 1
+                if(len(sentences))>0:
+        # #             #3.Find the subtree of the keyword in each sentence
+                    for sentence in sentences:
+                        sentence = str(sentence)
+                        # print(sentence)
+                        one_sentence = nlp(sentence)
+                        pos = self.index_of_keyword(keyword, sentence)
+                        if(pos!=None):
+                            subtree = list(one_sentence[pos].subtree)
+                            for word in keywords:
+                                # print(sentence)
+                                # print(keyword, "keyword")
+                                # print(subtree)
+                                if ((word!=keyword)):
+                                    for x in subtree:
+                                        #print(word)
+                                        # print("Subtree word:", x)
+                                        if (self.check_if_equal(word, x)==1):
+                                            # print("found:", x, "in subtree of:", keyword, subtree)
+                                            return 1
         return found
 
     # Check Rule 2
