@@ -72,9 +72,9 @@ def MainProcess(subgoal, action, filename):
     result_1_S = C.checkRule1(keywords_S, txt)
     result_1_A = C.checkRule1(keywords_A, txt)
     if (result_1_S==1 and result_1_A==1) or (keywords_A == [] and keywords_S == []):
-        report = report + "\nRule 1 not violated.<br>"
+        report = report + "\nRule 1 not violated.\n"
     else:
-        report = report + "\nRule 1 violated: Keywords not found on the webpage.<br>"
+        report = report + "\nRule 1 violated: Keywords not found on the webpage.\n"
         report = report + f"\nSubgoal keywords: {keywords_S}, Action Keywords: {keywords_A}\n"
 
     print("Rule 1")
@@ -90,6 +90,7 @@ def MainProcess(subgoal, action, filename):
     else:
         report= report + "\nRule 3 not violated.\n"
     print("Rule 3")
+    report = report.replace("\n", "\n\n\n")
     return report
 
 
