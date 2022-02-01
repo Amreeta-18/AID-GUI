@@ -110,6 +110,7 @@
  -->
  	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
  		<div>
+ 			<p>Please upload the scenario, subgoals and actions to be performed by the persona and the respective html file. </p><br>
  			<label for="usecase">Use Case</label>
  			<input type="text" usecase="usecase" name = "usecase" id="usecase" >
  		</div>
@@ -123,20 +124,19 @@
  		</div>
 
  		<div>
- 		<p>Please upload .xlsx file with the scenario, subgoals and actions to be performed by the persona and the respective html files. <br>
  			 <label for="html_file">HTML file</label>
  		     <input type=file name=html_file>
  		</div>
 
- 		<div>
+ 		<!-- <div>
  			 <label for="xl_file">Excel file</label>
  		     <input type=file name=xl_file>
- 		</div>
+ 		</div> -->
 
  		<button type="submit">Submit</button>
  	</form>
  	
-		Here is an example file: <a href="/Example_Input.xlsx" download>Download Example_Input.xlsx</a>.</p><br>
+		<!-- Here is an example file: <a href="/Example_Input.xlsx" download>Download Example_Input.xlsx</a>.</p><br> -->
 
 <!--     <form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
 =======
