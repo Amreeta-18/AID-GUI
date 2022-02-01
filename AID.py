@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 # This file runs each of the rules for each URL in the input/output file
 
-def LinkParser(file):
+def LinkParser(file, var):
     if file:
         try:
             with open(file, "r") as f:
@@ -17,6 +17,7 @@ def LinkParser(file):
             return -1
     # Extract all links from page
     links = doc.find_all("a")
+    # print(doc)
     doc2 = str(doc)
     style = ' STYLE="background-color: rgb(255,255,0)" '
     res = []
@@ -34,13 +35,15 @@ def LinkParser(file):
             doc2 = doc2.replace(x, aug_link)
             print(alias)
             res.append(link)
-    file = open("templates/Highlight/changed.html", "w", encoding="utf-8")
-    file.write(doc2)
-    file.close()
+    f = open(f"templates/Highlight/changed{var}.html", "w", encoding="utf-8")
+    # printcheck = "CHANGED!!!"
+    # file.write(printcheck)
+    f.write(doc2)
+    f.close()
     # print(doc2)
     return res
 
-def MainProcess(usecase, subgoal, action, filename):
+def MainProcess(usecase, subgoal, action, filename, var):
     report = ""
 
     #Loading the English model for spaCy
@@ -84,7 +87,8 @@ def MainProcess(usecase, subgoal, action, filename):
     # #Rule 3 starts here - Link label exists or not
     # Highlight links which donot have label
     # Link labels will be checked
-    result_3 = LinkParser(filename)
+    result_3 = LinkParser(filename, var)
+    print(filename)
     if result_3 == -1:
         report = report + "No Links Found"
     elif len(result_3) > 0:
@@ -94,5 +98,6 @@ def MainProcess(usecase, subgoal, action, filename):
     print("Rule 3")
     return report
 
+# MainProcess("usecase", "subgoal", "action", "a.html")
 
-# LinkParser("current_html.html")
+# LinkParser("a.html")
