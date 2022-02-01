@@ -26,6 +26,7 @@ def allowed_file(filename):
 @app.route("/result", methods=['POST'])
 def result():
     if request.method == 'POST':
+        usecase = request.form['usecase']
         subgoal = request.form['subgoal']
         action = request.form['action']
         # check if the post request has the file part
@@ -49,11 +50,12 @@ def result():
             # Backend output
             # output = str(MainTool.MainProcess(f"Upload/{filename}"))
             # output = str(linkParser.txtForm(file = f"Upload/{filename}"))
-            output = AID.MainProcess(subgoal, action, f"Upload/{filename}")
+            output = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}")
             # output = str(textParser.textParse2(f"Upload/{filename}"))
             # Download option to end user
             # output = f"{output}\nSubgoal: {subgoal} \nAction: {action}"
             # Rerender on html
+            # output = output.replace("\n", "<br")
             return render_template('result.html', output = output)
 
 # Home Page

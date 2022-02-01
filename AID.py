@@ -38,7 +38,7 @@ def LinkParser(file):
     # print(doc2)
     return res
 
-def MainProcess(subgoal, action, filename):
+def MainProcess(usecase, subgoal, action, filename):
     report = ""
 
     #Loading the English model for spaCy
@@ -65,7 +65,7 @@ def MainProcess(subgoal, action, filename):
         if (token.pos_ == 'NOUN' or token.pos_ == 'ADJ') and (str(token) not in DOM_words):
             keywords_A.append(token.text)
 
-    report = f'URL of webpage evaluated: {filename[7:]}\nSubgoal: {subgoal}\nAction: {action}\n'
+    report = f'\nURL of webpage evaluated: {filename[7:]}\nUse Case: {usecase}\nSubgoal: {subgoal}\nAction: {action}\n'
     
     # Rule 1 starts here - tokens present in the page or not
     # print the keywords S and A if violated
@@ -88,9 +88,8 @@ def MainProcess(subgoal, action, filename):
     elif len(result_3) > 0:
         report = report + "\nRule 3 violated: Link is not labelled. Click on Results to view highlighted errors\n"
     else:
-        report= report + "\nRule 3 not violated.\n"
+        report= report + "\nRule 3 not violated. Results show the input html in this case.\n"
     print("Rule 3")
-    report = report.replace("\n", "\n\n\n")
     return report
 
 
