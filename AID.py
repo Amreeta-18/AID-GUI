@@ -24,13 +24,15 @@ def LinkParser(file):
     regex = r"(?i)\b((?:http[s]?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
     for l in range(len(links)):
         link = links[l]
-        li = link['href']
         alias = link.string
-        alias = alias.strip()
-        if re.match(regex, alias):
+        if alias:
+            alias = alias.strip()
+
+        if (alias and re.match(regex, alias)):
             x = str(link)
             aug_link = x[:2] + style + x[2:]
             doc2 = doc2.replace(x, aug_link)
+            print(alias)
             res.append(link)
     file = open("templates/Highlight/changed.html", "w", encoding="utf-8")
     file.write(doc2)
@@ -93,5 +95,4 @@ def MainProcess(usecase, subgoal, action, filename):
     return report
 
 
-
-# LinkParser("Upload/index3.html")
+# LinkParser("current_html.html")
