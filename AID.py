@@ -94,10 +94,10 @@ def MainProcess(usecase, subgoal, action, filename, var):
         report= report + "\nRule 3 not violated. Results show the input html in this case.\n"
     print("Rule 3")
 
-    f = open(f"templates/Highlight/changed{var}.html", "w", encoding="utf-8")
+    f = open(f"static/changed{var}.html", "w", encoding="utf-8")
     # printcheck = "CHANGED!!!"
     # file.write(printcheck)
-    document = addBanner.augment(document, subgoal, action, report)
+    addBanner.augment(subgoal, action, report, var)
     f.write(document)
     f.close()
     return report

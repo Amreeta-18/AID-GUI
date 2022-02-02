@@ -3,20 +3,18 @@ from bs4 import BeautifulSoup
 
 def readFile(file):
 	f = open(file, "r")
-	txt = f.read()
+	doc = BeautifulSoup(f, "html.parser")
 	f.close()
-	return txt
+	return str(doc)
 
-def augment(doc, subgoal, action, violations):
-	ref = readFile("templates/Banner/head.txt")
-	body = readFile("templates/Banner/banner.txt")
+def augment(subgoal, action, violations, var):
+	# ref = readFile("templates/Banner/head.txt")
+	# body = readFile("templates/Banner/banner.txt")
+	body = readFile("templates/banner.html")
 	body = body.replace("{SUBGOAL}", subgoal)
 	body = body.replace("{ACTION}", action)
 	body = body.replace("{VIOLATIONS}", violations)
-
-	x, y = doc.find("</head>"), doc.find("<body>")+ 6
-
-	doc = doc[:x] + ref + "\n" + doc[x: y] + "\n" + body + doc[y:]
-
-	return doc
+	f = open(f"static/banner{var}.html", "w", encoding="utf-8")
+	f.write(body)
+	f.close()
 

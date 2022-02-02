@@ -1,0 +1,11 @@
+<html>
+      <head>
+        <title>Multiple pages in one page</title>
+      <head>
+      <frameset border="1" cols="200,*" frameBorder="0" frameSpacing="4">
+        <noframes>
+        </noframes>
+        <frame name="top" src="{{ url_for('static', filename='banner1.html') }}">
+        <frame name="bottom" src="{{ url_for('static', filename='changed1.html') }}">
+      </frameset>
+  </html>

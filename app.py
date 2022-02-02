@@ -76,7 +76,6 @@ def result():
 def home():
     return render_template('index.html')
 
-
 # Functionality pages
 @app.route('/uploadpage')
 def uploadpage():
@@ -84,11 +83,11 @@ def uploadpage():
 
 @app.route('/highlight1')
 def highlightpage1():
-    return render_template('Highlight/changed1.html')
+    return render_template('highlight1.html')
 
 @app.route('/highlight2')
 def highlightpage2():
-    return render_template('Highlight/changed2.html')
+    return render_template('highlight2.html')
 
 if __name__=="__main__":
     app.run(debug=True)
