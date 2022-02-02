@@ -6,9 +6,11 @@ from collections import Counter
 import textParser
 from bs4 import BeautifulSoup
 
+import addBanner
+
 # This file runs each of the rules for each URL in the input/output file
 
-def LinkParser(file, var):
+def LinkParser(file):
     if file:
         try:
             with open(file, "r") as f:
@@ -35,13 +37,8 @@ def LinkParser(file, var):
             doc2 = doc2.replace(x, aug_link)
             print(alias)
             res.append(link)
-    f = open(f"templates/Highlight/changed{var}.html", "w", encoding="utf-8")
-    # printcheck = "CHANGED!!!"
-    # file.write(printcheck)
-    f.write(doc2)
-    f.close()
     # print(doc2)
-    return res
+    return [doc2, res]
 
 def MainProcess(usecase, subgoal, action, filename, var):
     report = ""
@@ -70,7 +67,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
         if (token.pos_ == 'NOUN' or token.pos_ == 'ADJ') and (str(token) not in DOM_words):
             keywords_A.append(token.text)
 
-    report = f'\nURL of webpage evaluated: {filename[7:]}\nUse Case: {usecase}\nSubgoal: {subgoal}\nAction: {action}\n'
+    # report = f'\nURL of webpage evaluated: {filename[7:]}\nUse Case: {usecase}\nSubgoal: {subgoal}\nAction: {action}\n'
     
     # Rule 1 starts here - tokens present in the page or not
     # print the keywords S and A if violated
@@ -87,7 +84,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     # #Rule 3 starts here - Link label exists or not
     # Highlight links which donot have label
     # Link labels will be checked
-    result_3 = LinkParser(filename, var)
+    document, result_3 = LinkParser(filename)
     print(filename)
     if result_3 == -1:
         report = report + "No Links Found"
@@ -96,6 +93,13 @@ def MainProcess(usecase, subgoal, action, filename, var):
     else:
         report= report + "\nRule 3 not violated. Results show the input html in this case.\n"
     print("Rule 3")
+
+    f = open(f"templates/Highlight/changed{var}.html", "w", encoding="utf-8")
+    # printcheck = "CHANGED!!!"
+    # file.write(printcheck)
+    document = addBanner.augment(document, subgoal, action, report)
+    f.write(document)
+    f.close()
     return report
 
 # MainProcess("usecase", "subgoal", "action", "a.html")

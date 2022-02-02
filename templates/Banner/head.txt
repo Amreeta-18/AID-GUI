@@ -1,0 +1,2 @@
+<link href="{{ url_for('static', filename='gendermagstyles.css') }}" media="all" rel="stylesheet" type="text/css" />
+<link href="dclogo.png" rel="icon" type="image/x-icon" />
