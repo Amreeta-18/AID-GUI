@@ -1,23 +1,64 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Welcome To The GenderMag Tool!</title>
-	</head>
+<title>The GenderMag Project | Automated Inclusivity Detector</title>
+<meta charset="utf-8"> 
+<!-- <link href="{{ url_for('static', filename='gendermagstyles.css') }}" media="all" rel="stylesheet" type="text/css" /> -->
 
-<div id="topbar">
-  <div id="titleblock">
-    <a href="/dc">GenderMag Automated Inclusivity Detector</a><br>
 
-	<body>	
-		<p id="welcomeText">Welcome To The GenderMag Tool!</p>
-		<p>This is a tool that automates the GenderMag method partially. (Read our paper here: <a href="https://ieeexplore.ieee.org/document/9402060" target="_blank">AID: An Automated Detector for Gender-Inclusivity Bugs in OSS Project Pages</a>.) <br>
+<style>
+body {margin:1;
+    padding-top: 50px; 
+}
 
-		The GenderMag Method (short for <u>Gender</u> Inclusiveness <u>Mag</u>nifier) is a method for finding gender-inclusiveness issues in software features. Using GenderMag, software developers and/or user experience (UX) teams can evaluate their software from a gender-inclusiveness perspective. Fixing issues that may disproportionately affect one gender over another can lead to better usability for everyone.
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #333;
+}
+</style>
+</head>
+
+
+<body>  
+
+<ul>
+  <li><a class="active"> GenderMag Automated Inclusivity Detector</a> </li>
+  <!-- <li><a class="active" href="#home">Home</a></li> -->
+</ul>
+
+		<p id="welcomeText" style="font-size:18px;"><b>What is The GenderMag Automated Inclusivity Detector?</b></p>
+		<p style="font-size:18px;">This tool automates the GenderMag method partially. The GenderMag Method (short for <u>Gender</u> Inclusiveness <u>Mag</u>nifier) is a method for finding gender-inclusiveness issues in software features. Using GenderMag, software developers and/or user experience (UX) teams can evaluate their software from a gender-inclusiveness perspective. Fixing issues that may disproportionately affect one gender over another can lead to better usability for everyone.
 		
 		</p>
-		<p>More information about GenderMag can be found on our <a href="http://gendermag.org/" target="_blank">website</a>. </p>
+		<p style="font-size:18px;">More information about GenderMag can be found on our <a href="http://gendermag.org/" target="_blank">website</a>. (Read our paper here: <a href="https://ieeexplore.ieee.org/document/9402060" target="_blank">AID: An Automated Detector for Gender-Inclusivity Bugs in OSS Project Pages</a>.) </p> 
 
-		<a id="startGenderMagButton" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Let's get started!</a>
+		<a id="startGenderMagButton" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 22px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Let's get started!</a>
 
 <!-- 	<form action="{{ url_for('result') }}" method="POST">
 	  <input type="file" id="myFile" name="WEB">

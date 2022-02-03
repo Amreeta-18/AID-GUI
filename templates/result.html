@@ -3,33 +3,76 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+
+    <style>
+    body {margin:1;
+        padding-top: 50px; 
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #333;
+    }
+    </style>
     </head>
 
     <body>
 
-        <img src="{{ url_for('static', filename='Abi.png') }}" alt="Abi persona" width="500" height="600">
-
+        
+<ul>
+  <li><a class="active"> GenderMag Automated Inclusivity Detector</a> </li>
+  <!-- <li><a class="active" href="#home">Home</a></li> -->
+</ul>
         <!-- Result -->
-        <div class="results">
-            <p>
+        <p> Please click on "Results (Before Action)" to go to the evaluation of the first HTML uploaded and the "Results (After Action)" for the evaluation of the second HTML uploaded. </p>
+
+<!--             <p>
             <pre>
                 {{ output }} 
             </pre>
-            </p>
-         <a id="startGenderMagButton1" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight1" target="_blank">Results</a>
+            </p> -->
+
+
+        <img src="{{ url_for('static', filename='Abi.png') }}" alt="Abi persona" style="border: 0.5px solid #000;">
+        
+        <div class="results">
+         <a id="startGenderMagButton1" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight1" target="_blank">Results (Before Action)</a>
         </div>
         
         <div class="results2">
             <p>
             <pre>
-                {{ output2}} 
+<!--                 {{ output2}}  -->
             </pre>
             </p>
-            <a id="startGenderMagButton2" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Results2</a>
+            <a id="startGenderMagButton2" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Results (After Action) </a>
         </div>
-
-
-        
     </body>
 </html>
 

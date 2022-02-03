@@ -1,55 +1,58 @@
 <html>
 <head>
-	<!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'> -->
+<title>The GenderMag Project | Automated Inclusivity Detector</title>
+<meta charset="utf-8"> 
 
-	<script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
-	<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
-	<script src="Stuk-jszip-4cbaf0e/dist/jszip.js"> </script>
+<style>
+body {margin:1;
+    padding-top: 50px; 
+    font-size: 18px;
+}
 
-	<script src="scripts/helper.js"></script>
-	<script src="scripts/output.js"></script>
-	<script src="scripts/screenshot.js"></script>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
-	<script src="scripts/popup.js"></script>
+li {
+  float: left;
+}
 
-	<title>GenderMag</title>
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #333;
+}
+</style>
 </head>
 
 <body>
 
+<ul>
+  <li><a class="active"> GenderMag Automated Inclusivity Detector: <i>Uploading documents for an automated evaluation</i></a> </li>
+  <!-- <li><a class="active" href="#home">Home</a></li> -->
+</ul>
 
+<!-- 
 <div id="userInfo" style="height:10%; width:100%; margin:5px; overflow:hidden;">
 
-	<span id="welcomeText">GenderMag Tool: <i>Uploading documents for an automated evaluation</i></span>
-
-    &nbsp; &nbsp; &nbsp;
-    <span class="icon" id="team">
-        <i class="fa fa-2x fa-users" aria-hidden="true"></i>
-        <label id="teamName"></label>
-        <button id='editTeam' style="width:55px; height:25px;background-color:#7D1935;color:white;" hidden>Edit</button>
-    </span>
-
-    <span class="icon" id="persona">
-        <i class="fa fa-2x fa-user" aria-hidden="true"></i>
-        <label id="personaName"></label>
-        <button id='editPersona' style="width:55px; height:25px;background-color:#7D1935;color:white;" hidden>Edit</button>
-    </span>
-
-    <span class="icon" id="scenario">
-        <i class="fa fa-2x fa-road" aria-hidden="true"></i>
-        <label id="scenarioName"></label>
-        <button id='editScenario' style="width:55px; height:25px;background-color:#7D1935;color:white;" hidden>Edit</button>
-    </span>
-
-<!-- Download and Exit button-->
-
-<!-- <button id="saveAndExit" style="float:right; width:150px; height:25px;background-color:#7D1935;color:white;">Download and Exit</button>
- Exit without Downloading button
-<button id="justExit" style="float:right; width:100px; height:25px;background-color:#7D1935;color:white;">Exit</button>
- -->
-<!-- <button id="viewPersona">View Personas</button> -->
-
-	</div>
+	</div> -->
 <hr>
 <div id="sideBySide" style="overflow-y:auto; overflow-x:hidden;">
 	<nav id="subgoalList" style="height:80%; width:10%; float:left"></nav>
@@ -57,70 +60,39 @@
 		<div id="setup" class="instruction" style="margin-bottom:5px;">
 			<!--span class="preview"> Before you get started with the GenderMag walkthrough... </span-->
 
-			<span class="complete" id="explain">This tool will perform an automated evaluation based on the GenderMag method. Before you get started, please enter some information for the evaluation.</span>
+			<span class="complete" id="explain">Please enter some information for the evaluation.</span>
 
 			<!--button class="moreOrLess" stateVar=0> See more </button-->
 
 		</div>
 		<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
-<!-- 		<div id="getTeam">
-			<br><label id="teamPrompt">First, enter the name of your development team or project</label><br>
-			<input id="teamInput" type="text" placeholder="ex. Mobile Dev Group">
-			<input type="submit" id="submitSubgoal" value="Submit Team Name">
-		</div> -->
-
  
 		<div id="getPersona">
-			<label id="personaPrompt">Select a Persona</label><br>
+			<label id="personaPrompt">Select a Persona:</label>
+			    <b>(To learn more about these personas, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here.)</a></p></b>
 			<select id="personaSelection" name="persona">
 				<option value="Abi">Abi</option>
-				<option value="Tim">Tim</option>
-				<option value="Pat">Pat</option>
-				<option value="Custom">Custom</option>
+				<option value="Tim" disabled>Tim</option>
+				<option value="Pat" disabled>Pat</option>
+				<option value="Custom" disabled>Custom</option>
 			</select>
             <!-- <button id="submitPersona">Submit</button><br> -->
-            <b><p>To learn more about these personas, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here.</a></p></b><br>
+        
 		</div>
 
-<!-- 		<div id="getPersonaPronoun">
-			<label id="pronounPrompt">Please enter pronouns for your persona</label><br>
-			<label for="pronounInput">Subject Pronoun:</label><br>
-			<input id="pronounInput" type="text" placeholder="ex: she, they, ze"><br>
-			<label for="possessiveInput">Possessive Adjective:</label><br>
-			<input id="possessiveInput" type="text" placeholder="ex: her, their, zir"><br>
-			<input type="submit" id="submitPronoun"><br>
-		</div> -->
-<!-- 
-		<div id="getScenario">
-			<label id="scenarioPrompt">Take a moment to describe the scenario your persona will be performing</label><br>
-			<input id="scenarioInput" type="text" placeholder="ex: Edit Sue's contact information" size="40" >
-			<input type="submit" id="submitScenario"><br>
-		</div>
-
-		<div id="subgoals">
-		</div>
-
-		<div id="getSubgoal">
-			<label id="subgoalPrompt"></label>Enter a subgoal<br>
-			<input id="subgoalInput" type="text" placeholder="ex Search for 'Sue' in the DB">
-			<input type="submit" id="submitSubgoal" value="Submit Subgoal">
-		</div>
-</div>
-	<div id="personaInfo"style ="height:80%; width:35%; float:left; margin:5px;overflow-y:auto"></div>
- -->
  	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
  		<div>
- 			<p>Please upload the scenario, subgoals and actions to be performed by the persona and the respective html file. </p><br>
+ 			<p>Please enter the Use Case, Subgoal and Actions to be evaluated, in the text boxes below:</p>
  			<label for="usecase">Use Case</label>
- 			<input type="text" usecase="usecase" name = "usecase" id="usecase" >
+ 			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" >
  		</div>
  		 <div>
  			<label for="subgoal">Subgoal</label>
- 			<input type="text" subgoal="subgoal" name = "subgoal" id="subgoal" required>
+ 			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" required>
  		</div>
  		 <div>
  			<label for="action">Action</label>
- 			<input type="text" subgoal="action" name = "action" id="action" required>
+ 			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" required>
  		</div>
 
  		<div>

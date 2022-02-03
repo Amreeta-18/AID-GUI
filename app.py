@@ -1,6 +1,6 @@
 # Libraries
 import os
-from flask import Flask, flash, request, redirect, url_for, render_template
+from flask import Flask, flash, request, redirect, url_for, render_template, make_response
 from werkzeug.utils import secure_filename
 import requests
 
@@ -16,6 +16,7 @@ ALLOWED_EXTENSIONS = {'xlsx', 'html'}
 # Flask Configuration
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 # Utility - Checks whether the file type is supported
 def allowed_file(filename):
@@ -83,7 +84,11 @@ def uploadpage():
 
 @app.route('/highlight1')
 def highlightpage1():
-    return render_template('highlight1.html')
+    response = make_response(render_template('highlight1.html'))
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate" # HTTP 1.1.
+    response.headers["Pragma"] = "no-cache" # HTTP 1.0.
+    response.headers["Expires"] = "0" # Proxies.
+    return response
 
 @app.route('/highlight2')
 def highlightpage2():
