@@ -4,7 +4,6 @@
     <head>
         <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="/Users/chattera/Documents/GitHub/AID-GUI/static/styles.css">
 <link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
 </head>
 
@@ -25,20 +24,22 @@
             </pre>
             </p> -->
 
-
-        <img src="{{ url_for('static', filename='Abi.png') }}" alt="Abi persona" style="border: 0.5px solid #000;">
-        
-        <div class="results">
-         <a id="startGenderMagButton1" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight1" target="_blank">Click here for results (Before Action)</a>
+        <div class="img-container">
+            <img src="{{ url_for('static', filename='Abi.png') }}" alt="Abi persona" style="border: 0.5px solid #000;">
         </div>
         
-        <div class="results2">
+        
+        <div class="results img-container">
+         <a id="startGenderMagButton1" style="position:absolute; left:40%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px; text-decoration: none;" href="/highlight1" target="_blank">Click here for results (Before Action)</a>
+        </div>
+        
+        <div class="results2 img-container">
             <p>
             <pre>
 <!--                 {{ output2}}  -->
             </pre>
             </p>
-            <a id="startGenderMagButton2" style="position:absolute; left:45%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Click here for results (After Action) </a>
+            <a id="startGenderMagButton2" style="position:absolute; left:40%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Click here for results (After Action) </a>
         </div>
     </body>
 </html>
