@@ -3,54 +3,20 @@
 	<head>
 <title>The GenderMag Project | Automated Inclusivity Detector</title>
 <meta charset="utf-8"> 
-<!-- <link href="{{ url_for('static', filename='gendermagstyles.css') }}" media="all" rel="stylesheet" type="text/css" /> -->
-
-
-<style>
-body {margin:1;
-    padding-top: 50px; 
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #333;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/Users/chattera/Documents/GitHub/AID-GUI/static/styles.css">
+<link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
 </head>
 
 
 <body>  
 
-<ul>
-  <li><a class="active"> GenderMag Automated Inclusivity Detector</a> </li>
-  <!-- <li><a class="active" href="#home">Home</a></li> -->
-</ul>
+<div class="topnav">
+  <a class="active">GenderMag Automated Inclusivity Detector</a>
+</div>
+
+<!-- <ul>
+ <a class="active"> GenderMag Automated Inclusivity Detector</a>
+</ul> -->
 
 		<p id="welcomeText" style="font-size:18px;"><b>What is The GenderMag Automated Inclusivity Detector?</b></p>
 		<p style="font-size:18px;">This tool automates the GenderMag method partially. The GenderMag Method (short for <u>Gender</u> Inclusiveness <u>Mag</u>nifier) is a method for finding gender-inclusiveness issues in software features. Using GenderMag, software developers and/or user experience (UX) teams can evaluate their software from a gender-inclusiveness perspective. Fixing issues that may disproportionately affect one gender over another can lead to better usability for everyone.

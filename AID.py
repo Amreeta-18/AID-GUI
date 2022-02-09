@@ -81,6 +81,15 @@ def MainProcess(usecase, subgoal, action, filename, var):
 
     print("Rule 1")
 
+    if (var==2):
+        result_2 = C.checkRule2(filename, keywords_A)
+        if result_2==1:
+            report = report + "\n Rule 2 is violated: Keywords from link-label is not present on the current page.\n"
+        else:
+            report = report + "\n Rule 2 not violated.\n"
+    else:
+        report = report + "\n Rule 2 not applicable.\n"
+
     # #Rule 3 starts here - Link label exists or not
     # Highlight links which donot have label
     # Link labels will be checked

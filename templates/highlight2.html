@@ -1,14 +1,21 @@
 <html>
       <head>
-        <title>Multiple pages in one page</title>
+        <title>HTML2 Evaluated</title>
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
-      <head>
-      <frameset border="1" cols="200,*" frameBorder="0" frameSpacing="4">
+        <link href="/Users/chattera/Documents/GitHub/AID-GUI/static/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css">
+      </head>
+
+      <frameset rows="55, *"> 
+      <frame src="{{ url_for('static', filename='navbar.html') }}"></frame>
+      <frameset border="1" cols="40%,*">
         <noframes>
         </noframes>
         <frame name="top" src="{{ url_for('static', filename='banner2.html') }}">
         <frame name="bottom" src="{{ url_for('static', filename='changed2.html') }}">
       </frameset>
-  </html>
+      </frameset>
+
+</html>

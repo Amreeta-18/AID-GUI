@@ -1,30 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en" dir="ltr">
 
-<head>
-
-<title>The GenderMag Project | Automated Inclusivity Detector</title>
-
-<meta charset="utf-8"> 
-<link href="{{ url_for('static', filename='gendermagstyles.css') }}" media="all" rel="stylesheet" type="text/css" />
-<!-- Favicon: the little picture on the tab -->
-
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-
-</head>
-
-<body>
-<div id="topbar">
-  <div id="titleblock">
-    <a href="/dc">GenderMag Automated Inclusivity Detector</a><br>
-    <span id="subtitle">Automated tool to make capture software inclusivivity bugs</span><br>
-    <br>
-    <p>On the Right, is the evaluated HTML page for Subgoal: {SUBGOAL} <br> Action: {ACTION}</p>
+  <head>
+      <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/Users/chattera/Documents/GitHub/AID-GUI/static/styles.css">
+        <link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='gendermagstyles.css') }}" media="all" rel="stylesheet" type="text/css" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+  </head>
 
 
-    <div>Violations found on this page:</div>
+<!-- <title>The GenderMag Project | Automated Inclusivity Detector</title> -->
+<body>  
+
+<p>On the Right, is the evaluated HTML page for Subgoal: "{SUBGOAL}" <br> Action: "{ACTION}"</p>
+
+<div>Violations found on this page:</div> <br>
       {VIOLATIONS}
-
+</body>
 </html>

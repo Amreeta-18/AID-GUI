@@ -100,40 +100,28 @@ class CheckRules():
         return found
 
     # Check Rule 2
-    def checkRule2(self, pathname, row, filename):
+    def checkRule2(self, filename, action_words):
         found = 0
-        # looking at the before action words
-        action_words=[]
-        action = G.before_action(row-1, filename)
-        # pathname_1 = G.before_pathname(row-1)
-        action = nlp(action)
-
-        DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'data', 'information', 'icon']
-        #Getting nouns from before action
-        for token in action:
-            if (token.pos_ == 'NOUN') and (str(token) not in DOM_words): #or token.pos_ == 'ADJ'
-               action_words.append(token.text)
-
         # print(action_words, len(action_words))
-        #If word is issue, it only checks for issue lists
-        term1 = 'issue'
-        term2 = 'issues'
-        # print(action_words)
-        if (term1 in action_words) or (term2 in action_words):
-            is_issue_list = self.is_issue_page(pathname)
-            if is_issue_list==1:
-                # print("returning 0")
-                return 0
+        #If word is issue, it only checks for issue lists ****REMOVING SINCE IT IS ONLY APPLICABLE FOR OSS
+        # term1 = 'issue'
+        # term2 = 'issues'
+        # # print(action_words)
+        # if (term1 in action_words) or (term2 in action_words):
+        #     is_issue_list = self.is_issue_page(pathname)
+        #     if is_issue_list==1:
+        #         # print("returning 0")
+        #         return 0
 
-        #checking if keyword is a link
+        #checking if keyword is a link LABEL
         a = str(action_words)
         links = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', a)
         if (len(links)>0):
             return 1
 
-        #if all the link words found on the next webpage, then good
+        #if all the key words clicked are found on the next webpage, then good
 
-        P.get_text_local(pathname)
+        P.get_text_local(filename)
         with open('Alltext.txt') as f:
             text = f.read()
             about_doc = nlp(text)

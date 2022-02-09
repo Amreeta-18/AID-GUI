@@ -2,52 +2,16 @@
 <head>
 <title>The GenderMag Project | Automated Inclusivity Detector</title>
 <meta charset="utf-8"> 
-
-<style>
-body {margin:1;
-    padding-top: 50px; 
-    font-size: 18px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #333;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/Users/chattera/Documents/GitHub/AID-GUI/static/styles.css">
+<link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-<ul>
-  <li><a class="active"> GenderMag Automated Inclusivity Detector: <i>Uploading documents for an automated evaluation</i></a> </li>
-  <!-- <li><a class="active" href="#home">Home</a></li> -->
-</ul>
+<div class="topnav">
+  <a class="active">GenderMag Automated Inclusivity Detector: <i>Uploading documents for an automated evaluation</a>
+</div> 
+
 
 <!-- 
 <div id="userInfo" style="height:10%; width:100%; margin:5px; overflow:hidden;">
@@ -84,25 +48,25 @@ li a:hover:not(.active) {
  		<div>
  			<p>Please enter the Use Case, Subgoal and Actions to be evaluated, in the text boxes below:</p>
  			<label for="usecase">Use Case</label>
- 			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" >
+ 			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" placeholder="Example: Edit Sue's contact information">
  		</div>
  		 <div>
  			<label for="subgoal">Subgoal</label>
- 			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" required>
+ 			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" placeholder="Example: Search for Sue in the contact list" required>
  		</div>
  		 <div>
  			<label for="action">Action</label>
- 			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" required>
+ 			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" placeholder="Example: Type 'Sue' in the search bar" required>
  		</div>
 
  		<div>
  			 <label for="html_files">HTML file before performing the action</label>
- 		     <input type=file name=html_files>
+ 		     <input class= "button button1" type=file name=html_files>
  		</div>
 
  		<div>
  			 <label for="html_file">HTML file after performing the action</label>
- 		     <input type=file name=html_file>
+ 		     <input class= "button button1" type=file name=html_file>
  		</div>
 
  		<!-- <div>
@@ -110,7 +74,7 @@ li a:hover:not(.active) {
  		     <input type=file name=xl_file>
  		</div> -->
 
- 		<button type="submit">Submit</button>
+ 		<button class= "button button1" type="submit">Submit</button>
  	</form>
  	
 		<!-- Here is an example file: <a href="/Example_Input.xlsx" download>Download Example_Input.xlsx</a>.</p><br> -->
