@@ -3,24 +3,38 @@
 
   <head>
       <meta charset="utf-8">
-        <link href="styles.css" media="all" rel="stylesheet" type="text/css" />
         <link href="gendermagstyles.css" media="all" rel="stylesheet" type="text/css" />
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
+        <style>
+          .bg {
+          margin:0;
+          padding:0;
+          width:100%;
+          height:100%;
+          font-family:'open_sansregular';
+          background-color: darkblue;
+          color: white;
+        }
+        </style>
   </head>
 
 
 <!-- <title>The GenderMag Project | Automated Inclusivity Detector</title> -->
-<body>  
+<body class = "bg">  
+<div>
+    <p>On the Right, is the evaluated HTML page for  <br> Subgoal: "{SUBGOAL}" <br> Action: "{ACTION}"</p>
 
-<p>On the Right, is the evaluated HTML page for Subgoal: "{SUBGOAL}" <br> Action: "{ACTION}"</p>
-
-<div>Violations found on this page: <br>
+<div>
+  Violations found on this page: <br>
       {VIOLATIONS}
 </div> <br>
-      
 
-<img src="Abi2.png" alt="Abi persona" style="border: 0.5pxx solid #000;">
+
+<img src="Abi2.png" alt="Abi persona" style="border: 0.5pxx solid #000;" height="450" width="450">
+</div>
+
+
 </body>
 </html>

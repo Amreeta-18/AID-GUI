@@ -10,6 +10,10 @@ def readFile(file):
 def augment(subgoal, action, violations, var):
 	# ref = readFile("templates/Banner/head.txt")
 	# body = readFile("templates/Banner/banner.txt")
+	subgoal = subgoal.replace("\n", "<br>")
+	action = action.replace("\n", "<br>")
+	violations = violations.replace("\n", "<br>")
+
 	body = readFile("templates/banner.html")
 	body = body.replace("{SUBGOAL}", subgoal)
 	body = body.replace("{ACTION}", action)
