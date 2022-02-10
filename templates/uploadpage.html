@@ -11,28 +11,14 @@
   <a class="active">GenderMag Automated Inclusivity Detector: <i>Uploading documents for an automated evaluation</i></a>
 </div> 
 
-
-<!-- 
-<div id="userInfo" style="height:10%; width:100%; margin:5px; overflow:hidden;">
-
-	</div> -->
-<hr>
-<div id="sideBySide" style="overflow-y:auto; overflow-x:hidden;">
-	<nav id="subgoalList" style="height:80%; width:10%; float:left"></nav>
-	<div id="containeryo" style="height:80%; width:50%; margin:5px;  float:left; overflow-y: auto; overflow-x:hidden;" >
-		<div id="setup" class="instruction" style="margin-bottom:5px;">
-			<!--span class="preview"> Before you get started with the GenderMag walkthrough... </span-->
-
-			<span class="complete" id="explain">Please enter some information for the evaluation.</span>
-
-			<!--button class="moreOrLess" stateVar=0> See more </button-->
+	<h1>Please enter some information for the evaluation:</h1>
 
 		</div>
 		<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
  
 		<div id="getPersona">
-			<label id="personaPrompt">Select a Persona:</label>
-			    <b>(To learn more about these personas, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here.)</a></p></b>
+			<label id="personaPrompt" style="font-size:18px;">Step 1: Select a Persona:</label>
+			    <b>(To learn more about these personas, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.)</b>
 			<select id="personaSelection" name="persona">
 				<option value="Abi">Abi</option>
 				<option value="Tim" disabled>Tim</option>
@@ -40,32 +26,33 @@
 				<option value="Custom" disabled>Custom</option>
 			</select>
             <!-- <button id="submitPersona">Submit</button><br> -->
-        
+        </p>
 		</div>
 
  	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
  		<div>
- 			<p>Please enter the Use Case, Subgoal and Actions to be evaluated, in the text boxes below:</p>
- 			<label for="usecase">Use Case</label>
+ 			<p style="font-size:18px;"> Please enter the Use Case, Subgoal and Actions to be evaluated, in the text boxes below:</p>
+ 			<label for="usecase" style="font-size:18px;">Step 2: Use Case</label>
  			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" placeholder="Example: Edit Sue's contact information">
- 		</div>
+ 		</div> <br>
  		 <div>
- 			<label for="subgoal">Subgoal</label>
+ 			<label for="subgoal" style="font-size:18px;">Step 3: Subgoal</label>
  			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" placeholder="Example: Search for Sue in the contact list" required>
- 		</div>
+ 		</div> <br>
+
  		 <div>
- 			<label for="action">Action</label>
+ 			<label for="action" style="font-size:18px;">Step 4: Action</label>
  			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" placeholder="Example: Type 'Sue' in the search bar" required>
- 		</div>
+ 		</div> <br>
 
  		<div>
- 			 <label for="html_files">HTML file before performing the action</label>
- 		     <input class= "button button1" type=file name=html_files>
- 		</div>
+ 			 <label for="html_files" style="font-size:18px;">Step 5: HTML file before performing the action</label>
+ 		     <input class= "button button1" type=file name=html_files required>
+ 		</div> 
 
  		<div>
- 			 <label for="html_file">HTML file after performing the action</label>
- 		     <input class= "button button1" type=file name=html_file>
+ 			 <label for="html_file" style="font-size:18px;">Step 6: HTML file after performing the action</label>
+ 		     <input class= "button button1" type=file name=html_file required>
  		</div>
 
  		<!-- <div>
@@ -73,7 +60,40 @@
  		     <input type=file name=xl_file>
  		</div> -->
 
- 		<button class= "button button1" type="submit">Submit</button>
+
+ <details>
+  <summary style="font-size:18px;">Click on the arrow for instructions to save a webpage as HTML</summary>
+
+
+<p style="font-size:18px;">Follow the instructions below to save a HTML file: <br> In Chrome: <br>
+<ul>
+  <li>Navigate to the web page, right-click on the page and select Save as.</li>
+  <li>elect or create a new folder to save the file, images, and associated items from the web page.</li>
+  <li>Enter a file name and select Webpage, Complete (*.htm;*html) for the Save as type</li>
+  <li>Click the Save button.</li>
+</ul>
+
+In FireFox:
+<ul>
+  <li>Navigate to the web page and select File, Save Page As... or right-click and select Save Page As...</li>
+  <li>Select or create a new folder to save the file, images, and associated items from the web page.</li>
+  <li>Enter a file name and select Web Page, complete (*.htm;*.html) for the Save as type</li>
+  <li>Click the Save button.</li>
+</ul>
+
+In Internet Explorer
+<ul>
+  <li>Navigate to the web page and select File, Save Page As... or right-click and select Save Page As...</li>
+  <li>Enter a file name and select Web Page, complete (*.htm;*.html) for the Save as type</li>
+  <li>Click the Save button.</li>
+</ul>
+</p>
+
+</details> 
+
+
+
+ 		<button class= "button button1" styles="align:left" type="submit">Submit</button>
  	</form>
  	
 		<!-- Here is an example file: <a href="/Example_Input.xlsx" download>Download Example_Input.xlsx</a>.</p><br> -->
@@ -85,6 +105,8 @@
       <p><input type=file name=file>
          <input type=submit value=Upload>
     </form> -->
+
+
 
 
  <br style="clear:left;" />

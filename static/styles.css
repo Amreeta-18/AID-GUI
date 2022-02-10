@@ -1,36 +1,20 @@
-body {margin:1;
-    padding-top:0px; 
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
+body {
   width: 100%;
+  height: 100%;
+  margin: 10;
+  padding: 0;
+  border: 0
 }
 
-.img-container {
-        text-align: center;
-}
-
-li {
+.logo {
+  /*border-top: 4px solid #648880;*/
+  padding: 10px 0 0px 0;
   float: left;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
-li a:hover:not(.active) {
-  background-color: #111;
+.img-container {
+        text-align: center;
 }
 
 .active {
@@ -44,12 +28,12 @@ li a:hover:not(.active) {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: gray;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: blue;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -57,17 +41,17 @@ li a:hover:not(.active) {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: ##00CED1;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: ##00CED1;
   color: white;
 }
 
 .button {
-  background-color: #00CED1; /* Green */
+  background-color: #00CED1; 
   border: none;
   color: black;
   padding: 10px;
@@ -80,3 +64,38 @@ li a:hover:not(.active) {
 }
 
 .button1 {border-radius: 12px;}
+
+summary::-webkit-details-marker {
+  style="font-size:18px;"
+  color: blue;
+}
+summary:focus {
+  outline-style: none;
+}
+
+.iconDetails {
+ margin-left:2%;
+float:left; 
+height:40px;
+width:40px; 
+} 
+
+.container2 {
+    width:270px;
+    height:auto;
+    padding:1%;
+    float:left;
+}
+
+  .buttons {
+width: 200px;
+margin: 0 auto;
+display: inline;}
+
+    .action_btn {
+width: 200px;
+margin: 0 auto;
+display: inline;}
+/*h4{margin:0}
+.left {float:left;width:545px;}
+.right {float:right;margin:0 0 0 5px;width:545px;}*/

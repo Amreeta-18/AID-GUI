@@ -15,7 +15,7 @@
 </div>
 
         <!-- Result -->
-        <p> Both HTML files have been checked for inclusivity bugs! </p>
+        <h1> Both HTML files have been checked for inclusivity bugs! </h1>
         <p> Please click on "Results (Before Action)" to go to the evaluation of the first HTML uploaded and the "Results (After Action)" for the evaluation of the second HTML uploaded. </p>
 
 <!--             <p>
@@ -23,24 +23,25 @@
                 {{ output }} 
             </pre>
             </p> -->
-
-        <div class="img-container">
-            <img src="{{ url_for('static', filename='Abi.png') }}" alt="Abi persona" style="border: 0.5px solid #000;">
-        </div>
         
         
         <div class="results img-container">
-         <a id="startGenderMagButton1" style="position:absolute; left:40%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px; text-decoration: none;" href="/highlight1" target="_blank">Click here for results (Before Action)</a>
+         <a id="startGenderMagButton1" style="position:absolute; left:20%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px; text-decoration: none;" href="/highlight1" target="_blank">Click here for results (Before Action)</a>
+            <a id="startGenderMagButton2" style="position:absolute; left:55%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Click here for results (After Action) </a>
+
         </div>
         
-        <div class="results2 img-container">
+<!--         <div class="results2 img-container">
             <p>
             <pre>
-<!--                 {{ output2}}  -->
+                 {{ output2}} 
             </pre>
             </p>
-            <a id="startGenderMagButton2" style="position:absolute; left:40%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Click here for results (After Action) </a>
+            <a id="startGenderMagButton2" style="position:absolute; left:70%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Click here for results (After Action) </a>
         </div>
+ -->
     </body>
 </html>
+
+
 
