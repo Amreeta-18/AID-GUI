@@ -66,11 +66,11 @@ body {
 .button1 {border-radius: 12px;}
 
 summary::-webkit-details-marker {
-  style="font-size:18px;"
+  font-size:18px;
   color: blue;
 }
 summary:focus {
-  outline-style: none;
+  outline-style: blue;
 }
 
 .iconDetails {

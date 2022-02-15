@@ -18,9 +18,9 @@
 </h1> <br><br><br><br>
 
 
-		<p align = "justify" style="font-size:20px; width: 90%"> This tool attempts to emulate a “real” GenderMag session and takes as input the data required when performing a GenderMag session, that is, the use-case, subgoal, and action, along with the HTML of the webpage for that step in the Cognitive Walkthrough. <br> <br>
+		<p align = "justify" style="font-size:20px; width: 90%"> This tool attempts to emulate a GenderMag session (<a href="http://gendermag.org/" target="_blank">GenderMag website</a>) and takes as input the data required when performing a GenderMag cognitive walkthrough. That is, the use-case, subgoal, and action, along with the webpage to be evaluated, are given by the user. <br> <br>
 
-		From this input, AID extracts the sentence structure from the text in the subgoal and action using natural language process and checks for three decision rules, as follows: <br>
+		From this input, the tool extracts the subgoal and action using natural language process and checks for three decision rules. These decision rules are detailed below (Click on the blue arrows for more detailed explanations): <br>
 	<details>
   <summary style="font-size:20px;">Rule 1 (Cues to needed information): Keywords from subgoals and associated actions should be present on the webpage</summary>
 	<p style="font-size:18px;">The first rule in our set checks for situations where users like Abi (To learn more about the Abi persona, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.) would not find all the information they need to complete their task. For example, the wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. 
