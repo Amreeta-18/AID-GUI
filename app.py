@@ -30,6 +30,7 @@ def result():
         usecase = request.form['usecase']
         subgoal = request.form['subgoal']
         action = request.form['action']
+        flag1, flag2 = 0, 0
         # check if the post request has the file part
         if 'html_file' not in request.files:
             flash('No file part')
@@ -46,7 +47,7 @@ def result():
             # Get filename and pass to backend
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            output = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 1)
+            output, flag1 = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 1)
 
         # get file2
         file = request.files['html_file']
@@ -57,7 +58,7 @@ def result():
             # Get filename and pass to backend
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            output2 = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 2)
+            output2, flag2 = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 2)
 
             # Backend output
             # output = str(MainTool.MainProcess(f"Upload/{filename}"))
@@ -70,7 +71,7 @@ def result():
             # output = f"{output}\nSubgoal: {subgoal} \nAction: {action}"
             # Rerender on html
             # output = output.replace("\n", "<br")
-        return render_template('result.html', output = output, output2 = output2)
+        return render_template('result.html', output = flag1, output2 = flag2)
 
 # Home Page
 @app.route('/')

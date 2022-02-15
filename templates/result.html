@@ -18,6 +18,18 @@
         <br>
         <h1> Both HTML files have been checked for inclusivity bugs! </h1>
         <br>
+        {% if output == 0 %}
+            <h2>Before Action Page has no violations</h2>
+        {% elif output>0 %}
+            <h2>Before Action Page has rule violations</h2>
+        {% endif %}
+
+        {% if output2 == 0 %}
+            <h2>After Action Page has no violations</h2>
+        {% elif output2>0 %}
+            <h2>After Action Page has rule violations</h2>
+        {% endif %}
+        <br>
         <p style ="font-size:20px"> Please click on "Results (Before Action)" to go to the evaluation of the first HTML uploaded and the "Results (After Action)" for the evaluation of the second HTML uploaded. </p>
 
 <!--             <p>
@@ -25,6 +37,7 @@
                 {{ output }} 
             </pre>
             </p> -->
+        
         
         <br><br>
         <div class="results img-container">
