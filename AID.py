@@ -50,7 +50,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     C = CheckRules()
 
     # List of DOM words to exclude from keywords
-    DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'icon', 'data', 'information']
+    DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'icon', 'data', 'information', 'webpage', 'page', 'website']
 
     # Getting Keywords from subgoal and action by extracting nouns
     subgoals = nlp(subgoal)
@@ -60,11 +60,11 @@ def MainProcess(usecase, subgoal, action, filename, var):
     txt = textParser.textParse(filename)
 
     for token in subgoals:
-        if (token.pos_ == 'NOUN' or token.pos_ == 'ADJ') and (str(token) not in DOM_words): #or (token.pos_ == 'NOUN'):
+        if (token.pos_ == 'PROPN' or token.pos_=='NOUN' or token.pos_ == 'ADJ') and (str(token) not in DOM_words): #or (token.pos_ == 'NOUN'):
             keywords_S.append(token.text)
 
     for token in actions:
-        if (token.pos_ == 'NOUN' or token.pos_ == 'ADJ') and (str(token) not in DOM_words):
+        if (token.pos_ == 'PROPN' or token.pos_=='NOUN' or token.pos_ == 'ADJ') and (str(token) not in DOM_words):
             keywords_A.append(token.text)
 
     # report = f'\nURL of webpage evaluated: {filename[7:]}\nUse Case: {usecase}\nSubgoal: {subgoal}\nAction: {action}\n'
@@ -73,7 +73,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     # print the keywords S and A if violated
     result_1_S = C.checkRule1(keywords_S, txt)
     result_1_A = C.checkRule1(keywords_A, txt)
-    report = report + "\nRule 1: Keywords from subgoals and associated actions should be present on the webpage. \nThe wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. \n"
+
     if (result_1_S==1 and result_1_A==1) or (keywords_A == [] and keywords_S == []):
         report = report + "\nRule 1 not violated.\n"
     else:
@@ -82,7 +82,6 @@ def MainProcess(usecase, subgoal, action, filename, var):
 
     print("Rule 1")
 
-    report = report+"\nRule 2: Linked pages should contain keywords from link labels. \n On clicking a link, the destination page should offer cues to help Abi’s understand that they have reached the right place. If a project page fails to use words similar to what a link label hinted at, Abi could get confused. \n"
     if (var==2):
         result_2 = C.checkRule2(filename, keywords_A)
         if result_2==1:
@@ -97,7 +96,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     # Link labels will be checked
     document, result_3 = LinkParser(filename)
     print(filename)
-    report = report + "\nRule 3: Links should be labeled with a keyword or phrase. Abi clicks on a link only after gathering enough information and planning their next step. Labeled links provide Abi with information about the webpage they are supposed to visit.\n"
+    
     if result_3 == -1:
         report = report + "\nNo Links Found on the webpage.\n"
     elif len(result_3) > 0:
@@ -105,13 +104,18 @@ def MainProcess(usecase, subgoal, action, filename, var):
     else:
         report= report + "\nRule 3 not violated. Results show the input html in this case.\n"
     print("Rule 3")
-
+    
+    report = report + "\nRule 1: Keywords from subgoals and associated actions should be present on the webpage. \nThe wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. \n"
+    report = report+"\nRule 2: Linked pages should contain keywords from link labels. \n On clicking a link, the destination page should offer cues to help Abi’s understand that they have reached the right place. If a project page fails to use words similar to what a link label hinted at, Abi could get confused. \n"
+    report = report + "\nRule 3: Links should be labeled with a keyword or phrase. Abi clicks on a link only after gathering enough information and planning their next step. Labeled links provide Abi with information about the webpage they are supposed to visit.\n"
     f = open(f"static/changed{var}.html", "w", encoding="utf-8")
     # printcheck = "CHANGED!!!"
     # file.write(printcheck)
+
     addBanner.augment(subgoal, action, report, var)
     f.write(document)
     f.close()
+
     return report
 
 # MainProcess("usecase", "subgoal", "action", "a.html")

@@ -18,20 +18,46 @@
 </h1> <br><br><br><br>
 
 
-		<p align = "justify" style="font-size:20px; width: 90%">This tool automates the GenderMag method partially. The GenderMag Method (short for <u>Gender</u> Inclusiveness <u>Mag</u>nifier) is a method for finding gender-inclusiveness issues in software features. Using GenderMag, software developers and/or user experience (UX) teams can evaluate their software from a gender-inclusiveness perspective. Fixing issues that may disproportionately affect one gender over another can lead to better usability for everyone.
+		<p align = "justify" style="font-size:20px; width: 90%"> This tool attempts to emulate a “real” GenderMag session and takes as input the data required when performing a GenderMag session, that is, the use-case, subgoal, and action, along with the HTML of the webpage for that step in the Cognitive Walkthrough. <br> <br>
+
+		From this input, AID extracts the sentence structure from the text in the subgoal and action using natural language process and checks for three decision rules, as follows: <br>
+	<details>
+  <summary style="font-size:20px;">Rule 1 (Cues to needed information): Keywords from subgoals and associated actions should be present on the webpage</summary>
+	<p style="font-size:18px;">The first rule in our set checks for situations where users like Abi (To learn more about the Abi persona, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.) would not find all the information they need to complete their task. For example, the wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. 
+	</p>
+	</details> 
+
+	<details>
+  <summary style="font-size:20px;">Rule 2 (Situating Abi in the context of the action performed): Linked pages should contain keywords from link labels </summary>
+	<p style="font-size:18px;">On clicking a link, the destination page should offer cues to help Abi (To learn more about the Abi persona, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.) understand that they have reached the right place. If a project page fails to use words similar to what a link label hinted at, users like Abi could get confused. 
+	</p>
+	</details> 
+
+	<details>
+  <summary style="font-size:20px;">Rule 3 (Information link navigation): Links should be labeled with a keyword or phrase</summary>
+	<p style="font-size:18px;">Users like Abi (To learn more about the Abi persona, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.) click on a link only after gathering enough information and planning their next step. Labeled links provide Abi with information about the webpage they are supposed to visit. Other work agrees, recommending that links should have descriptive yet unique link labels and begin with keywords. Rule 3 captures this tenet.
+	</p>
+	</details> 
+
+
+<!-- 		The GenderMag Method (short for <u>Gender</u> Inclusiveness <u>Mag</u>nifier) is a method for finding gender-inclusiveness issues in software features. Using GenderMag, software developers and/or user experience (UX) teams can evaluate their software from a gender-inclusiveness perspective. Fixing issues that may disproportionately affect one gender over another can lead to better usability for everyone. <br>
+ -->
+
 			</p>
 
 		<p align = "justify" style="font-size:20px; width: 100%">More information about GenderMag can be found on our <a href="http://gendermag.org/" target="_blank">website</a>. (Read our paper here: <a href="https://ieeexplore.ieee.org/document/9402060" target="_blank">AID: An Automated Detector for Gender-Inclusivity Bugs in OSS Project Pages</a>.) </p> 
 		<br><br>
 
 		<a id="startGenderMagButton" style="position:relative; left:40%; border-radius: 6px; color: #ffffff; font-size: 22px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Let's get started!</a> <br><br>
-	
 
-<p style="font-size:18px; width: 50%"">For more information about GenderMag, watch this video:</p>
+
+
+<!-- Commenting this out for now since it is unhelpful information, but can be used alongside a video of how this tool works -->
+<!-- <p style="font-size:18px; width: 50%"">For more information about GenderMag, watch this video:</p>
 
 <div class='container2'>
             	<iframe style="float:middle;display: block;" title="The GenderMag method" id="video" width="540" height="245" src="https://www.youtube.com/embed/ucY8-tHD134"></iframe> 
 </div>
-
+ -->
 </body>
 </html>
