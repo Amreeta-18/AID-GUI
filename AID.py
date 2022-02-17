@@ -13,6 +13,7 @@ def processRegion(region):
     X = re.findall(r"\<.*?\>", region)
     for c in X:
         region = region.replace(c, "")
+    print(region)
     return region
 
 # Find the region using the text in the immediate parent
@@ -44,7 +45,7 @@ def LinkParser(file):
         if alias:
             alias = alias.strip()
 
-        if (alias and re.match(regex, alias)) and findRegion(link)!= "":
+        if (alias and re.match(regex, alias)) and len(findRegion(link))<= len(alias):
             x = str(link)
             aug_link = x[:2] + style + x[2:]
             doc2 = doc2.replace(x, aug_link)
