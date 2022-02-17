@@ -3,15 +3,16 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 <link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
+
 </head>
 
 
 <body>  
 
 <div class="topnav">
-  <a class="active">GenderMag Automated Inclusivity Detector</a>
+  <a class="active" href = "/">GenderMag Automated Inclusivity Detector</a>
 </div>
 
         <!-- Result -->
@@ -19,15 +20,15 @@
         <h1> Both HTML files have been checked for inclusivity bugs! </h1>
         <br>
         {% if output == 0 %}
-            <h2>Before Action Page has no violations</h2>
+            <h2><i class="fa-regular fa-circle-check"></i>Before Action Page has no violations</h2>
         {% elif output>0 %}
-            <h2>Before Action Page has rule violations</h2>
+            <h2><i class="fa-regular fa-circle-xmark"></i>Before Action Page has rule violations</h2>
         {% endif %}
 
         {% if output2 == 0 %}
-            <h2>After Action Page has no violations</h2>
+            <h2><i class="fa-regular fa-circle-check"></i>After Action Page has no violations</h2>
         {% elif output2>0 %}
-            <h2>After Action Page has rule violations</h2>
+            <h2><i class="fa-regular fa-circle-xmark"></i>After Action Page has rule violations</h2>
         {% endif %}
         <br>
 <!--         <p style ="font-size:20px"> Please click on "Results (Before Action)" to go to the evaluation of the first HTML uploaded and the "Results (After Action)" for the evaluation of the second HTML uploaded. </p> -->
@@ -45,6 +46,10 @@
             <a id="startGenderMagButton2" style="position:absolute; left:50%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Click here for results (After Action) </a>
 
         </div>
+        <br><br><br><br>
+        <div class="results img-container">
+            <a id="startGenderMagButton2" style="position:absolute; left:40%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Evaluate another webpage</a>
+        </div>
         
 <!--         <div class="results2 img-container">
             <p>
@@ -55,6 +60,13 @@
             <a id="startGenderMagButton2" style="position:absolute; left:70%; border-radius: 6px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/highlight2" target="_blank">Click here for results (After Action) </a>
         </div>
  -->
+
+ <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+          feather.replace()
+        </script>
     </body>
 </html>
 
