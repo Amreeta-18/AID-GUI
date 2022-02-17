@@ -85,7 +85,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     else:
         flag = 1
         report = report + addColor("\nRule 1 is violated: Some keywords Abi was looking for, were not found on the webpage.\n", "orange")
-        report = report + f"\nThe subgoal keywords for this instance were: {keywords_S}, and the action keywords were: {keywords_A}.\n"
+        report = report + f"The subgoal keywords for this instance were: {keywords_S}, and the action keywords were: {keywords_A}.\n"
 
     print("Rule 1")
 
@@ -93,11 +93,11 @@ def MainProcess(usecase, subgoal, action, filename, var):
         result_2 = C.checkRule2(filename, keywords_A)
         if result_2==1:
             flag = 1
-            report = report + addColor("\n Rule 2 is violated: Keywords from the previous link-label is not present on the current page.\n", "green")
+            report = report + addColor("\n Rule 2 is violated: Keywords from the previous link-label is not present on the current page.", "orange")
         else:
-            report = report + addColor("\n Rule 2 not violated.\n", "orange")
+            report = report + addColor("\n Rule 2 not violated.", "green")
     else:
-        report = report + addColor("\n Rule 2 not applicable since it is a before-action webpage.\n", "yellow")
+        report = report + addColor("\n Rule 2 not applicable since it is a before-action webpage.", "green")
 
     # #Rule 3 starts here - Link label exists or not
     # Highlight links which donot have label
@@ -109,12 +109,12 @@ def MainProcess(usecase, subgoal, action, filename, var):
         report = report + "\nNo Links Found on the webpage.\n"
     elif len(result_3) > 0:
         flag = 1
-        report = report + addColor("\nRule 3 violated: Links are not labelled. Please refer to the right side to see the highlighted links (in yellow).\n", "green")
+        report = report + addColor("\nRule 3 violated: Links are not labelled. Please refer to the right side to see the highlighted links (in yellow).\n", "orange")
     else:
-        report= report + addColor("\nRule 3 not violated. Results show the input html in this case.\n", "orange")
+        report= report + addColor("\nRule 3 not violated. Results show the input html in this case.\n", "green")
     print("Rule 3")
     
-    report = report + "\nRule 1: Keywords from subgoals and associated actions should be present on the webpage. \nThe wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. \n"
+    report = report + "\n\nRead below for descriptions of each rule: \n\nRule 1: Keywords from subgoals and associated actions should be present on the webpage. \nThe wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. \n"
     report = report+"\nRule 2: Linked pages should contain keywords from link labels. \n On clicking a link, the destination page should offer cues to help Abi’s understand that they have reached the right place. If a project page fails to use words similar to what a link label hinted at, Abi could get confused. \n"
     report = report + "\nRule 3: Links should be labeled with a keyword or phrase. Abi clicks on a link only after gathering enough information and planning their next step. Labeled links provide Abi with information about the webpage they are supposed to visit.\n"
     f = open(f"static/changed{var}.html", "w", encoding="utf-8")

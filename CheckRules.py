@@ -115,9 +115,9 @@ class CheckRules():
 
         #checking if keyword is a link LABEL
         a = str(action_words)
-        links = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', a)
-        if (len(links)>0):
-            return 1
+        # links = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', a)
+        # if (len(links)>0):
+        #     return 1
 
         #if all the key words clicked are found on the next webpage, then good
 

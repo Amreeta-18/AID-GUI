@@ -65,6 +65,8 @@ body {
 
 .button1 {border-radius: 12px;}
 
+.button2 {border-radius: 6px;}
+
 summary::-webkit-details-marker {
   font-size:18px;
   color: blue;

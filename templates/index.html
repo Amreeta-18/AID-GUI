@@ -18,24 +18,27 @@
 </h1> <br><br><br><br>
 
 
-		<p align = "justify" style="font-size:20px; width: 90%"> This tool attempts to emulate a GenderMag session (<a href="http://gendermag.org/" target="_blank">GenderMag website</a>) and takes as input the data required when performing a GenderMag cognitive walkthrough. That is, the use-case, subgoal, and action, along with the webpage to be evaluated, are given by the user. <br> <br>
+		<p align = "justify" style="font-size:20px; width: 90%"> This tool attempts to emulate a <a href="http://gendermag.org/" target="_blank">GenderMag</a> software evaluation session and takes as input the data required when performing such a session, and checks for three decision rules. 
+		<!-- That is, the input is the use-case, subgoal, and action used in the GenderMag session, along with the webpage to be evaluated. <br> <br> --> <br>
 
-		From this input, the tool extracts the subgoal and action using natural language process and checks for three decision rules. These decision rules are detailed below (Click on the blue arrows for more detailed explanations): <br>
+		The three decision rules are detailed below: <br>
+	<!-- 	From this input, the tool extracts the subgoal and action using natural language process and checks for three decision rules. These decision rules are detailed below (Click on the blue arrows for more detailed explanations): <br> -->
 	<details>
-  <summary style="font-size:20px;">Rule 1 (Cues to needed information): Keywords from subgoals and associated actions should be present on the webpage</summary>
-	<p style="font-size:18px;">The first rule in our set checks for situations where users like Abi (To learn more about the Abi persona, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.) would not find all the information they need to complete their task. For example, the wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. 
+  <summary style="font-size:20px;">Rule 1: Cues to needed information</summary>
+	<p style="font-size:18px;">The first rule in our set checks for situations where users like <a href = "http://gendermag.org/Foundations.html" target = "_blank">Abi</a> would not find all the information they need to complete their task. 
+	<!-- For example, the wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need.  -->
 	</p>
 	</details> 
 
 	<details>
-  <summary style="font-size:20px;">Rule 2 (Situating Abi in the context of the action performed): Linked pages should contain keywords from link labels </summary>
-	<p style="font-size:18px;">On clicking a link, the destination page should offer cues to help Abi (To learn more about the Abi persona, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.) understand that they have reached the right place. If a project page fails to use words similar to what a link label hinted at, users like Abi could get confused. 
+  <summary style="font-size:20px;">Rule 2: Situating Abi in the context of the action performed</summary>
+	<p style="font-size:18px;">On clicking a link, the destination page should offer cues to help <a href = "http://gendermag.org/Foundations.html" target = "_blank">Abi</a> understand that they have reached the right place. If a webpage fails to use words similar to what a link's description hinted at, users like Abi could get confused. 
 	</p>
 	</details> 
 
 	<details>
-  <summary style="font-size:20px;">Rule 3 (Information link navigation): Links should be labeled with a keyword or phrase</summary>
-	<p style="font-size:18px;">Users like Abi (To learn more about the Abi persona, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.) click on a link only after gathering enough information and planning their next step. Labeled links provide Abi with information about the webpage they are supposed to visit. Other work agrees, recommending that links should have descriptive yet unique link labels and begin with keywords. Rule 3 captures this tenet.
+  <summary style="font-size:20px;">Rule 3: Information link navigation</summary>
+	<p style="font-size:18px;">Users like <a href = "http://gendermag.org/Foundations.html" target = "_blank">Abi</a> click on a link only after gathering enough information and planning their next step. Labeled and descriptive links provide Abi with information about the webpage they are supposed to visit. Rule 3 captures this tenet.
 	</p>
 	</details> 
 
@@ -50,6 +53,14 @@
 
 		<a id="startGenderMagButton" style="position:relative; left:40%; border-radius: 6px; color: #ffffff; font-size: 22px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Let's get started!</a> <br><br>
 
+
+<!-- <p id="demo" onclick="myFunction()">Click me.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
+</script> -->
 
 
 <!-- Commenting this out for now since it is unhelpful information, but can be used alongside a video of how this tool works -->

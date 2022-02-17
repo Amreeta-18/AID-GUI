@@ -26,8 +26,13 @@
 				<option value="Custom" disabled>Custom</option>
 			</select>
       <details>
-  <summary style="font-size:16px;">The persona is representing your users.</summary>
-  Only one persona is used per session. Abi provides the strongest inclusion focus and is the only persona available for this automated evaluation. To learn more about GenderMag personas, click <a href = "http://gendermag.org/Foundations.html" target = "_blank">here</a>.
+  <summary style="font-size:16px;">(What is a persona?)</summary>
+  Personas represent your users. The <a href = "http://gendermag.org/Foundations.html" target = "_blank">GenderMag personas</a> are Abi, Pat, and Tim. Abi's cognitive style consists of a set of facet values at one end of the cognitive style spectrum. Tim is at the other end. Pat is somewhere in between. Most people are a mixture of Abi and Tim---a mixture of facet values. In addition, an individual's facet values can change with time and circumstances.
+
+  Abi provides the strongest inclusion focus and is the only persona currently being used for this automated evaluation. <br>
+  <img src="static/persona.jpg">
+
+
 </details>
 
 		</div>
@@ -35,24 +40,24 @@
  	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
  		<div> <br>
 <!--  			<p style="font-size:18px;"> <b>Please enter the Use Case, Subgoal and Actions to be evaluated, in the text boxes below:</b></p> -->
- 			<label for="usecase" style="font-size:18px;">Step 2: The Use Case to be evaluated</label>
+ 			<label for="usecase" style="font-size:18px;">Step 2: Enter the use-case to be evaluated: </label>
  			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" placeholder="Example: Edit Sue's contact information"><br>
 
         Consider choosing a use-case focusing on especially problematic or critical parts of the course.
  		</div> <br>
 
  		 <div>
- 			<label for="subgoal" style="font-size:18px;">Step 3: Subgoal</label>
+ 			<label for="subgoal" style="font-size:18px;">Step 3: Enter the subgoal: </label>
  			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" placeholder="Example: Search for Sue in the contact list" required>
              <details>
-            <summary style="font-size:16px;">A subgoal is what you as the instructor hope the student is thinking
+            <summary style="font-size:16px;">A subgoal is what you as the instructor hope the student is <i>thinking</i>
 of doing next.</summary>
              Subgoals usually start with a verb, like “Find” something, “Create” something or “Add” something. <br> They’re different from Actions; these involve clicking on or tapping something. It’s important to make that distinction.
             </details>
  		</div> <br>
 
  		 <div>
- 			<label for="action" style="font-size:18px;">Step 4: Action</label>
+ 			<label for="action" style="font-size:18px;">Step 4: Enter the action: </label>
  			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" placeholder="Example: Type 'Sue' in the search bar" required>
                    <details>
             <summary style="font-size:16px;">Decide the action you hope a student would take within the current subgoal. 
@@ -65,11 +70,39 @@ of doing next.</summary>
  			 <label for="html_files" style="font-size:18px;">Step 5: Upload the HTML of the webpage the student sees <i>before</i> performing the action.</label>
  		     <input class= "button button1" type=file name=html_files required>
  		</div> 
- 		<br>
+         <details>
+          <summary style="font-size:16px;">Click on the arrow for instructions to save a webpage as HTML</summary>
+
+
+        <p style="font-size:18px;">Follow the instructions below to save a HTML file: <br> In Chrome: <br>
+        <ul>
+          <li>Navigate to the web page, right-click on the page and select Save as.</li>
+          <li>elect or create a new folder to save the file, images, and associated items from the web page.</li>
+          <li>Enter a file name and select Webpage, Complete (*.htm;*html) for the Save as type</li>
+          <li>Click the Save button.</li>
+        </ul>
+
+        In FireFox:
+        <ul>
+          <li>Navigate to the web page and select File, Save Page As... or right-click and select Save Page As...</li>
+          <li>Select or create a new folder to save the file, images, and associated items from the web page.</li>
+          <li>Enter a file name and select Web Page, complete (*.htm;*.html) for the Save as type</li>
+          <li>Click the Save button.</li>
+        </ul>
+
+        In Internet Explorer
+        <ul>
+          <li>Navigate to the web page and select File, Save Page As... or right-click and select Save Page As...</li>
+          <li>Enter a file name and select Web Page, complete (*.htm;*.html) for the Save as type</li>
+          <li>Click the Save button.</li>
+        </ul>
+        </p>
+
+        </details> <br>
  		<div>
  			 <label for="html_file" style="font-size:18px;">Step 6: Upload the HTML of the webpage the student sees <i>after</i> performing the action.</label>
  		     <input class= "button button1" type=file name=html_file required>
- 		</div> <br>
+ 		</div>
 
  		<!-- <div>
  			 <label for="xl_file">Excel file</label>
@@ -79,7 +112,6 @@ of doing next.</summary>
 
  <details>
   <summary style="font-size:16px;">Click on the arrow for instructions to save a webpage as HTML</summary>
-
 
 <p style="font-size:18px;">Follow the instructions below to save a HTML file: <br> In Chrome: <br>
 <ul>
@@ -107,11 +139,15 @@ In Internet Explorer
 
 </details> <br>
 
- 		<button class= "button button1" style="position:relative; left:33%; border-radius: 10px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" type="submit">Submit</button>
+        <a class= "button button1" style="position:relative; right:0.5%; border-radius: 10px; color: #ffffff; font-size: 16px; background: #4a96ad; padding: 5px 10px 5px 10px; text-decoration: none;" href="/uploadpage">Clear all input fields</a> <br><br><br>
 
-        <a id="startGenderMagButton" style="position:relative; right:5%; border-radius: 10px; color: #ffffff; font-size: 21px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/">Go back to Home page</a> 
+<br>
 
-        <a id="startGenderMagButton" style="position:relative; left:30%; border-radius: 10px; color: #ffffff; font-size: 21px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Clear all input fields</a> <br><br>
+ 		<button class= "button button1" style="position:relative; left:40%; border-radius: 10px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" type="submit">Submit</button>
+
+        <a id="startGenderMagButton" style="position:relative; left:10%; border-radius: 10px; color: #ffffff; font-size: 21px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/">Go back to Home page</a> 
+<!-- 
+        <a id="startGenderMagButton" style="position:relative; left:30%; border-radius: 10px; color: #ffffff; font-size: 21px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Clear all input fields</a> <br><br> -->
  
  	</form>
  	
