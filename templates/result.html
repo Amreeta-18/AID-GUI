@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/css/app-wa-b068d97a1df98ee908fe83352093edcb.css?vsn=d">
+<script src="/js/settings-5f77fd406dcb97ac12d6c5f502a6e441.js?vsn=d"></script>
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css" />
+<script src="https://site-assets.fontawesome.com/releases/v6.0.0/js/all.js" data-auto-add-css="false" data-auto-replace-svg="false"></script>
+<script src="https://use.fortawesome.com/1ce05b4b.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.css">
 <link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
 
 </head>
@@ -20,15 +26,15 @@
         <h1> Both HTML files have been checked for inclusivity bugs! </h1>
         <br>
         {% if output == 0 %}
-            <h2><i class="fa-regular fa-circle-check"></i>Before Action Page has no violations</h2>
+            <h2><i class="fa-solid fa-circle-check" style="color: green;"></i> Before Action Page has no violations</h2>
         {% elif output>0 %}
-            <h2><i class="fa-regular fa-circle-xmark"></i>Before Action Page has rule violations</h2>
+            <h2><i class="fa-solid fa-circle-xmark" style="color: red;"></i> Before Action Page has rule violations</h2>
         {% endif %}
 
         {% if output2 == 0 %}
-            <h2><i class="fa-regular fa-circle-check"></i>After Action Page has no violations</h2>
+            <h2><i class="fa-solid fa-circle-check" style="color: green;"></i> After Action Page has no violations</h2>
         {% elif output2>0 %}
-            <h2><i class="fa-regular fa-circle-xmark"></i>After Action Page has rule violations</h2>
+            <h2><i class="fa-solid fa-circle-xmark" style="color: red;"></i> After Action Page has rule violations</h2>
         {% endif %}
         <br>
 <!--         <p style ="font-size:20px"> Please click on "Results (Before Action)" to go to the evaluation of the first HTML uploaded and the "Results (After Action)" for the evaluation of the second HTML uploaded. </p> -->
@@ -61,12 +67,8 @@
         </div>
  -->
 
- <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-          feather.replace()
-        </script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
     </body>
 </html>
 
