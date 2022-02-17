@@ -8,6 +8,19 @@ from bs4 import BeautifulSoup
 
 import addBanner
 
+# Remove all tags in the region to finally get texts in the region
+def processRegion(region):
+    X = re.findall(r"\<.*?\>", region)
+    for c in X:
+        region = region.replace(c, "")
+    return region
+
+# Find the region using the text in the immediate parent
+def findRegion(link):
+    parent = link.parent
+    s = str(parent)
+    return processRegion(s)
+
 # This file runs each of the rules for each URL in the input/output file
 
 def LinkParser(file):
@@ -31,7 +44,7 @@ def LinkParser(file):
         if alias:
             alias = alias.strip()
 
-        if (alias and re.match(regex, alias)):
+        if (alias and re.match(regex, alias)) and findRegion(link)!= "":
             x = str(link)
             aug_link = x[:2] + style + x[2:]
             doc2 = doc2.replace(x, aug_link)

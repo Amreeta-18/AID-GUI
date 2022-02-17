@@ -179,8 +179,11 @@ def csvForm(url = None, file = None):
 	f.close()
 
 if __name__ == "__main__":
-	src_file = "index3.html"
+	src_file = "Upload/index3.html"
 	src_url = ""
-	txtForm(file = src_file)
-	csvForm(file = src_file)
-	print("Done")
+	# txtForm(file = src_file)
+	# csvForm(file = src_file)
+	# print("Done")
+	nodes = parseLink(file = src_file)
+	x = list(nodes.keys())
+	print(nodes[x[0]])
