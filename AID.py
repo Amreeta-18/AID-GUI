@@ -69,6 +69,7 @@ def addColor(text, color):
 def MainProcess(usecase, subgoal, action, filename, var):
     report = ""
     flag = 0
+    flags = []
 
     #Loading the English model for spaCy
     nlp = spacy.load('en_core_web_sm')
@@ -103,9 +104,11 @@ def MainProcess(usecase, subgoal, action, filename, var):
 
 
     if (result_1_S==1 and result_1_A==1) or (keywords_A == [] and keywords_S == []):
+        flags.append("Not Violated")
         report = report + addColor("\nRule 1 not violated.\n", "green")
     else:
         flag = 1
+        flags.append("Violated")
         report = report + addColor("\nRule 1 is violated: Some keywords Abi was looking for, were not found on the webpage.\n", "orange")
         report = report + f"The subgoal keywords for this instance were: {keywords_S}, and the action keywords were: {keywords_A}.\n"
 
@@ -115,10 +118,13 @@ def MainProcess(usecase, subgoal, action, filename, var):
         result_2 = C.checkRule2(filename, keywords_A)
         if result_2==1:
             flag = 1
+            flags.append("Violated")
             report = report + addColor("\n Rule 2 is violated: Keywords from the previous link-label is not present on the current page.", "orange")
         else:
+            flags.append("Not Violated")
             report = report + addColor("\n Rule 2 not violated.", "green")
     else:
+        flags.append("Not Applicable")
         report = report + addColor("\n Rule 2 not applicable since it is a before-action webpage.", "green")
 
     # #Rule 3 starts here - Link label exists or not
@@ -128,11 +134,14 @@ def MainProcess(usecase, subgoal, action, filename, var):
     print(filename)
     
     if result_3 == -1:
+        flags.append("No Links on page")
         report = report + "\nNo Links Found on the webpage.\n"
     elif len(result_3) > 0:
         flag = 1
+        flags.append("Violated")
         report = report + addColor("\nRule 3 violated: Links are not labelled. Please refer to the right side to see the highlighted links (in yellow).\n", "orange")
     else:
+        flags.append("Not Violated")
         report= report + addColor("\nRule 3 not violated. Results show the input html in this case.\n", "green")
     print("Rule 3")
     
@@ -147,7 +156,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     f.write(document)
     f.close()
 
-    return report, flag
+    return report, flag, flags
 
 # MainProcess("usecase", "subgoal", "action", "a.html")
 

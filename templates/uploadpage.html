@@ -4,8 +4,6 @@
 <meta charset="utf-8"> 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 <link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-Source:getbootstrap.com
 
 </head>
 
@@ -15,7 +13,9 @@ Source:getbootstrap.com
   <a class="active" href = "/">GenderMag Automated Inclusivity Detector</a>
 </div> 
 
-	<h1>Please enter some information for the evaluation:</h1>
+	<h1>
+
+  Please enter some information for the evaluation:</h1>
 
 		</div>
 		<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
@@ -44,15 +44,17 @@ Source:getbootstrap.com
  	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
  		<div> <br>
 <!--  			<p style="font-size:18px;"> <b>Please enter the Use Case, Subgoal and Actions to be evaluated, in the text boxes below:</b></p> -->
- 			<label for="usecase" style="font-size:18px;">Step 2: Enter the use-case to be evaluated: </label>
+ 			<label for="usecase" style="font-size:18px;">Step 2: Enter the 
+      <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A use case is a written description of how users will perform tasks on your website. It outlines, from a user's point of view, a system's behavior as it responds to a request. Each use case is represented as a sequence of simple steps, beginning with a user's goal and ending when that goal is fulfilled.">use-case</a>
+    to be evaluated: </label>
  			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" placeholder="Example: Edit Sue's contact information"><br>
 
-        Consider choosing a <a data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-  Use case is a use case</a> focusing on especially problematic or critical parts of the course.
+        Consider choosing a use case focusing on especially problematic or critical parts of the course.
  		</div> <br>
 
  		 <div>
- 			<label for="subgoal" style="font-size:18px;">Step 3: Enter the subgoal: </label>
+ 			<label for="subgoal" style="font-size:18px;">Step 3: Enter the 
+      <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A goal that is involved in or secondary to achieving a larger goal">subgoal</a>: </label>
  			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" placeholder="Example: Search for Sue in the contact list" required>
              <details>
             <summary style="font-size:16px;">A subgoal is what you as the instructor hope the student is <i>thinking</i>
@@ -62,7 +64,9 @@ of doing next.</summary>
  		</div> <br>
 
  		 <div>
- 			<label for="action" style="font-size:18px;">Step 4: Enter the action: </label>
+ 			<label for="action" style="font-size:18px;">Step 4: Enter the 
+      <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="Actions usually involve clicking or tapping something on the webpage.">action</a>: </label>
+    : </label>
  			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" placeholder="Example: Type 'Sue' in the search bar" required>
                    <details>
             <summary style="font-size:16px;">Decide the action you hope a student would take within the current subgoal. 

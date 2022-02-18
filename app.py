@@ -1,6 +1,6 @@
 # Libraries
 import os
-from flask import Flask, flash, request, redirect, url_for, render_template, make_response
+from flask import Flask, flash, request, redirect, url_for, render_template, make_response, send_file
 from werkzeug.utils import secure_filename
 import requests
 
@@ -43,12 +43,17 @@ def result():
         if file.filename == '':
             flash('No selected file')
             return redirect(request.url)
+
+        rep = open("Upload/report.csv", "w")
+        rep.write("Filename, Use case, Subgoal, Action, Rule 1, Rule 2, Rule 3\n")
         if file and allowed_file(file.filename):
             # Get filename and pass to backend
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            output, flag1 = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 1)
-
+            output, flag1, flags1 = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 1)
+            flags = ",".join(flags1)
+            row = f"{usecase}, {subgoal}, {action}, {filename}, {flags}\n"
+            rep.write(row)
         # get file2
         file = request.files['html_file']
         if file.filename == '':
@@ -58,8 +63,10 @@ def result():
             # Get filename and pass to backend
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            output2, flag2 = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 2)
-
+            output2, flag2, flags2 = AID.MainProcess(usecase, subgoal, action, f"Upload/{filename}", 2)
+            flags = ",".join(flags2)
+            row = f"{usecase}, {subgoal}, {action}, {filename}, {flags}\n"
+            rep.write(row)
             # Backend output
             # output = str(MainTool.MainProcess(f"Upload/{filename}"))
             # output = str(linkParser.txtForm(file = f"Upload/{filename}"))
@@ -71,6 +78,8 @@ def result():
             # output = f"{output}\nSubgoal: {subgoal} \nAction: {action}"
             # Rerender on html
             # output = output.replace("\n", "<br")
+            
+        rep.close()
         return render_template('result.html', output = flag1, output2 = flag2)
 
 # Home Page
@@ -94,6 +103,12 @@ def highlightpage1():
 @app.route('/highlight2')
 def highlightpage2():
     return render_template('highlight2.html')
+
+@app.route('/download')
+def downloadFile ():
+    #For windows you need to use drive name [ex: F:/Example.pdf]
+    path = "Upload/report.csv"
+    return send_file(path, as_attachment=True)
 
 if __name__=="__main__":
     app.run(debug=True)
