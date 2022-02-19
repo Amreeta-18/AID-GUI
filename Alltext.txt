@@ -1,23 +1,35 @@
-to access this site,you must enable javascript.
+you need to have javascript enabled in order to access this site.
 dashboard
-office of international services (ois) (org_1201)
+intro to computer science ii (cs_162_400_f2021)
+assignment 7
 skip to content
 dashboard
 dashboard
 
 close
 my dashboard
-office of international services (ois) (org_1201)
+intro to computer science ii (cs_162_400_f2021)
+assignments
+assignment 7
+fall 2021
 home
+announcements
+syllabus
 modules
-namecoach
+ed discussion
+gradescope
+assignments
 zoom
 my media
 media gallery
-office of international services (ois) (org_1201)
-recent feedback
-02793968-aa34-4178-b3d3-bb39350312c5,dashboard
+project 7 (100 points)
+https://classroom.github.com/a/36wcuvot
+
+7db2e1fe-21d2-4a6e-84bc-90c5223ecff7,dashboard
 
 account
 courses
-history,
+history
+
+
+load assignment 7 in a new window,

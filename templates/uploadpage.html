@@ -41,8 +41,8 @@
  	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
 <!-- USE CASE -->
  		<div> <br>
- 			<label for="usecase" style="font-size:18px;">Step 2: Enter the 
-      <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A use case is a written description of how users will perform tasks on your website. It outlines, from a user's point of view, a system's behavior as it responds to a request. Each use case is represented as a sequence of simple steps, beginning with a user's goal and ending when that goal is fulfilled.">use-case</a>
+ 			<label for="usecase" style="font-size:18px;">Step 2: Enter the use-case
+      <!-- <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A use case is a written description of how users will perform tasks on your website. It outlines, from a user's point of view, a system's behavior as it responds to a request. Each use case is represented as a sequence of simple steps, beginning with a user's goal and ending when that goal is fulfilled.">use-case</a> -->
     to be evaluated: </label>
  			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" placeholder="Example: Edit Sue's contact information" required><br>
       <details>
@@ -52,8 +52,9 @@
  		</div> <br>
 <!-- SUBGOAL -->
  		 <div>
- 			<label for="subgoal" style="font-size:18px;">Step 3: Enter the 
-      <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A goal that is involved in or secondary to achieving a larger goal">subgoal</a>: </label>
+ 			<label for="subgoal" style="font-size:18px;">Step 3: Enter the subgoal:
+      <!-- <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A goal that is involved in or secondary to achieving a larger goal">subgoal</a>: --> 
+  </label>
  			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" placeholder="Example: Search for Sue in the contact list" required>
       <details>
         <summary style="font-size:16px;">(What is a subgoal?)</summary>
@@ -63,9 +64,10 @@
  		</div> <br>
 <!-- ACTION -->
  		 <div>
- 			<label for="action" style="font-size:18px;">Step 4: Enter the 
-      <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="Actions usually involve clicking or tapping something on the webpage.">action</a>: </label>
-    : </label>
+ 			<label for="action" style="font-size:18px;">Step 4: Enter the action:
+      <!-- <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="Actions usually involve clicking or tapping something on the webpage.">action</a>: --> 
+        </label>
+     </label>
  			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" placeholder="Example: Type 'Sue' in the search bar" required>
           <details>
             <summary style="font-size:16px;">(What is an action?)

@@ -54,6 +54,8 @@ def result():
             flags = ",".join(flags1)
             row = f"{usecase}, {subgoal}, {action}, {filename}, {flags}\n"
             rep.write(row)
+        else:
+            return render_template('error.html')
         # get file2
         file = request.files['html_file']
         if file.filename == '':
@@ -78,6 +80,8 @@ def result():
             # output = f"{output}\nSubgoal: {subgoal} \nAction: {action}"
             # Rerender on html
             # output = output.replace("\n", "<br")
+        else:
+            return render_template('error.html')
             
         rep.close()
         return render_template('result.html', output = flag1, output2 = flag2)
