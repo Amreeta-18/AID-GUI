@@ -1,9 +1,0 @@
-link name
-this is a header
-this is a medium header
-.
-this is a new paragraph!
-
-this is a new paragraph!
-
-this is a new sentence without a paragraph break,in bold italics.,
