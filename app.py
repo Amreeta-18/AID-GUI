@@ -111,7 +111,7 @@ def highlightpage2():
 @app.route('/download')
 def downloadFile ():
     path = "Upload/report.csv"
-    return send_file(path, as_attachment=True, download_name="report.csv")
+    return send_file(path, as_attachment=True)#, download_name="report.csv")
 
 if __name__=="__main__":
     app.run(debug=True)
