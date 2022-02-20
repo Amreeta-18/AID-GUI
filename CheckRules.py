@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 #pip install 'gitpython'
 #pip install 'pandas'
 #useful imports (from when restarting)
-from minerutils import GitHub
+# from minerutils import GitHub
 # from minerutils import Travis
 import pandas as pd
 # from git import Repo
