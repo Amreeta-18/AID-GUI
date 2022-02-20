@@ -45,7 +45,7 @@ def result():
             return redirect(request.url)
 
         rep = open("Upload/report.csv", "w")
-        rep.write("Filename, Use case, Subgoal, Action, Rule 1, Rule 2, Rule 3\n")
+        rep.write("Use case, Subgoal, Action, Filename, Rule 1, Rule 2, Rule 3\n")
         if file and allowed_file(file.filename):
             # Get filename and pass to backend
             filename = secure_filename(file.filename)
