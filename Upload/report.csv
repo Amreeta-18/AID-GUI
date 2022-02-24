@@ -1,3 +1,3 @@
-Filename, Use case, Subgoal, Action, Rule 1, Rule 2, Rule 3
-USE, SUB, AC, index.html, Violated,Not Applicable,Not Violated
-USE, SUB, AC, assign7.html, Violated,Violated,Violated
+Use case, Subgoal, Action, Filename, Rule 1, Rule 2, Rule 3
+USE, Zoom, gradescope, cs162.html, Not Violated,Not Applicable,Not Violated
+USE, Zoom, gradescope, land.html, Violated,Violated,Not Violated

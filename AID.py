@@ -14,7 +14,7 @@ def processRegion(region):
     for c in X:
         region = region.replace(c, "")
     region = region.strip()
-    print(f"This is the region: {region}, {len(region)}")
+    # print(f"This is the region: {region}, {len(region)}")
     return region
 
 # Find the region using the text in the immediate parent
@@ -25,30 +25,33 @@ def findRegion(link):
 
 # This file runs each of the rules for each URL in the input/output file
 
-def LinkParser(file):
+def LinkParser(file, emlinks):
     if file:
         try:
             with open(file, "r") as f:
                 doc = BeautifulSoup(f, "html.parser")
         except:
-            return -1
+            return ["", -1, ""]
     # Extract all links from page
     links = doc.find_all("a")
     # print(doc)
     doc2 = str(doc)
     style = ' STYLE="background-color: rgb(255,255,0)" '
     res = []
+    res2 = []
+    emres = ""
     # Parse Extracted Links
     regex = r"(?i)\b((?:http[s]?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
     for l in range(len(links)):
         link = links[l]
         alias = link.string
+        title = link.get("title")
         if alias:
             alias = alias.strip()
-
-
-        if (alias and re.match(regex, alias)): 
-            print(f"This is alias: {alias}, {len(alias)}")
+        if title:
+            title = title.strip()
+        if (alias and re.match(regex, alias)) or (title and re.match(regex, title)): 
+            # print(f"This is alias: {alias}, {len(alias)}")
             # Rule 3 a: Link has no label and no region text
             # if len(findRegion(link)) <= len(alias):
             #     style = ' STYLE="background-color: rgb(255,0,0)" '
@@ -57,10 +60,36 @@ def LinkParser(file):
             x = str(link)
             aug_link = x[:2] + style + x[2:]
             doc2 = doc2.replace(x, aug_link)
-            print(alias)
+            # print(alias)
             res.append(link)
     # print(doc2)
-    return [doc2, res]
+
+    if emlinks:
+        # print("# Embedded Links ->", len(emlinks))
+        # Embedded Links
+        for l in range(len(emlinks)):
+            link = emlinks[l]
+            alias = link.string
+            title = link.get("title")
+            # print(title)
+            if alias:
+                alias = alias.strip()
+            if title:
+                title = title.strip()
+                # print(title)
+            if (alias and re.match(regex, alias)) or (title and re.match(regex, title)):
+                res2.append(link.get("href"))
+            if alias == "None" and title == "None":
+                res2.append(link.get("href"))
+
+        if res2:
+            emres = "The following embedded links also violate Rule 3\n"
+            for i in range(len(res2)):
+                t = f"{i+1}. {res2[i]}\n"
+                emres += t
+
+    # res = res.extend(res2)
+    return [doc2, res, emres]
 
 def addColor(text, color):
     txt = f'<p style="color: {color}">{text}</p>'
@@ -85,7 +114,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     actions = nlp(action)
     keywords_S = []
     keywords_A = []
-    txt = textParser.textParse(filename)
+    txt, emlinks = textParser.textParse(filename)
 
     for token in subgoals:
         if (token.pos_ == 'PROPN' or token.pos_=='NOUN' or token.pos_ == 'ADJ') and (str(token) not in DOM_words): #or (token.pos_ == 'NOUN'):
@@ -130,8 +159,9 @@ def MainProcess(usecase, subgoal, action, filename, var):
     # #Rule 3 starts here - Link label exists or not
     # Highlight links which donot have label
     # Link labels will be checked
-    document, result_3 = LinkParser(filename)
-    print(filename)
+    document, result_3, emres = LinkParser(filename, emlinks)
+    # print(filename)
+    print("Rule 2")
     
     if result_3 == -1:
         flags.append("No Links on page")
@@ -140,6 +170,8 @@ def MainProcess(usecase, subgoal, action, filename, var):
         flag = 1
         flags.append("Violated")
         report = report + addColor("\nRule 3 violated: Links are not labelled. Please refer to the right side to see the highlighted links (in yellow).\n", "orange")
+        if emres:
+            report = report + addColor(emres, "orange")
     else:
         flags.append("Not Violated")
         report= report + addColor("\nRule 3 not violated. Results show the input html in this case.\n", "green")
