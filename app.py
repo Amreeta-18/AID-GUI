@@ -28,8 +28,8 @@ def allowed_file(filename):
 def result():
     if request.method == 'POST':
         usecase = request.form['usecase']
-        subgoal = request.form['subgoal']
-        action = request.form['action']
+        subgoal = request.form['subgoal'].lower()
+        action = request.form['action'].lower()
         flag1, flag2 = 0, 0
         # check if the post request has the file part
         if 'html_file' not in request.files:
