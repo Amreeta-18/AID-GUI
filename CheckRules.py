@@ -3,7 +3,8 @@ import spacy
 import re
 import nltk
 from GMFormInput import GMFormInput
-from bs4 import BeautifulSoup 
+from bs4 import BeautifulSoup
+from spacy.language import Language 
 
 # required for github API usage (install using terminal)
 #pip install 'git+https://github.com/caiusb/miner-utils'
@@ -27,6 +28,18 @@ nlp = spacy.load('en_core_web_sm')
 
 P = parseDOM()
 G = GMFormInput()
+
+@Language.component("component")
+def set_custom_boundaries(doc):
+# Adds support to use `...` as the delimiter for sentence detection
+    for token in doc[:-1]:
+        if token.text == '\n':
+            doc[token.i+1].is_sent_start = True
+    return doc
+
+def intersection(lst1, lst2): 
+        lst3 = [value for value in lst1 if value in lst2] 
+        return lst3
 
 class CheckRules():
 
@@ -67,7 +80,7 @@ class CheckRules():
                     return found
 
                 custom_nlp = spacy.load('en_core_web_sm')
-                custom_nlp.add_pipe(set_custom_boundaries, before='parser')
+                custom_nlp.add_pipe("component", before='parser')
                 about_doc = custom_nlp(text)
                 sents = list(about_doc.sents)
 
@@ -100,37 +113,20 @@ class CheckRules():
         return found
 
     # Check Rule 2
-    def checkRule2(self, filename, action_words):
+    def checkRule2(self, text, action_words):
         found = 0
-        # print(action_words, len(action_words))
-        #If word is issue, it only checks for issue lists ****REMOVING SINCE IT IS ONLY APPLICABLE FOR OSS
-        # term1 = 'issue'
-        # term2 = 'issues'
-        # # print(action_words)
-        # if (term1 in action_words) or (term2 in action_words):
-        #     is_issue_list = self.is_issue_page(pathname)
-        #     if is_issue_list==1:
-        #         # print("returning 0")
-        #         return 0
 
-        #checking if keyword is a link LABEL
         a = str(action_words)
-        # links = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', a)
-        # if (len(links)>0):
-        #     return 1
 
         #if all the key words clicked are found on the next webpage, then good
 
-        P.get_text_local(filename)
-        with open('Alltext.txt') as f:
-            text = f.read()
-            about_doc = nlp(text)
+        about_doc = nlp(text)
 
-            for keyword in action_words:
-                # if self.word_in_linklabel(pathname_1, keyword)==1:
-                    # link_label_words+= 1
-                if(any(keyword in line for line in text.splitlines()))==True:
-                    found+= 1
+        for keyword in action_words:
+            # if self.word_in_linklabel(pathname_1, keyword)==1:
+                # link_label_words+= 1
+            if(any(keyword in line for line in text.splitlines()))==True:
+                found+= 1
 
         #print(action_words)
         if found==len(action_words):
@@ -387,14 +383,6 @@ class CheckRules():
     #         workbook.save('ID_Input.xlsx')
     #         continue
 
-def set_custom_boundaries(doc):
-# Adds support to use `...` as the delimiter for sentence detection
-    for token in doc[:-1]:
-        if token.text == '\n':
-            doc[token.i+1].is_sent_start = True
-    return doc
 
-def intersection(lst1, lst2): 
-        lst3 = [value for value in lst1 if value in lst2] 
-        return lst3
+
 

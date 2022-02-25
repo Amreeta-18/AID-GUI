@@ -107,7 +107,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     C = CheckRules()
 
     # List of DOM words to exclude from keywords
-    DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'icon', 'data', 'information', 'webpage', 'page', 'website']
+    DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'icon', 'data', 'information', 'webpage', 'page', 'website', 'abi', 'clicks', 'finds', 'click', 'find', 'visits', "goto"]
 
     # Getting Keywords from subgoal and action by extracting nouns
     subgoals = nlp(subgoal)
@@ -144,7 +144,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     print("Rule 1")
 
     if (var==2):
-        result_2 = C.checkRule2(filename, keywords_A)
+        result_2 = C.checkRule2(txt, keywords_A)
         if result_2==1:
             flag = 1
             flags.append("Violated")
