@@ -21,23 +21,27 @@ def getJS(soup):
 	script = soup.find_all('script')
 	if script:
 		if len(script) > 2:
-			script = str(script[2])
 
-			if script.find("ENV"):
-				script = script[script.find("ENV"):script.find("</")]
-				script = script[script.find("{"):script.find("};")+1]
-				js = json.loads(script)
-				try:
+			for sc in script:
+				scr = str(sc)
+				# print(script)
+				if scr.find("ENV") != -1:
+					scr = scr[scr.find("ENV"):scr.find("</")]
+					scr = scr[scr.find("{"):scr.find("};")+1]
+					# print(scr)
 					
-					data = js["WIKI_PAGE"]["body"]
+					try:
+						js = json.loads(scr)
+						data = js["WIKI_PAGE"]["body"]
 
-					sp = BeautifulSoup(data, "html.parser")
+						sp = BeautifulSoup(data, "html.parser")
 
-					# print(sp.prettify())
-					txt = sp.get_text()
-					links = sp.find_all("a")
-				except:
-					pass
+						# print(sp.prettify())
+						txt = sp.get_text()
+						links = sp.find_all("a")
+						return [txt, links]
+					except:
+						pass
 	# print(links)
 	return [txt, links]
 
