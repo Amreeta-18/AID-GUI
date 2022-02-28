@@ -107,7 +107,7 @@ def MainProcess(usecase, subgoal, action, filename, var):
     C = CheckRules()
 
     # List of DOM words to exclude from keywords
-    DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'icon', 'data', 'information', 'webpage', 'page', 'website', 'abi', 'clicks', 'finds', 'click', 'find', 'visits', "goto"]
+    DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'icon', 'data', 'information', 'webpage', 'page', 'website', 'abi', 'clicks', 'finds', 'click', 'find', 'visits', "goto", "links"]
 
     # Getting Keywords from subgoal and action by extracting nouns
     subgoals = nlp(subgoal)
@@ -134,11 +134,11 @@ def MainProcess(usecase, subgoal, action, filename, var):
 
     if (result_1_S==1 and result_1_A==1) or (keywords_A == [] and keywords_S == []):
         flags.append("Not Violated")
-        report = report + addColor("\nRule 1 not violated.\n", "green")
+        report = report + addColor("\nRule 1 (described below) not violated. The tool found all the keywords Abi was looking for.\n", "green")
     else:
         flag = 1
         flags.append("Violated")
-        report = report + addColor("\nRule 1 is violated: Some keywords Abi was looking for, were not found on the webpage.\n", "orange")
+        report = report + addColor("\nRule 1 (described below) is violated: The tool did not find all the keywords Abi was looking for, on the webpage.\n", "orange")
         report = report + f"The subgoal keywords for this instance were: {keywords_S}, and the action keywords were: {keywords_A}.\n"
 
     print("Rule 1")
@@ -148,13 +148,13 @@ def MainProcess(usecase, subgoal, action, filename, var):
         if result_2==1:
             flag = 1
             flags.append("Violated")
-            report = report + addColor("\n Rule 2 is violated: Keywords from the previous link-label is not present on the current page.", "orange")
+            report = report + addColor("\n Rule 2 (described below) is violated: The tool did not find the keywords from the previous link-label on the current page.", "orange")
         else:
             flags.append("Not Violated")
-            report = report + addColor("\n Rule 2 not violated.", "green")
+            report = report + addColor("\n Rule 2 (described below) not violated. Abi knows she is on the right webpage.", "green")
     else:
         flags.append("Not Applicable")
-        report = report + addColor("\n Rule 2 not applicable since it is a before-action webpage.", "green")
+        report = report + addColor("\n Rule 2 (described below) not applicable since Abi did not take any action yet.", "green")
 
     # #Rule 3 starts here - Link label exists or not
     # Highlight links which donot have label
@@ -165,16 +165,16 @@ def MainProcess(usecase, subgoal, action, filename, var):
     
     if result_3 == -1:
         flags.append("No Links on page")
-        report = report + "\nNo Links Found on the webpage.\n"
+        report = report + "\nRule 3 (described below) not violated. The tool did not detect any links on the webpage.\n"
     elif len(result_3) > 0:
         flag = 1
         flags.append("Violated")
-        report = report + addColor("\nRule 3 violated: Links are not labelled. Please refer to the right side to see the highlighted links (in yellow).\n", "orange")
+        report = report + addColor("\nRule 3 (described below) violated: Some links are not labelled. Please refer to the right side to see the highlighted links (in yellow).\n", "orange")
         if emres:
             report = report + addColor(emres, "orange")
     else:
         flags.append("Not Violated")
-        report= report + addColor("\nRule 3 not violated. Results show the input html in this case.\n", "green")
+        report= report + addColor("\nRule 3 (described below) is not violated. All links are labelled.\n", "green")
     print("Rule 3")
     
     report = report + "\n\nRead below for descriptions of each rule: \n\nRule 1: Keywords from subgoals and associated actions should be present on the webpage. \nThe wording of the subgoal serves as the information that Abi seeks, and the words from actions serve as cues to direct Abi to a UI action. Without such cues, Abi would face difficulty finding all the information they need. \n"
