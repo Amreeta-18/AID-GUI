@@ -92,8 +92,19 @@ def home():
     return render_template('index.html')
 
 # Functionality pages
-@app.route('/uploadpage')
+@app.route('/demopage')
+def demopage():
+    return render_template('demopage.html')
+
+@app.route('/uploadpage', methods=['POST'])
 def uploadpage():
+    if request.method == 'POST':
+        Identity = request.form['Identity']
+        Affiliation = request.form['Affiliation'].lower()
+        comment = request.form['comment'].lower()
+        f = open("User_data/data.txt", "a")
+        f.write(f"Identity = {Identity}, Affiliation = {Affiliation}, comment = {comment}\n")
+        # print(Identity, Affiliation, comment)
     return render_template('uploadpage.html')
 
 @app.route('/highlight1')
