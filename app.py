@@ -3,6 +3,7 @@ import os
 from flask import Flask, flash, request, redirect, url_for, render_template, make_response, send_file
 from werkzeug.utils import secure_filename
 import requests
+from datetime import datetime
 
 # Backend Integration
 import AID
@@ -96,14 +97,31 @@ def home():
 def demopage():
     return render_template('demopage.html')
 
+
+# Datetime function
+def getDateTime():
+    date, time = str(datetime.now().date()), str(datetime.now().time())
+    time = time[:time.index(".")]
+    time = time.replace(":", ".")
+    dt = str(datetime.now())
+    return dt, date, time
+
 @app.route('/uploadpage', methods=['POST'])
 def uploadpage():
     if request.method == 'POST':
         Identity = request.form['Identity']
-        Affiliation = request.form['Affiliation'].lower()
+        Affiliation = request.form['Affiliation']
         comment = request.form['comment'].lower()
-        f = open("User_data/data.txt", "a")
-        f.write(f"Identity = {Identity}, Affiliation = {Affiliation}, comment = {comment}\n")
+
+        if Identity == "":
+            Identity = "NA"
+        if comment == "":
+            comment = "NA"
+
+        dt, date, time = getDateTime()
+        filename = f"{date}_{time}_{Affiliation}.txt"
+        f = open(f"User_data/{filename}", "a")
+        f.write(f"Timestamp = {dt}, Identity = {Identity}, Affiliation = {Affiliation}, comment = {comment}\n")
         # print(Identity, Affiliation, comment)
     return render_template('uploadpage.html')
 

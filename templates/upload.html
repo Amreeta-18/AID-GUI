@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>The GenderMag Project | Automated Inclusivity Detector</title>
+<meta charset="utf-8"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+<link href="{{ url_for('static', filename='styles.css') }}" media="all" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="topnav">
+  <a class="active" href = "/">GenderMag Automated Inclusivity Detector</a>
+</div> 
+
+	<h1>
+
+  Please enter some information for the evaluation:</h1>
+<!-- PERSONA -->
+		</div>
+		<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
+ 
+		<div id="getPersona">
+			<label id="personaPrompt" style="font-size:18px;">Step 1: Select a Persona:</label>
+
+			<select id="personaSelection" name="persona">
+				<option value="Abi">Abi</option>
+				<option value="Tim" disabled>Tim</option>
+				<option value="Pat" disabled>Pat</option>
+				<option value="Custom" disabled>Custom</option>
+			</select>
+      <details>
+        <summary style="font-size:16px;">(What is a persona?)</summary>
+        Personas represent your users. The <a href = "http://gendermag.org/Foundations.html" target = "_blank">GenderMag personas</a> are Abi, Pat, and Tim. Abi's cognitive style consists of a set of facet values at one end of the cognitive style spectrum. Tim is at the other end. Pat is somewhere in between. Most people are a mixture of Abi and Tim---a mixture of facet values. In addition, an individual's facet values can change with time and circumstances.
+
+        Abi provides the strongest inclusion focus and is the only persona currently being used for this automated evaluation. <br>
+        <img style="width:80%;height:80%;position: relative; left:10%" src="static/persona.png">
+      </details>
+		</div>
+
+ 	<form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
+<!-- USE CASE -->
+ 		<div> <br>
+ 			<label for="usecase" style="font-size:18px;">Step 2: Enter the use-case
+      <!-- <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A use case is a written description of how users will perform tasks on your website. It outlines, from a user's point of view, a system's behavior as it responds to a request. Each use case is represented as a sequence of simple steps, beginning with a user's goal and ending when that goal is fulfilled.">use-case</a> -->
+    to be evaluated: </label>
+ 			<input style="width: 300px;" type="text" usecase="usecase" name = "usecase" id="usecase" placeholder="Example: Edit Sue's contact information" required><br>
+      <details>
+        <summary style="font-size:16px;">(What is a use-case?)</summary>
+             A use-case is a concise description of a user using a product to achieve specific goals. Consider choosing a use-case focusing on especially problematic or critical parts of the course.<br>
+      </details>
+ 		</div> <br>
+<!-- SUBGOAL -->
+ 		 <div>
+ 			<label for="subgoal" style="font-size:18px;">Step 3: Enter the subgoal:
+      <!-- <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="A goal that is involved in or secondary to achieving a larger goal">subgoal</a>: --> 
+  </label>
+ 			<input style="width: 300px;" type="text" subgoal="subgoal" name = "subgoal" id="subgoal" placeholder="Example: Search for Sue in the contact list" required>
+      <details>
+        <summary style="font-size:16px;">(What is a subgoal?)</summary>
+               A subgoal is what you as the instructor hope the student is <i>thinking</i>
+              of doing next. Subgoals usually start with a verb, like “Find” something, “Create” something or “Add” something. <br> They’re different from Actions; these involve clicking on or tapping something. It’s important to make that distinction.
+      </details>
+ 		</div> <br>
+<!-- ACTION -->
+ 		 <div>
+ 			<label for="action" style="font-size:18px;">Step 4: Enter the action:
+      <!-- <a href="#" style = "text-decoration: none;" data-toggle="tooltip" title="Actions usually involve clicking or tapping something on the webpage.">action</a>: --> 
+        </label>
+     </label>
+ 			<input style="width: 300px;" type="text" subgoal="action" name = "action" id="action" placeholder="Example: Type 'Sue' in the search bar" required>
+
+          <details>
+            <summary style="font-size:16px;">(What is an action?)
+            </summary>
+              Actions usually involve clicking on or tapping something on the webpage. Decide the action you hope a student would take within the current subgoal.
+          </details>
+ 		</div> <br>
+
+ 		<div>
+ 			 <label for="html_files" style="font-size:18px;">Step 5: Upload the HTML of the webpage the student sees <i>before</i> performing the action.</label><br>
+ 		     <input class= "button button1" type=file name=html_files required>
+ 		</div> 
+
+       <details>
+          <summary style="font-size:16px;">(How do I save a webpage as HTML?)</summary> 
+
+
+        <p style="font-size:18px;">Follow the instructions below to save a HTML file: <br> In Chrome: <br>
+        <ul>
+          <li>Navigate to the webpage, right-click on the page and select Save as.</li>
+          <li>Select or create a new folder to save the file, images, and associated items from the web page.</li>
+          <li>Enter a file name and select Webpage, Complete (*.htm;*html) for the Save as type</li>
+          <li>Click the Save button.</li>
+        </ul>
+
+        In FireFox:
+        <ul>
+          <li>Navigate to the webpage and select File, Save Page As... or right-click and select Save Page As...</li>
+          <li>Select or create a new folder to save the file, images, and associated items from the web page.</li>
+          <li>Enter a file name and select Web Page, complete (*.htm;*.html) for the Save as type</li>
+          <li>Click the Save button.</li>
+        </ul>
+
+        In Internet Explorer
+        <ul>
+          <li>Navigate to the webpage and select File, Save Page As... or right-click and select Save Page As...</li>
+          <li>Enter a file name and select Web Page, complete (*.htm;*.html) for the Save as type</li>
+          <li>Click the Save button.</li>
+        </ul>
+        </p>
+
+        </details> <br>
+        
+    <details>
+        <summary style="font-size:16px;">(What is the <i>before</i> and <i>after</i> action webpage?)
+        </summary> <br>
+        The picture below, on the left, shows the before action page for the Action "Click on the Syllabus". Once a student clicks on the "Syllabus" link they are directed to the webpage on the right, that is, the after action page. <br>
+        <img style="position: relative; left:10%" src="static/BeforeAfterAction.png"> <br>
+    </details> <br>
+  
+ 		<div>
+ 			 <label for="html_file" style="font-size:18px;">Step 6: Upload the HTML of the webpage the student sees <i>after</i> performing the action.</label><br>
+ 		     <input class= "button button1" type=file name=html_file required>
+ 		</div>
+ <br>
+
+        <a class= "button button1" style="position:relative; right: 0.2%; border-radius: 10px; color: #ffffff; font-size: 16px; background: #4a96ad; padding: 5px 10px 5px 10px; text-decoration: none;" href="/uploadpage">Clear all input fields</a><br>
+        <a id="startGenderMagButton" style="position:relative; left:15%; border-radius: 10px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/">Go back to Home page</a> 
+
+        <button class= "button button1" style="position:relative; left:20%; border-radius: 10px; color: #ffffff; font-size: 20px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" type="submit">Submit</button>
+
+        
+<!-- 
+        <a id="startGenderMagButton" style="position:relative; left:30%; border-radius: 10px; color: #ffffff; font-size: 21px; background: #4a96ad; padding: 10px 20px 10px 20px; text-decoration: none;" href="/uploadpage">Clear all input fields</a> <br><br> -->
+ 
+ 	</form>
+ 	
+		<!-- Here is an example file: <a href="/Example_Input.xlsx" download>Download Example_Input.xlsx</a>.</p><br> -->
+
+<!--     <form action="{{ url_for('result') }}" method=post enctype=multipart/form-data>
+=======
+    
+>>>>>>> 5be5520abfd5f4fc2235c3a6e5ab26a9ea589c8e
+      <p><input type=file name=file>
+         <input type=submit value=Upload>
+    </form> -->
+
+ <br style="clear:left;" />
+</div>
+	</body>
+</html>
