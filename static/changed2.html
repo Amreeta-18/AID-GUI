@@ -1,489 +1,404 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html class="scripts-not-loaded" dir="ltr" lang="en">
 <head>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3011199-3"></script>
+<meta charset="utf-8"/>
+<meta content="884218b1f2764a1ab812724671bfbe5e-960e46799fcfe3cd-0" name="sentry-trace">
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="font" crossorigin="anonmyous" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Regular-bd03a2cc27.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonmyous" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Bold-cccb897485.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonmyous" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Italic-4eb103b4d1.woff2" rel="preload" type="font/woff2"/>
+<link href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/lato_extended-f5a83bde37.css" media="screen" rel="stylesheet">
+<script>if (navigator.userAgent.match(/(MSIE|Trident\/)/)) location.replace('/ie-is-not-supported.html')</script>
+<link href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico" rel="shortcut icon" type="image/x-icon">
+<link href="https://du11hjcvx0uqb.cloudfront.net/dist/images/apple-touch-icon-585e5d997d.png" rel="apple-touch-icon">
+<link href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2d3e38c11c566559bb4157a971f5cf43/variables-7dd4b80918af0e0218ec0229e4bd5873.css" media="all" rel="stylesheet">
+<link href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-d1d0d1ed66.css" media="all" rel="stylesheet"/>
+<meta content="app-id=480883488" name="apple-itunes-app"/>
+<link href="/web-app-manifest/manifest.json" rel="manifest"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#252525" name="theme-color"/>
+<link href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_normal_contrast/bundles/assignments-f9562f4855.css" media="all" rel="stylesheet">
+<link href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_normal_contrast/bundles/new_user_tutorials-2950c871dd.css" media="all" rel="stylesheet"/>
+<link href="https://instructure-uploads.s3.amazonaws.com/account_10020000000097009/attachments/69284433/hide_addeditmedia_btn.css" media="all" rel="stylesheet"/>
 <script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-3011199-3');
-	</script>
-<title>CS 565: Human-Computer Interaction, Spring 2020</title>
-<meta content="HCI,CS565,Oregon State,Human-Computer Interaction,Minsuk Kahng" name="description"/>
-<meta content="Minsuk Kahng" name="author"/>
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no&gt;
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          if (!e.defaultPrevented) {
+            e.preventDefault()
+          }
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+<script>
+    INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"iad.rtmp.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":true,"js_uploader":true},"logPageViews":true,"editorButtons":[{"name":"Commons Favorites","id":110946,"favorite":false,"url":"https://lor.instructure.com/api/lti/favorite-resources","icon_url":"https://lor.instructure.com/img/icon_commons.png","canvas_icon_class":null,"width":800,"height":400,"use_tray":true,"description":"\u003cp\u003eFind and share course content\u003c/p\u003e\n"},{"name":"LibApps Library Content","id":115898,"favorite":false,"url":"https://osulibrary.libapps.com/libapps/lti_launch_manual.php","icon_url":"https://libapps.s3.amazonaws.com/apps/libapps/images/favicon_lib.png","canvas_icon_class":null,"width":800,"height":600,"use_tray":false,"description":"\u003cp\u003eAdd content from LibGuides, E-Reserves, LibCal, and LibAnswers directly into your LMS course pages.\u003c/p\u003e\n"},{"name":"Alexander Street Video","id":197502,"favorite":false,"url":"https://video.alexanderstreet.com/lti/search-widget","icon_url":"https://video.alexanderstreet.com/assets/lti/favicon-16x16.png","canvas_icon_class":null,"width":800,"height":600,"use_tray":false,"description":"\u003cp\u003eSearch and embed Alexander Street video\u003c/p\u003e\n"},{"name":"Interactive Content â€“ H5P","id":199770,"favorite":false,"url":"https://oregonstate.h5p.com/lti/launch","icon_url":"https://oregonstate.h5p.com/img/h5p-icon.png","canvas_icon_class":"icon-lti","width":1024,"height":768,"use_tray":false,"description":"\u003cp\u003eCreate, share and reuse interactive HTML5 content in your browser\u003c/p\u003e\n"},{"name":"Embed Kaltura Media","id":212462,"favorite":true,"url":"https://kaltura.oregonstate.edu/browseandembed/index/browseandembed","icon_url":"https://lmsadmin.isadm.oregonstate.edu/static/icons.gif","canvas_icon_class":null,"width":1100,"height":600,"use_tray":false,"description":"\u003cp\u003eMedia Gallery and Embed\u003c/p\u003e\n"}]};
+    ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2d3e38c11c566559bb4157a971f5cf43/variables-7dd4b80918af0e0218ec0229e4bd5873.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2d3e38c11c566559bb4157a971f5cf43/variables-7dd4b80918af0e0218ec0229e4bd5873.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-f0f64c287d.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/lato_extended-f5a83bde37.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-7dd4b80918af0e0218ec0229e4bd5873.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-fa0672d544.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/lato_extended-f5a83bde37.css"],"current_user_id":"6312491","current_user_roles":["user","student","teacher","observer"],"current_user_is_student":false,"current_user_types":[],"current_user_disabled_inbox":false,"discussions_reporting":true,"files_domain":"cluster26.canvas-user-content.com","DOMAIN_ROOT_ACCOUNT_ID":"10020000000097009","k12":false,"use_responsive_layout":true,"use_rce_a11y_checker_notifications":true,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"auto_show_cc":false,"disable_celebrations":false,"disable_keyboard_shortcuts":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *","autoplay *","clipboard-write *","display-capture *"],"DEEP_LINKING_POST_MESSAGE_ORIGIN":"https://canvas.oregonstate.edu","DEEP_LINKING_LOGGING":null,"comment_library_suggestions_enabled":false,"SETTINGS":{"open_registration":false,"collapse_global_nav":false,"release_notes_badge_disabled":false,"filter_speed_grader_by_student_group":false},"API_GATEWAY_URI":"https://api.us-east-1.instructure.com/graphql/future","DIRECT_SHARE_ENABLED":false,"FEATURES":{"featured_help_links":true,"rce_buttons_and_icons":false,"important_dates":true,"feature_flag_filters":true,"k5_parent_support":true,"conferencing_in_planner":true,"remember_settings_tab":true,"word_count_in_speed_grader":true,"observer_picker":false,"lti_platform_storage":false,"scale_equation_images":true,"new_equation_editor":false,"responsive_awareness":true,"responsive_misc":true,"product_tours":false,"files_dnd":true,"usage_rights_discussion_topics":true,"granular_permissions_manage_users":true,"create_course_subaccount_picker":true,"lti_deep_linking_module_index_menu_modal":false,"lti_multiple_assignment_deep_linking":false,"embedded_release_notes":false,"canvas_k6_theme":false,"new_math_equation_handling":true},"current_user":{"id":"6312491","anonymous_id":"3raqz","display_name":"Amreeta Chatterjee","avatar_image_url":"https://oregonstate.instructure.com/images/thumbnails/76295633/YoNk6pvmkphCwFtjCHmsnZAqrfOxt7wdSThO1Spp","html_url":"https://canvas.oregonstate.edu/about/6312491","pronouns":null,"avatar_is_fallback":false},"page_view_update_url":"/page_views/7db2e1fe-21d2-4a6e-84bc-90c5223ecff7?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiN2RiMmUxZmUtMjFkMi00YTZlLTg0YmMtOTBjNTIyM2VjZmY3IiwidSI6MTAwMjAwMDAwMDYzMTI0OTEsImMiOiIyMDIyLTAyLTE3VDE5OjE0OjM0LjEwWiJ9.ALDmSOjVBEKphln7tUufnLU480ny_190C407ztbOhDg","context_asset_string":"course_1830120","ping_url":"https://canvas.oregonstate.edu/api/v1/courses/1830120/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","rce_auto_save_max_age_ms":86400000,"K5_USER":false,"K5_HOMEROOM_COURSE":false,"K5_SUBJECT_COURSE":false,"media_comment_asset_string":"user_6312491","COURSE_ID":"1830120","FIRST_ANNOTATION_SUBMISSION":false,"badge_counts":{"submissions":0},"notices":[],"active_context_tab":"assignments"};
+    BRANDABLE_CSS_HANDLEBARS_INDEX = [["new_styles_normal_contrast","new_styles_high_contrast","responsive_layout_normal_contrast","responsive_layout_high_contrast","new_styles_normal_contrast_rtl","new_styles_high_contrast_rtl","responsive_layout_normal_contrast_rtl","responsive_layout_high_contrast_rtl"],{"10":["8300658022",0,0,0,"250b5824c2",4,4,4],"15":["fc26aa5fd4",0,0,0,"f904416063",4,4,4],"19":["df5777ed9c"],"61":["c34731ada0","f405852bb2",0,1,"a4eda69452","3fd9943b9a",4,5],"64":["6d90a3d213",0,0,0,"cace9d4281",4,4,4],"67":["8b57f54e71",0,0,0,"43833dde85",4,4,4],"71":["9bb12d406b","3128a2cc3b",0,1,"9a2e3a11ca","851e44943d",4,5],"06":["4526e0502d",0,0,0,"4ca4dedba8",4,4,4],"f0":["7c947dce20",0,0,0,0,0,0,0],"c8":["fd6747df94","32c26c8fa4",0,1,"80cc70eb8a","c6f0afaa9e",4,5],"1e":["a4ce6b99b5","39d2986ce0","93968ae330","541e45feba","e12dd92511","ba63dd3b58","8594db4d82","e291bb53e9"],"b3":["8ebc71ebc3","cf8efa05c8",0,1,"4efdc93a21","fd6d3a9780",4,5],"4f":["0a2c3dcf2f",0,0,0,"79668e6396",4,4,4],"0c":["c26e82abac",0,0,0,"b71e9cbd6d",4,4,4],"da":["b218c8c3f2","edbd1b5e83",0,1,"312312508c","dfb2d13098",4,5],"1d":["a3bfcb7961",0,0,0,"90682b3bbe",4,4,4],"08":["64bff5a97d"],"e2":["11429f119a"],"9f":["35936a18c3",0,0,0,0,0,0,0],"2b":["abf63f48ef","bf8e135ffe",0,1,"378e0c136b","9833e305e6",4,5],"2c":["6d919206cd",0,0,0,0,0,0,0],"c2":["6f2721ae01"],"9c":["ecafc938e4",0,0,0,"59e7c22304",4,4,4],"c5":["ebf0e1382f","7f587d9a8a",0,1,"afbdabf23d","0d398196a8",4,5],"f2":["51574f9b13"]}]
+;
+  </script>
+<link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2d3e38c11c566559bb4157a971f5cf43/variables-7dd4b80918af0e0218ec0229e4bd5873.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/America/Los_Angeles-d9cac65c52.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/America/Los_Angeles-d9cac65c52.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/en_US-80a0ce259b.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/main-e-2e327d306a.js" rel="preload" type="text/javascript"/><script>
+//<![CDATA[
 
-	&lt;link href=" css?family='Lato:400,700&amp;subset=latin,latin-ext"' fonts.googleapis.com="" https:="" name="viewport" rel="stylesheet" type="text/css"/>
-<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet"/>
-<style type="text/css">
-		body { font-family: Lato, Arial; padding-top: 60px;}
-		h1, h2, h3, h4, h5, h6 { margin-top: 1.75rem;}
-		h1 small { font-size: 22px;}
-		.bg-primary {background-color: #5f4086 !important;}
-		:target::before { content: ""; display: block; height: 60px; margin: -60px 0 0;}
-		.table td { font-size: 0.9rem; line-height: 1.3;}
-	</style>
-</head>
-<body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-<a class="navbar-brand" href="#">CS 565  HCI</a>
-<button aria-badge="Toggle navigation" aria-controls="navbarSupportedContent" aria-expanded="false" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav mr-auto">
-<li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse">
-<a class="nav-link" href="#schedule">Schedule</a>
-</li>
-<li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse">
-<a class="nav-link" href="#project">Project</a>
-</li>
-<li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse">
-<a class="nav-link" href="#homework">Homework</a>
-</li>
-</ul>
-</div>
-</nav>
-<div class="container">
-<div class="row">
-<div class="col">
-<br/>
-<div class="alert alert-danger" role="alert">
-<strong>This is an old version offered in 2020. For 2021, <a href="https://minsuk.com/courses/cs565-spring2021/">click here</a>.</strong>
-</div>
-<h1>
-<small>CS 565, Spring 2020</small>
-<br/>
-		Human-Computer Interaction
-	</h1>
-<p>
-<a href="https://eecs.oregonstate.edu/" style="color:#444;">School of Electrical Engineering and Computer Science</a>
-<br/>
-<a href="https://oregonstate.edu/" style="color:#444;">Oregon State University</a>
-</p>
-<p>
-<span style="font-size:18px; line-height:1.5em;">
-	Mon &amp; Wed at 12:00 - 1:50pm<br/>
-<strike>KEC 1001</strike> Zoom</span>
-</p>
-<p>
-<span style="font-size: 1.25rem;"><a href="https://eecs.oregonstate.edu/people/Kahng-Minsuk">Prof. Minsuk Kahng</a></span>
-<br/>Assistant Professor, <a href="https://eecs.oregonstate.edu/">School of Electrical Engineering and Computer Science</a>
-<br/>
-	E-mail: <a href="/cdn-cgi/l/email-protection#c3aeaaadb0b6a8eda8a2abada483acb1a6a4acadb0b7a2b7a6eda6a7b6"><span class="__cf_email__" data-cfemail="8de0e4e3fef8e6a3e6ece5e3eacde2ffe8eae2e3fef9ecf9e8a3e8e9f8">[email protected]</span></a>
-<br/>
-	Website: <a STYLE="background-color: rgb(255,255,0)"  href="https://minsuk.com">https://minsuk.com</a>
-</p>
-<p>
-<a href="https://oregonstate.instructure.com/courses/1765140"><button class="btn btn-secondary" type="button">Canvas</button></a>
-<a href="https://oregonstate.instructure.com/courses/1765140/external_tools/152204"><button class="btn btn-secondary" type="button">Zoom</button></a>
-<a href="https://oregonstate.instructure.com/courses/1765140/external_tools/152675"><button class="btn btn-secondary" type="button">Piazza</button></a>
-</p>
-<div class="alert alert-warning" role="alert">
-	The first meeting will be over <a href="https://oregonstate.instructure.com/courses/1765140/external_tools/152204">Zoom</a> on Monday, March 30 at 12pm. The link is available on Canvas. (If you haven't registered for the course yet, but want to attend the first meeting, please put you into the waitlist or email me. An instruction email will be sent to students on the waitlist.)
-	</div>
-<div class="alert alert-warning" role="alert">
-	We will be meeting over Zoom at our scheduled class time on Monday and Wednesday at 12pm. It is required to attend the class, as we will be doing in-class activities and project working sessions during the class times. If you have concerns with this, please <a href="https://forms.gle/6fvu7Dn2Y4HEypo68">complete this survey</a> as soon as possible.
-	</div>
-<h3>Course Description</h3>
-<p>
-	In this class, you will learn basic principles of Human-Computer Interaction (HCI), including how to design and prototype user interfaces and interactive systems, based on the needs of users, and how to evaluate such interfaces and systems rigorously.
-	</p>
-<h3>Learning Objectives</h3>
-<p>
-		At the completion of this course, students will be able to:
-		<ol>
-<li>Describe HCI design processes.</li>
-<li>Describe basics of human subjects research.</li>
-<li>Design a user interface based on analysis of human capabilities and needs, and prepare a prototype system.</li>
-<li>Evaluate user interfaces using a variety of HCI research methods.</li>
-<li>Make an oral presentation that justifies design decisions. </li>
-</ol>
-</p>
-<h3>How the course will be conducted</h3>
-<div class="alert alert-warning" role="alert">
-		Recognition of the unique situation, this spring term is unlike any other term taught at OSU. We are all facing uncertainties and significant changes to our lives. To that end, the format of this class has been adapted to the situation.
-		This means that the lectures, activities, and how you get information may not be what you are used to or what you were expecting. Learning remotely will not be the same as learning in person, but our goal is to make it as effective as possible. We all need to be flexible as there may be more changes ahead.
-	</div>
-<p>
-		CS 565 is a <strong>hands-on</strong> course. You'll be expected to actively participate in projects, activities, and discussion.
-		A significant portion of the class will be devoted to a team project (~4-person groups). Each team will design, prototype, and evaluate user interfaces.
-	</p>
-<p>
-		Because of this highly interactive nature, we cannot easily transform every component of the class into online. Therefore, instead, we will use a <a href="https://en.wikipedia.org/wiki/Flipped_classroom">"flipped classroom"</a> model for this term. We will still meet at our scheduled class time via Zoom, but you will do readings and watch videos before the class, and during the class time, we will be doing in-class activities and project working sessions with your teammates.
-	</p>
-<p>
-		It is <strong>mandatory</strong> to attend classes. The in-class activities will be counted towards your final grade, and the project working sessions will be crucial for working on your project deliverables. 
-		If you have concerns with this, please <a href="https://forms.gle/6fvu7Dn2Y4HEypo68">complete this survey</a> as soon as possible. We may be able to find alternative ways for you, depending on your and your classmates' situations, but please understand that we won't accommodate every case.
-	</p>
-<h3>Grading</h3>
-<p>
-		Your performance will be evaluated via group projects, individual assignments, nano-quizzes, and active participation.
-		<strong>There is no exams.</strong> 
-		Weights will be as follows (subject to change): 
-	<ul>
-<li>Group Project: 55%
-		<li>Individual Assignments: 20%
-		<li>Nano-Quizes: 10%
-		<li>Participation (including, in-class activities, peer feedback): 15%
-	</li></li></li></li></ul>
-<p> <b>Note:</b> The team receives one grade for the group project. However, allocation of the grade among team members will in some cases not be equal, if team members do not contribute relatively equally to the effort.</p>
-<h3>Textbooks</h3>
-	
-	There is one <strong>required</strong> material, though it's not a usual textbook:
-	<ul>
-<li>
-<strong><a href="https://uitraps.com/product/trap-cards-deck/">UI Tenents &amp; Traps - Trap Cards Deck</a></strong>
-<br/>Author: Medlock
-		<br/>Available at <a href="http://osubeaverstore.com/TextBookAgreement/">OSU Bookstore</a>: you can order it from home.
-		</li>
-</ul>
-	
-	The following textbooks will be used for our pre-class readings, but you don't have to buy them:
-	<ul>
-<li>
-<a href="http://search.library.oregonstate.edu/OSU:everything:CP71199765050001451"><strong>Designing with the Mind in Mind:</strong> Simple Guide to Understanding User Interface Design Guidelines, 2nd Edition, 2014</a>.
-			<br/>Author: Jeff <strong>Johnson</strong>
-<br/>Publishers: Morgan Kaufmann
-			<br/>ISBN/SKU 978-0124079144
-			<br/>Available for free as an <a href="http://search.library.oregonstate.edu/OSU:everything:CP71199765050001451">online book from the OSU Library</a>. You don't need to buy a physical copy.
-		</li>
-<li>
-<a href="http://www.id-book.com/"><strong>Interaction Design: Beyond Human-Computer Interaction</strong>, 5th Edition, 2019</a> (or 4th Edition, 2015).
-			<br/>Authors: Helen Sharp, Jennifer Preece, and Yvonne <strong>Rogers</strong>
-<br/>Publishers: Wiley
-			<br/>ISBN/SKU 978-1119547259.
-			<br/>See Canvas for readings.
-		</li>
-</ul>
-<h3>Announcements and Questions</h3>
-<p>
-	We use <strong><a href="https://oregonstate.instructure.com/courses/1765140">Canvas</a></strong> for all announcements and submission of projects and assignments, but not for questions.
-	</p>
-<p>
-	We use <strong>Piazza</strong> for questions and discussion. 
-	The fastest way to get help with homework assignments is to post your questions on Piazza. That way, our TAs and instructor can help, and your peers can too.
-	</p>
-<p>
-	If you prefer that your question addresses to only our TAs and the instructor, you can use the private post feature (i.e., check the "Individual Students(s) / Instructors(s)" radio box).
-	For special cases such as failed submissions due to system errors, missing grades, failed file uploads, emergencies that prevent you from submitting, personal issues, you can contact the staff using a private Piazza post.
-	Emails will not be the fastest way to get response from the staff. Please use Piazza first.
-	</p>
-<h3>TA &amp; Office Hours</h3>
-<h5>Your TA:</h5>
-<p>
-<span style="font-size: 1.1rem;">Alexandria LeClerc</span><br>
-	PhD Student<br>
-<a href="/cdn-cgi/l/email-protection#afc3caccc3caddccceefc0ddcac8c0c1dcdbcedbca81cacbda"><span class="__cf_email__" data-cfemail="721e17111e17001113321d0017151d1c01061306175c171607">[email protected]</span></a><br>
-	Office Hours TBA
-	</br></br></br></p>
-<p>
-	The instructor and TA will hold office hours starting Week 2. We will hold office hours via Zoom. Please note that you are always welcome to ask questions on Piazza. 
-	</p>
-<a id="schedule"></a>
-<h3>Course Schedule <span class="badge badge-warning">Tentative: Check Canvas for up-to-date schedule</span></h3>
-<!--<div>
-	For <strong>all due dates</strong> used in this course, their times are <span class="badge badge-success" style="font-size: 1.1rem;">23:59 Pacific time zone (11:59 pm PT)</span>.
-	</div>-->
-<div class="table-responsive">
-<table class="table table-sm" id="schedule">
-<thead>
-<tr>
-<th>Wk</th>
-<th>Date</th>
-<th>Topic</th>
-<th>Assignments</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2">1</td>
-<td>Mon, Mar 30</td>
-<td>
-					Introduction 1: Course Introduction
-				</td>
-<td>
-					* <a href="https://forms.gle/6fvu7Dn2Y4HEypo68">Survey</a>
-</td>
-</tr>
-<tr>
-<td>Wed, Apr 1</td>
-<td>
-					Introduction 2: Design Process
-				</td>
-<td>
-					* HW 1: Project Ideas <br>(due Fri, 4/3)
-				</br></td>
-</tr>
-<tr>
-<td rowspan="2">2</td>
-<td>Mon, Apr 6</td>
-<td>
-					Needfinding 1: Observation
-				</td>
-<td>
-					* Project Bid (due Mon, 4/6)
-				</td>
-</tr>
-<tr>
-<td>Wed, Apr 8</td>
-<td>
-					Needfinding 2: Interviews
-				</td>
-<td>
-					* HW 2: Paper Critique (1)
-				</td>
-</tr>
-<tr>
-<td rowspan="2">3</td>
-<td>Mon, Apr 13</td>
-<td>
-					Needfinding 3: User Data Analysis
-				</td>
-<td>
-					* Project 1: Proposal
-				</td>
-</tr>
-<tr>
-<td>Wed, Apr 15</td>
-<td>
-					Human Capabilities 1: Memory
-				</td>
-<td>
-					* HW 3: IRB
-				</td>
-</tr>
-<tr>
-<td rowspan="2">4</td>
-<td>Mon, Apr 20</td>
-<td>
-					Human Capabilities 2: Perception
-				</td>
-<td>
-					* Project 2: User Research
-				</td>
-</tr>
-<tr>
-<td>Wed, Apr 22</td>
-<td>
-					Prototyping 1: Concepts
-				</td>
-<td>
-					* HW 4: Hall of Fame/Shame
-				</td>
-</tr>
-<tr>
-<td rowspan="2">5</td>
-<td>Mon, Apr 27</td>
-<td>
-					Prototyping 2: Low-Fi Prototyping
-				</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>Wed, Apr 29</td>
-<td>
-					Evaluation 1: Analytical Evaluation
-				</td>
-<td>
-					* Project 3: Early Prototype
-				</td>
-</tr>
-<tr>
-<td rowspan="2">6</td>
-<td>Mon, May 4</td>
-<td>
-					Project Mid-term Presentations
-				</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>Wed, May 6</td>
-<td>
-					Evaluation 2: Analytical Eval. (cont'd)
-				</td>
-<td>
-					* HW 5: Heuristic Evaluation
-				</td>
-</tr>
-<tr>
-<td rowspan="2">7</td>
-<td>Mon, May 11</td>
-<td>
-					Prototyping 3: Visual and Interaction Design					
-				</td>
-<td>
-					* Project 5: TBD
-				</td>
-</tr>
-<tr>
-<td>Wed, May 13</td>
-<td>
-					Prototyping 4: Information Visualization
-				</td>
-<td>
-					* HW 6: Paper Critique (2)
-				</td>
-</tr>
-<tr>
-<td rowspan="2">8</td>
-<td>Mon, May 18</td>
-<td>
-					Evaluation 3: Empirical Studies
-				</td>
-<td>
-					* Project 6: Empirical Study Plan
-				</td>
-</tr>
-<tr>
-<td>Wed, May 20</td>
-<td>
-					Evaluation 4: Empirical Study Analysis
-				</td>
-</tr>
-<tr>
-<td rowspan="2">9</td>
-<td>Mon, May 25</td>
-<td>
-					No Class: Memorial Day
-				</td>
-<td>
-					* Project 7: Empirical Study
-				</td>
-</tr>
-<tr>
-<td>Wed, May 27</td>
-<td>
-					TBD
-				</td>
-<td>
-</td>
-</tr>
-<tr>
-<td rowspan="2">10</td>
-<td>Mon, June 1</td>
-<td>
-					Project Final Presentation
-				</td>
-</tr>
-<tr>
-<td>Wed, June 3</td>
-<td>
-					Project Final Presentation
-				</td>
-<td>
-					* Project 8: Final Report
-				</td>
-</tr>
-<tr>
-<td rowspan="2">11</td>
-<td> </td>
-<td>
-					No Final Exam
-				</td>
-</tr>
-</tbody>
-</table>
-</div>
-<a name="project"></a>
-<h3>Group Project</h3>
-<p>Your mission is to design a substantial user interface, carefully and thoroughly following the methods and principles from CS 565. Guide your efforts by following the PRICPE process we will cover in the class.</p>
-<h5>Project Theme</h5>
-<p>
-		This year's project theme will be <strong>"Designing for AI"</strong>!
-		With the rapid advances in the field of Artificial Intelligence (AI), AI-powered products and applications are now entering our daily lives. 
-		However, these AI-enabled products require careful design processes that are not needed for non-AI-enabled applications, especially because of the uncertain nature of AI. Even a highly accurate model produces wrong predictions. Carelessly designed process can generate serious usability problems (e.g., what if Siri repeatedly misunderstands your speech and there is no way to fix it; what if a self-driving car misclassifies a person as a static object), or even societal problems (e.g., a conversational agent uses often offensive words to certain population).
-	</p>
-<p>
-		You, with your teammates, will design a user interface for applications or tools that involve AI.
-		Any ideas are welcome, as well as it has a sizeable user interface component, and you have a way to observe/interview potential users (i.e., you can't design user interfaces for doctors without observing or talking to them).
-		You can create a user interface for a novel application that uses AI.
-		You can also pick an existing product (e.g., Alexa, YouTube) and how you can improve their user interfaces for certain populations (e.g., people with hearing difficulties) or focus on specific aspects (e.g., explainability).
-		It's also strongly encouraged to choose a topic that is relevant to your research.
-	</p>
-<p>
-		More examples include:
-		<ul>
-<li>Designing video editing software that lets YouTube creators perform editing via voice
-			<li>Designing an email writing assistant plugin for non-native speakers</li>
-<li>Adding a feature to Netflix that tells you why it thinks you like its recommended movies</li>
-<li>Designing a self-driving car that asks for your preference among multiple possible routes</li>
-<li>Designing a video search engine for reporters to find specific video clips</li>
-<li>Designing a new application that recognizes and describes scene to low-vision people</li>
-<li>Redesigning a computational notebook interface for data scientists</li>
-<li>Designing an interface (or educational software) for non-CS major students to build machine learning models</li>
-</li></ul>
-</p>
-<p>
-		Programming is not required for this project. Your goal is not to develop machine learning algorithms. Your main objective is to design and prototype user interfaces based on users' needs. 
-	</p>
-<h5>Milestone</h5>
-	Your team will submit the following deliverables throughout the term (subject to change). These will help you successfully complete the project by following the HCI design process.
-	<ul>
-<li>Project 1: Proposal [5%]</li>
-<li>Project 2: User Research [7.5%]</li>
-<li>Project 3: Early Prototype [5%]</li>
-<li>Project 4: Mid-Term Presentation [2.5%]</li>
-<li>Project 5: Mid-Fidelity Prototype [2.5%]</li>
-<li>Project 6: Evaluation Plan [2.5%]</li>
-<li>Project 7: Evaluation [10%]</li>
-<li>Project 8: Final Outcome [20%]</li>
-</ul>
-<a name="homework"></a>
-<h3>Assignments</h3>
-
-	We have 6 assignments in total (subject to change). The instructions for the assignments will be posted on Canvas. See the schedule table above for due dates.
-
-	<ul>
-<li>HW 1: Project Ideas [3%]</li>
-<li>HW 2/5: Paper Critiques (2) [7%]</li>
-<li>HW 3: IRB [2%]</li>
-<li>HW 4: Hall of Fame/Shame [3%]</li>
-<li>HW 6: Heuristic Evaluation [5%]</li>
-</ul>
-<h3>Classroom Policies</h3>
-<p>This class is our community. Every student should feel safe and welcome to contribute in this course, and it is all of our jobs to make sure this is the case. I will try to establish this tone whenever possible, but ultimately the responsibility for cultivating a safe and welcoming community belongs to the students---that means you! Fortunately, forming a safe and welcoming community is not too hard. A good place to start is to recognize (and continually remind yourself) of the following facts:
-	<ul>
-<li>Your classmates come from a variety of cultural, economic, and educational backgrounds. Something that is obvious to you may not be obvious to them, and vice versa.</li>
-<li>Your classmates are human beings with intelligence and emotions. This applies even when one or the other of you is posting anonymously. Rudeness and disrespect are unprofessional, and have no place in this course or in your career.</li>
-<li>Your classmates are here to learn. They have the right to pursue their education without being distracted by others' disruptive behavior, or made uncomfortable by inappropriate jokes or unwanted sexual interest.</li>
-</ul>
-</p>
-<p>In addition, the <a href="http://oregonstate.edu/studentconduct/offenses-0">OSU Expectations for Student Conduct</a> apply.</p>
-<p>In short, treat your classmates as respected colleagues, support each other when needed, have fun without spoiling it for anyone else, and everybody wins.</p>
-<h3>Students with Disabilities</h3>
-<p>
-	Accommodations for students with disabilities are determined and
-	approved by Disability Access Services (DAS). If you, as a student,
-	believe you are eligible for accommodations but have not obtained
-	approval please contact DAS immediately at 541-737-4098 or at
-	<a STYLE="background-color: rgb(255,255,0)"  href="http://ds.oregonstate.edu">http://ds.oregonstate.edu</a>.
-	DAS notifies students and faculty members
-	of approved academic accommodations and coordinates implementation of
-	those accommodations. While not required, students and faculty members
-	are encouraged to discuss details of the implementation of individual
-	accommodations.
-	</p>
-<h3>Previous Offerings</h3>
-<p>CS 565 had been taught by <a href="http://web.engr.oregonstate.edu/~burnett/">Prof. Margaret Burnett</a>, and this year's course is largely adapted from <a href="http://classes.engr.oregonstate.edu/eecs/spring2019/cs565/">the last year's offering by her</a>. 
-
-
-	
-</p></p></div>
-</div>
-</div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script type="text/javascript">
-var sc_project=7117963; 
-var sc_invisible=1; 
-var sc_security="1cb5269f"; 
+      ;["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2d3e38c11c566559bb4157a971f5cf43/variables-7dd4b80918af0e0218ec0229e4bd5873.js", "https://du11hjcvx0uqb.cloudfront.net/dist/timezone/America/Los_Angeles-d9cac65c52.js", "https://du11hjcvx0uqb.cloudfront.net/dist/timezone/America/Los_Angeles-d9cac65c52.js", "https://du11hjcvx0uqb.cloudfront.net/dist/timezone/en_US-80a0ce259b.js", "https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/main-e-2e327d306a.js"].forEach(function(src) {
+        var s = document.createElement('script')
+        s.src = src
+        s.async = false
+        document.head.appendChild(s)
+      });
+//]]>
+</script><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/0-c-d122efd52f.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/9-c-a923466f4c.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/70-c-6d696ed8b3.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/external_tools_show-c-fc1e6c3684.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/2-c-76bc2d045a.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/3-c-db365dc360.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/4-c-b8cf79bbb5.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/5-c-91ec3d99dd.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/148-c-e02bd3d4f9.js" rel="preload" type="text/javascript"/><link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/module_sequence_footer-c-fb849aa55d.js" rel="preload" type="text/javascript"/><script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('external_tools_show');
+(window.bundles || (window.bundles = [])).push('module_sequence_footer');
+(window.bundles || (window.bundles = [])).push('navigation_header');
+//]]>
 </script>
-<script async="" src="https://www.statcounter.com/counter/counter.js" type="text/javascript"></script>
-<noscript><div class="statcounter"><a href="http://statcounter.com/" target="_blank" title="Web Analytics"><img alt="Web Analytics" class="statcounter" src="//c.statcounter.com/7117963/0/1cb5269f/1/"/></a></div></noscript>
+<title>Assignment 7</title>
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', "UA-9138420-1", 'auto');
+      ga('set', 'userId', "9550bc1c653e5e6d8d6bf2bc77aaa9ff");
+    ga('set', 'dimension1', "111");
+    ga('set', 'dimension2', "00");
+    ga('set', 'dimension3', "0");
+    ga('set', 'dimension4', "Higher Ed");
+    ga('send', 'pageview');
+    (window.requestIdleCallback || window.setTimeout)(function(){
+      var s=document.createElement('script'), m=document.getElementsByTagName('script')[0]
+      s.async=1; s.src='https://www.google-analytics.com/analytics.js'
+      m.parentNode.insertBefore(s,m)
+    });
+  </script>
+</link></link></link></link></link></meta></head>
+<body class="ic-framed-lti-tool with-left-side course-menu-expanded assignments primary-nav-expanded full-width context-course_1830120 responsive_awareness responsive_misc responsive_student_grades_page">
+<noscript>
+<div class="ic-flash-static ic-flash-error" role="alert">
+<div aria-hidden="true" class="ic-flash__icon">
+<i class="icon-warning"></i>
+</div>
+<h1>You need to have JavaScript enabled in order to access this site.</h1>
+</div>
+</noscript>
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder"></div>
+<div class="ic-app" id="application">
+<header class="no-print" id="mobile-header">
+<button class="Button Button--icon-action-rev Button--large mobile-header-hamburger" type="button">
+<i class="icon-solid icon-hamburger"></i>
+<span class="menu-item__badge" id="mobileHeaderInboxUnreadBadge" style="min-width: 0; top: 12px; height: 12px; right: 6px; display:none;"></span>
+<span class="screenreader-only">Dashboard</span>
+</button>
+<div class="mobile-header-space"></div>
+<a aria-controls="mobileContextNavContainer" class="mobile-header-title expandable" href="/courses/1830120" role="button">
+<div>INTRO TO COMPUTER SCIENCE II (CS_162_400_F2021)</div>
+<div>Assignment 7</div>
+</a>
+<div id="immersive_reader_mobile_mount_point"></div>
+<div class="mobile-header-space"></div>
+<button aria-label="Navigation Menu" class="Button Button--icon-action-rev Button--large mobile-header-arrow" type="button">
+<i class="icon-arrow-open-down" id="mobileHeaderArrowIcon"></i>
+</button>
+</header>
+<nav id="mobileContextNavContainer"></nav>
+<header class="ic-app-header no-print" id="header">
+<a href="#content" id="skip_navigation_link">Skip To Content</a>
+<div aria-label="Global Navigation" class="ic-app-header__main-navigation" role="region">
+<div class="ic-app-header__logomark-container">
+<a class="ic-app-header__logomark" href="https://canvas.oregonstate.edu/">
+<span class="screenreader-only">Dashboard</span>
+</a>
+</div>
+<ul class="ic-app-header__menu-list" id="menu">
+<li class="menu-item ic-app-header__menu-list-item">
+<button class="ic-app-header__menu-list-link" id="global_nav_profile_link">
+<div class="menu-item-icon-container">
+<div aria-hidden="true" class="fs-exclude ic-avatar">
+<img alt="Amreeta Chatterjee" src="https://oregonstate.instructure.com/images/thumbnails/76295633/YoNk6pvmkphCwFtjCHmsnZAqrfOxt7wdSThO1Spp"/>
+</div>
+<span class="menu-item__badge"></span>
+</div>
+<div class="menu-item__text">
+                  Account
+                </div>
+</button>
+</li>
+<li class="ic-app-header__menu-list-item">
+<a class="ic-app-header__menu-list-link" href="https://canvas.oregonstate.edu/" id="global_nav_dashboard_link">
+<div aria-hidden="true" class="menu-item-icon-container">
+<svg class="ic-icon-svg ic-icon-svg--dashboard" enable-background="new 0 0 280 200" version="1.1" viewbox="0 0 280 200" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+</div>
+<div class="menu-item__text">Dashboard</div>
+</a>
+</li>
+<li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+<button class="ic-app-header__menu-list-link" id="global_nav_courses_link">
+<div aria-hidden="true" class="menu-item-icon-container">
+<svg class="ic-icon-svg ic-icon-svg--courses" enable-background="new 0 0 280 259" version="1.1" viewbox="0 0 280 259" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+</div>
+<div class="menu-item__text">
+                  Courses
+                </div>
+</button>
+</li>
+<li class="menu-item ic-app-header__menu-list-item">
+<a class="ic-app-header__menu-list-link" href="/calendar" id="global_nav_calendar_link">
+<div aria-hidden="true" class="menu-item-icon-container">
+<svg class="ic-icon-svg ic-icon-svg--calendar" enable-background="new 0 0 280 280" version="1.1" viewbox="0 0 280 280" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+</div>
+<div class="menu-item__text">
+                Calendar
+              </div>
+</a>
+</li>
+<li class="menu-item ic-app-header__menu-list-item">
+<a class="ic-app-header__menu-list-link" href="/conversations" id="global_nav_conversations_link">
+<div class="menu-item-icon-container">
+<span aria-hidden="true"><svg class="ic-icon-svg ic-icon-svg--inbox" enable-background="new 0 0 280 280" version="1.1" viewbox="0 0 280 280" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+</span>
+<span class="menu-item__badge"></span>
+</div>
+<div class="menu-item__text">
+                Inbox
+              </div>
+</a>
+</li>
+<li class="menu-item ic-app-header__menu-list-item">
+<button class="ic-app-header__menu-list-link" id="global_nav_history_link">
+<div aria-hidden="true" class="menu-item-icon-container">
+<svg class="ic-icon-svg menu-item__icon svg-icon-history" version="1.1" viewbox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+<path d="M960 112.941c-467.125 0-847.059 379.934-847.059 847.059 0 467.125 379.934 847.059 847.059 847.059 467.125 0 847.059-379.934 847.059-847.059 0-467.125-379.934-847.059-847.059-847.059M960 1920C430.645 1920 0 1489.355 0 960S430.645 0 960 0s960 430.645 960 960-430.645 960-960 960m417.905-575.955L903.552 988.28V395.34h112.941v536.47l429.177 321.77-67.765 90.465z" fill-rule="evenodd" stroke="none" stroke-width="1"></path>
+</svg>
+</div>
+<div class="menu-item__text">
+                  History
+                </div>
+</button>
+</li>
+<li class="globalNavExternalTool menu-item ic-app-header__menu-list-item" id="context_external_tool_110946_menu_item">
+<a class="ic-app-header__menu-list-link" href="/accounts/97009/external_tools/110946?launch_type=global_navigation">
+<svg class="ic-icon-svg ic-icon-svg--lti menu-item__icon" version="1.1" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M9.4 32c0-7.8 6.5-14.3 14.4-14.3h11.7v-9.4h-11.8c-13.1 0-23.7 10.6-23.7 23.7s10.7 23.7 23.7 23.7h11.7v-9.4h-11.7c-7.9 0-14.3-6.5-14.3-14.3z m54.6 0l-19.1-17v11.3h-20.2c-3.1 0-5.6 2.5-5.6 5.6s2.5 5.6 5.6 5.7h20.2v11.2l19.1-16.8z"></path>
+</svg>
+<div class="menu-item__text">
+          Commons
+        </div>
+</a>
+</li>
+<li class="ic-app-header__menu-list-item">
+<a class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/" id="global_nav_help_link" role="button">
+<div class="menu-item-icon-container" role="presentation">
+<svg class="ic-icon-svg menu-item__icon svg-icon-help" enable-background="new 0 0 200 200" fill="currentColor" version="1.1" viewbox="0 0 200 200" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+<span class="menu-item__badge"></span>
+</div>
+<div class="menu-item__text">
+                Help
+              </div>
+</a> </li>
+</ul>
+</div>
+<div class="ic-app-header__secondary-navigation">
+<ul class="ic-app-header__menu-list">
+<li class="menu-item ic-app-header__menu-list-item">
+<button aria-label="Minimize global navigation" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" id="primaryNavToggle" title="Minimize global navigation">
+<div aria-hidden="true" class="menu-item-icon-container">
+<svg class="ic-icon-svg ic-icon-svg--navtoggle" height="32" version="1.1" viewbox="0 0 40 32" width="40" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0">
+<path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+</div>
+</button>
+</li>
+</ul>
+</div>
+<div id="global_nav_tray_container"></div>
+<div id="global_nav_tour"></div>
+</header>
+<div id="instructure_ajax_error_box">
+<div style="text-align: right; background-color: #fff;"><a class="close_instructure_ajax_error_box_link" href="#">Close</a></div>
+<iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;" title="Error"></iframe>
+</div>
+<div class="ic-Layout-wrapper" id="wrapper">
+<div class="ic-app-nav-toggle-and-crumbs no-print">
+<button aria-label="Hide Courses Navigation Menu" aria-live="polite" class="Button Button--link ic-app-course-nav-toggle" id="courseMenuToggle" type="button">
+<i aria-hidden="true" class="icon-hamburger"></i>
+</button>
+<div class="ic-app-crumbs">
+<nav aria-label="breadcrumbs" id="breadcrumbs" role="navigation"><ul><li class="home"><a href="/"><span class="ellipsible"><i class="icon-home" title="My dashboard">
+<span class="screenreader-only">My dashboard</span>
+</i>
+</span></a></li><li><a href="/courses/1830120"><span class="ellipsible">INTRO TO COMPUTER SCIENCE II (CS_162_400_F2021)</span></a></li><li><a href="/courses/1830120/assignments"><span class="ellipsible">Assignments</span></a></li><li><span class="ellipsible">Assignment 7</span></li></ul></nav>
+</div>
+<div class="right-of-crumbs">
+<div class="TutorialToggleHolder"></div>
+<div id="immersive_reader_mount_point"></div>
+</div>
+</div>
+<div class="ic-Layout-columns" id="main">
+<div class="ic-Layout-watermark"></div>
+<div class="ic-app-course-menu ic-sticky-on list-view" id="left-side" style="display: block">
+<div class="ic-sticky-frame" id="sticky-container">
+<span class="ellipsis" id="section-tabs-header-subtitle">Fall 2021</span>
+<nav aria-label="Courses Navigation Menu" role="navigation"><ul id="section-tabs"><li class="section"><a class="home" href="/courses/1830120">Home</a></li><li class="section"><a class="announcements" href="/courses/1830120/announcements">Announcements</a></li><li class="section"><a class="syllabus" href="/courses/1830120/assignments/syllabus">Syllabus</a></li><li class="section"><a class="modules" href="/courses/1830120/modules">Modules</a></li><li class="section"><a class="context_external_tool_185430" href="/courses/1830120/external_tools/185430?display=borderless" target="_blank">Ed Discussion</a></li><li class="section"><a class="context_external_tool_135757" href="/courses/1830120/external_tools/135757?display=borderless" target="_blank">Gradescope</a></li><li class="section"><a aria-current="page" class="assignments active" href="/courses/1830120/assignments">Assignments</a></li><li class="section"><a class="context_external_tool_152204" href="/courses/1830120/external_tools/152204">Zoom</a></li><li class="section"><a class="context_external_tool_212460" href="/courses/1830120/external_tools/212460">My Media</a></li><li class="section"><a class="context_external_tool_212462" href="/courses/1830120/external_tools/212462">Media Gallery</a></li></ul></nav>
+</div>
+</div>
+<div class="ic-app-main-content" id="not_right_side">
+<div class="ic-Layout-contentWrapper" id="content-wrapper">
+<div class="ic-Layout-contentMain" id="content" role="main">
+<div id="assignment_show">
+<div class="assignment-title">
+<div class="title-content">
+<h1 class="title">
+        Assignment 7
+      </h1>
+</div>
+<div class="assignment-buttons">
+<span style="display: inline-block">
+</span>
+</div>
+</div>
+</div>
+<div class="description user_content" style="margin: 20px">
+<div style="width: 98%; max-width: 1000px; margin-bottom: 24px;"><img alt="Assignment Icon" data-api-endpoint="https://canvas.oregonstate.edu/api/v1/courses/1830120/files/89091099" data-api-returntype="File" data-decorative="true" height="74" src="/courses/1830120/files/89091099/download?wrap=1" style="padding-left: 10px; float: right;" width="75"/>
+<h2 style="border-bottom: 2px solid #dc4405; font-size: 18pt; margin-top: 0px; margin-bottom: 12px; margin-right: 85px;">Project 7 (100 points)</h2>
+<p><a STYLE="background-color: rgb(255,255,0)"  href="https://classroom.github.com/a/36Wcuvot" target="_blank">https://classroom.github.com/a/36Wcuvot</a> </p>
+</div>
+</div>
+<div class="tool_content_wrapper" data-tool-wrapper-id="613d6216-a81e-4200-9dcf-0ffd495f72f8">
+<form action="https://www.gradescope.com/auth/lti/callback" class="hide" data-message-type="tool_launch" data-tool-id="www.gradescope.com" data-tool-launch-type="window" data-tool-path="/auth/lti/callback" id="tool_form" method="POST" target="tool_content">
+<input id="oauth_consumer_key" name="oauth_consumer_key" type="hidden" value="46_canvas"/>
+<input id="oauth_signature_method" name="oauth_signature_method" type="hidden" value="HMAC-SHA1"/>
+<input id="oauth_timestamp" name="oauth_timestamp" type="hidden" value="1645125274"/>
+<input id="oauth_nonce" name="oauth_nonce" type="hidden" value="pQGWjsPYsqIUTyCkVuo5j1ngGdAzUmvoJ90DkKXqY4"/>
+<input id="oauth_version" name="oauth_version" type="hidden" value="1.0"/>
+<input id="context_id" name="context_id" type="hidden" value="6bc0c58c4c99e32ddb88afc5d7b8a7038a70f36a"/>
+<input id="context_label" name="context_label" type="hidden" value="INTRO TO COMPUTER SCIENCE II (CS_162_400_F2021)"/>
+<input id="context_title" name="context_title" type="hidden" value="INTRO TO COMPUTER SCIENCE II (CS_162_400_F2021)"/>
+<input id="custom_canvas_api_domain" name="custom_canvas_api_domain" type="hidden" value="canvas.oregonstate.edu"/>
+<input id="custom_canvas_assignment_id" name="custom_canvas_assignment_id" type="hidden" value="8570487"/>
+<input id="custom_canvas_assignment_points_possible" name="custom_canvas_assignment_points_possible" type="hidden" value="100"/>
+<input id="custom_canvas_assignment_title" name="custom_canvas_assignment_title" type="hidden" value="Assignment 7"/>
+<input id="custom_canvas_course_id" name="custom_canvas_course_id" type="hidden" value="1830120"/>
+<input id="custom_canvas_course_name" name="custom_canvas_course_name" type="hidden" value="INTRO TO COMPUTER SCIENCE II (CS_162_400_F2021)"/>
+<input id="custom_canvas_course_shortname" name="custom_canvas_course_shortname" type="hidden" value="INTRO TO COMPUTER SCIENCE II (CS_162_400_F2021)"/>
+<input id="custom_canvas_enrollment_state" name="custom_canvas_enrollment_state" type="hidden" value="active"/>
+<input id="custom_canvas_membership_role" name="custom_canvas_membership_role" type="hidden" value="ObserverEnrollment"/>
+<input id="custom_canvas_module_id" name="custom_canvas_module_id" type="hidden" value="2751626"/>
+<input id="custom_canvas_module_item_id" name="custom_canvas_module_item_id" type="hidden" value="21377151"/>
+<input id="custom_canvas_term_name" name="custom_canvas_term_name" type="hidden" value="Fall 2021"/>
+<input id="custom_canvas_user_id" name="custom_canvas_user_id" type="hidden" value="6312491"/>
+<input id="custom_canvas_user_login_id" name="custom_canvas_user_login_id" type="hidden" value="chattera@oregonstate.edu"/>
+<input id="custom_canvas_workflow_state" name="custom_canvas_workflow_state" type="hidden" value="available"/>
+<input id="custom_gs_school_id" name="custom_gs_school_id" type="hidden" value="46"/>
+<input id="custom_lms_name" name="custom_lms_name" type="hidden" value="canvas"/>
+<input id="ext_ims_lis_basic_outcome_url" name="ext_ims_lis_basic_outcome_url" type="hidden" value="https://canvas.oregonstate.edu/api/lti/v1/tools/135757/ext_grade_passback"/>
+<input id="ext_lti_assignment_id" name="ext_lti_assignment_id" type="hidden" value="01251bb0-8e3e-42b0-9c18-b4642dc7f03f"/>
+<input id="ext_outcome_data_values_accepted" name="ext_outcome_data_values_accepted" type="hidden" value="url,text"/>
+<input id="ext_outcome_result_total_score_accepted" name="ext_outcome_result_total_score_accepted" type="hidden" value="true"/>
+<input id="ext_outcome_submission_submitted_at_accepted" name="ext_outcome_submission_submitted_at_accepted" type="hidden" value="true"/>
+<input id="ext_outcomes_tool_placement_url" name="ext_outcomes_tool_placement_url" type="hidden" value="https://canvas.oregonstate.edu/api/lti/v1/turnitin/outcomes_placement/135757"/>
+<input id="ext_roles" name="ext_roles" type="hidden" value="urn:lti:instrole:ims/lis/Instructor,urn:lti:instrole:ims/lis/Student,urn:lti:role:ims/lis/Learner/NonCreditLearner,urn:lti:role:ims/lis/Mentor,urn:lti:sysrole:ims/lis/User"/>
+<input id="launch_presentation_document_target" name="launch_presentation_document_target" type="hidden" value="iframe"/>
+<input id="launch_presentation_locale" name="launch_presentation_locale" type="hidden" value="en"/>
+<input id="launch_presentation_return_url" name="launch_presentation_return_url" type="hidden" value="https://canvas.oregonstate.edu/courses/1830120/assignments"/>
+<input id="lis_course_offering_sourcedid" name="lis_course_offering_sourcedid" type="hidden" value="CS_162_400_F2021"/>
+<input id="lis_outcome_service_url" name="lis_outcome_service_url" type="hidden" value="https://canvas.oregonstate.edu/api/lti/v1/tools/135757/grade_passback"/>
+<input id="lis_person_contact_email_primary" name="lis_person_contact_email_primary" type="hidden" value="chattera@oregonstate.edu"/>
+<input id="lis_person_name_family" name="lis_person_name_family" type="hidden" value="Chatterjee"/>
+<input id="lis_person_name_full" name="lis_person_name_full" type="hidden" value="Amreeta Chatterjee"/>
+<input id="lis_person_name_given" name="lis_person_name_given" type="hidden" value="Amreeta"/>
+<input id="lis_person_sourcedid" name="lis_person_sourcedid" type="hidden" value="933934147"/>
+<input id="lti_message_type" name="lti_message_type" type="hidden" value="basic-lti-launch-request"/>
+<input id="lti_version" name="lti_version" type="hidden" value="LTI-1p0"/>
+<input id="oauth_callback" name="oauth_callback" type="hidden" value="about:blank"/>
+<input id="resource_link_id" name="resource_link_id" type="hidden" value="95344d2c0d8f4b63cc6b5eebec64e99203840379"/>
+<input id="resource_link_title" name="resource_link_title" type="hidden" value="Assignment 7"/>
+<input id="role_scope_mentor" name="role_scope_mentor" type="hidden" value=""/>
+<input id="roles" name="roles" type="hidden" value="urn:lti:instrole:ims/lis/Observer,urn:lti:role:ims/lis/Mentor"/>
+<input id="tool_consumer_info_product_family_code" name="tool_consumer_info_product_family_code" type="hidden" value="canvas"/>
+<input id="tool_consumer_info_version" name="tool_consumer_info_version" type="hidden" value="cloud"/>
+<input id="tool_consumer_instance_contact_email" name="tool_consumer_instance_contact_email" type="hidden" value="notifications@instructure.com"/>
+<input id="tool_consumer_instance_guid" name="tool_consumer_instance_guid" type="hidden" value="132dd7c63118da074c378722abba7086628b2496.oregonstate.instructure.com"/>
+<input id="tool_consumer_instance_name" name="tool_consumer_instance_name" type="hidden" value="Oregon State University"/>
+<input id="user_id" name="user_id" type="hidden" value="40926bc738e4de9208e9e925b0b224f2b7f25ab2"/>
+<input id="user_image" name="user_image" type="hidden" value="https://oregonstate.instructure.com/images/thumbnails/76295633/YoNk6pvmkphCwFtjCHmsnZAqrfOxt7wdSThO1Spp"/>
+<input id="oauth_signature" name="oauth_signature" type="hidden" value="/TzdQe05OW75PelN0sahHGEa9pk="/>
+<div style="margin-bottom: 20px;">
+<div class="load_tab">
+            This tool needs to be loaded in a new browser window
+            <div style="margin: 10px 0;">
+<button class="btn" data-expired_message="The session for this tool has expired. Please reload the page to access the tool again" type="submit">
+                    Load Assignment 7 in a new window
+                </button>
+</div>
+</div>
+<div class="tab_loaded" style="display: none;">
+            This tool was successfully loaded in a new browser window. Reload the page to access the tool again.
+        </div>
+</div>
+</form>
+<div class="before_external_content_info_alert screenreader-only-tool" tabindex="0">
+<div class="ic-flash-info">
+<div aria-hidden="true" class="ic-flash__icon">
+<i class="icon-info"></i>
+</div>
+      The following content is partner provided
+    </div>
+</div>
+<iframe allow="geolocation *; microphone *; camera *; midi *; encrypted-media *; autoplay *; clipboard-write *; display-capture *" allowfullscreen="allowfullscreen" class="tool_launch" data-lti-launch="true" id="tool_content" mozallowfullscreen="true" name="tool_content" src="about:blank" style="height:100%;width:100%;" tabindex="0" title="Assignment 7" webkitallowfullscreen="true"></iframe>
+<div class="after_external_content_info_alert screenreader-only-tool" tabindex="0">
+<div class="ic-flash-info">
+<div aria-hidden="true" class="ic-flash__icon">
+<i class="icon-info"></i>
+</div>
+      The preceding content is partner provided
+    </div>
+</div>
+</div>
+<div data-asset-id="21377151" data-asset-type="ModuleItem" data-course-id="1830120" id="sequence_footer"></div>
+<div id="module_sequence_footer"></div>
+</div>
+</div>
+<div class="ic-app-main-content__secondary" id="right-side-wrapper">
+<aside id="right-side" role="complementary">
+</aside>
+</div>
+</div>
+</div>
+</div>
+<div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+<div id="page_view_id">7db2e1fe-21d2-4a6e-84bc-90c5223ecff7</div>
+</div>
+<div aria-live="assertive" class="hide-text affix" id="aria_alerts" role="alert"></div>
+<div id="StudentTray__Container"></div>
+<div class="NewUserTutorialTray__Container"></div>
+<script>
+    Object.assign(
+      ENV,
+      {}
+    )
+  </script>
+<link as="script" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/inst_fs_service_worker-c-9be2ac263c.js" rel="preload" type="text/javascript"/><script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('inst_fs_service_worker');
+//]]>
+</script>
+<script>
+//<![CDATA[
+
+      ;["https://instructure-uploads.s3.amazonaws.com/account_10020000000097009/attachments/91487583/syl_rs_ally_PROD.js"].forEach(function(src) {
+        var s = document.createElement('script')
+        s.src = src
+        s.async = false
+        document.head.appendChild(s)
+      });
+//]]>
+</script>
+</div> <!-- #application -->
 </body>
 </html>
