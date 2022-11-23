@@ -63,7 +63,6 @@ def LinkParser(file, emlinks):
             # print(alias)
             res.append(link)
     # print(doc2)
-    print("Ths is", res)
 
     if emlinks:
         # print("# Embedded Links ->", len(emlinks))
