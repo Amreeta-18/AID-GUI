@@ -1,3 +1,3 @@
 Use case, Subgoal, Action, Filename, Rule 1, Rule 2, Rule 3
-USE, sub, ac, after-action.html, Not Violated,Not Applicable,Violated
-USE, sub, ac, assign7.html, Violated,Not Violated,Violated
+USE, sub, ac, 162_landingpageA1before.html, Violated,Not Applicable,Not Violated
+USE, sub, ac, after-action.html, Not Violated,Not Violated,Violated
