@@ -1,0 +1,467 @@
+Sentence,Label
+SOFTWARE ENGINEERING I (CS_361_400_S2022)   ,Not
+Dashboard    SOFTWARE ENGINEERING I (CS_361_400_S2022) Syllabus           Immersive Reader        Skip to content    Dashboard                           Account                     Dashboard                       Courses                                    Groups                                  Calendar               Resources                      Inbox                                    History                                Commons                          My Media                               Help                                 Close          My dashboard  SOFTWARE ENGINEERING I (CS_361_400_S2022)Syllabus             Immersive Reader        Spring 2022 HomeSyllabusAnnouncementsModulesEd DiscussionMicrosoft TeamsAssignmentsTutorMeMedia Gallery      SOFTWARE ENGINEERING I (CS_361_400_S2022)    SOFTWARE ENGINEERING I (CS_361_400_S2022)   Jump to today        Course Introduction   Syllabus & Schedule   Where to go for Help?   Tools & Textbooks   Support & Other Info    NOTE: Some links on this page may only be accessible to registered students,Not
+ Start Here Please begin the course by clicking the Start Here button,Instruction
+This course will introduce you to tools and methods for real-world software development,Not
+You will be working in teams (you can choose your teammates) of about five on non-programming and programming assignments,Not
+Your team will use the Agile Scrum approach to software project implementation and management (starting later in the term),Not
+"During this course, you will learn how to plan out and specify what your software should do and how users should experience it, how to evaluate how well your software design reflects those specifications, how to use the microservices high-level architecture, how to structure your work and teamwork in a way that supports iterative growth and ongoing contributions from multiple developers, and other non-technical and technical skills and concepts",Not
+"We will explore some topics in-depth, and others just enough for you to get the idea so that, when you're working on future software projects, you can decide whether or not the methods could help with what you're doing",Not
+"This course does NOT aim to teach the ""best"" way to manage software projects or to create software",Not
+There are a huge variety of software creation environments,Not
+They all work differently,Not
+Even teams within the same organization can create software in vastly different ways,Not
+"Instead, this course aims to show you pieces of software methodology that can be incorporated into many software creation environments",Not
+"Course Learning Outcomes By the end of this course, you should be able to",Not
+Select the most appropriate software process model to use in a particular situation,Instruction
+ Synthesize requirements for a realistic software system and write a requirements specification document ,Instruction
+Produce professional-quality software-related documents ,Instruction
+"Model system requirements using one or more semi-formal notations such as UML, dataflow diagrams, entity-relationship diagrams, or state diagrams ",Instruction
+Validate designs and adjust the specification or design as necessary,Instruction
+"Design software systems at an architectural level and at lower levels, using one or more techniques, such as object-oriented design or agile methods, and express these designs in design specification documents  ",Instruction
+Describe several methods of estimating the cost and developing a schedule for a programming project Participate effectively in a team environment ,Instruction
+The focus of this course is helping you become a self-directed but collaborative software engineer---two areas of ability employers are looking for,Not
+"You choose the programming language, the algorithms, and, with your team, what functionality to write and when",Not
+"Throughout the course, you will be not only be improving your own knowledge and abilities but also helping your teammates do the same, by regularly providing them feedback",Not
+The end product of the course is a software portfolio piece,Not
+"To get you there, we'll be covering specific software engineering methods for designing software, working in a team, and for managing and de-risking projects",Not
+"I'm Lara Letaw, your instructor",Not
+"In addition to my role of facilitating your success, I wrote the course and the textbook",Not
+I'll be regularly asking how the course is going for you so I can keep improving it,Not
+` Welcome to CS361!    NOTE: Some links on this page may only be accessible to registered students,Not
+Syllabus & Schedule  CS361_Spring_2022_Syllabus,Not
+pdf   Download CS361_Spring_2022_Syllabus,Instruction
+pdf CS361_Spring_2022_Schedule,Not
+docx   Download CS361_Spring_2022_Schedule,Instruction
+"docx  Syllabus Quiz After completing all ""Start Here"" module readings, take this quiz:  Syllabus Quiz    NOTE: Some links on this page may only be accessible to registered students",Not
+"Communication Policy The instructor will be log into the course on a regular basis, approximately 3-5 times each week",Not
+Please post all course-related questions on Ed Discussion (see sidebar) so the whole class may benefit from the conversation,Instruction
+Please send an email to your instructor or TAs for matters of a personal nature,Instruction
+"When you email your TA or the instructors, you should expect a response within 48 hours",Not
+We will try to grade assignments within one week after their due date,Not
+Contact Information & Office Hours TA office hours start Week 2 (via Microsoft Teams---see sidebar) and the TA information below will be updated by then,Not
+General course questions? Post to Ed Discussion (see sidebar),Not
+Instructor: Lara Letaw - letawl@oregonstate,Not
+edu  Office hours: By appointment (via Zoom)   TAs:  Nithish Kumar Reddy Rajapuram - rajapurn@oregonstate,Not
+edu  Office hours: Tuesday-10:00 AM - 11:00 AM PST (Via Microsoft Teams) Chimdi Chikezie - chikezic@oregonstate,Not
+"edu  Office hours:  Tuesday-11:30 AM - 12:30 PM PST, Thursday-12:30 PM - 1:30 PM  PST (Via Microsoft Teams) Nafisa Nowshin- nowshinn@oregonstate",Not
+edu  Office hours: Wednesday-3,Not
+"30 PM - 04:30 PM PST,  Thursday-11:00 AM - 12:00 PM PST  (Via Microsoft Teams) Amulya Gangam - gangama@oregonstate",Not
+edu Office hours: Tuesday-2:00 PM - 04:00 PM PST  (Via Microsoft Teams)   TA: Mark Trinh - trinhm@oregonstate,Not
+"edu - Monday 1-2PM, Tuesday 1-2PM (Pacific), or by scheduled appointment",Not
+(Starting Week 2)    NOTE: Some links on this page may only be accessible to registered students,Not
+"Course Tools & Textbooks  Textbook: ""Handbook of Software Engineering Methods   Links to an external site",Not
+""" (Letaw 2022)  Word format   Download Word format (12",Not
+3MB)   Discussion board: Ed Discussion (see sidebar) Real-time chat (for TA office hours): Microsoft Teams (see sidebar)  Need a MySQL Database? Instructions,Instruction
+Database host name is: classmysql,Not
+engr,Not
+oregonstate,Not
+eduUsername is: cs361_ONIDusernameDefault password is: last 4 digits of your OSU ID numberWeb access: https://classmysql,Not
+edu   Links to an external site,Not
+NOTICE:Please change your password the first time you access your account,Instruction
+DO NOT use your ONID password as this password could be in config files and is much less secure,Instruction
+"To change your password, run the SQL statement:SET PASSWORD = PASSWORD('password')Access is only granted from the oregonstate",Instruction
+edu domain,Not
+It's enforced at the socket level by the OS on the physical db server,Not
+NO EXCEPTIONS,Not
+You can access the database either from on campus or by running the campus VPN client:https://is,Not
+edu/vpn   Links to an external site,Not
+"If you forget your password, simply e-mail support saying you forgot it and we'll reset it to the default",Instruction
+Please DO NOT e-mail us the new password,Instruction
+We don't want to know it and we will not reset your account to that,Not
+VERY IMPORTANT:If you want to keep your data please export it at the end of the term,Instruction
+All databases and associated accounts will be deleted the week after the term ends,Not
+No exceptions,Not
+"Please note, we will help with technical problems such as inability to access your database",Not
+We will defer questions about queries or homework to your instructor,Not
+"Academic or Student Support Services For all other academic and student support services, refer to the Student Services link found in the course menu",Not
+The following services are available to all Ecampus students:  Ecampus Success Counseling Disability Access Services The Writing Center and Online Writing Lab The Valley Library and Ecampus Library Services Ecampus Enrollment & Student Services Check Your Computer test - ensure you have installed the minimum required technology for Ecampus courses,Not
+Accessibility Statements This course uses technologies that may support accessibility in different ways,Not
+Please refer to the accessibility statement for each technology provider for details as to the level and types of accessibility that are supported,Instruction
+Follow this link to access Accessibility Statements for commonly used software,Instruction
+Accessibility Tools for Canvas The following tools are available within your Ecampus course,Not
+ReadSpeaker - is a tool that reads text on Canvas course pages aloud,Not
+"TextAid - is an additional tool that allows users to have nearly any text highlighted and read aloud, including documents, Web sites, text composed by a user, and more",Not
+"For more information, please visit ReadSpeaker Text Aid",Instruction
+"Canvas Technical Questions If you have a technical issue or question when using Canvas, 24/7 support is available in Canvas via chat, phone, or e-mail through the Help link in the menu on your left",Not
+Additional technical support (use of software/browsers) can be accessed through the OSU Computer Helpdesk,Not
+Copyright & Ownership of Materials  The materials on this course website are only for the use of students enrolled in this course for purposes associated with this course and may not be retained or further disseminated,Not
+"When copyright permission is required, Ecampus has contacted the copyright owner",Not
+"When a fair use determination has been made, this has been documented",Not
+Images that are not cited have been obtained from the public domain or via a paid subscription or are images taken by the instructor,Not
+Please contact the instructor if you have any questions about the copyright and ownership of materials presented in this course,Instruction
+"Peer Tutoring (Free) OSU Online CS peer tutoring happens via Zoom, and there are two ways you can engage: drop-in tutoring hours and scheduled tutoring appointments",Not
+ Follow this link to access Privacy Policies for commonly used external tools that require the user to create an account,Instruction
+The syllabus page shows a table-oriented view of  course schedule and basics of course grading,Not
+"You can add any other comments, notes or thoughts you have about the course structure, course policies or anything else",Not
+"To add some comments, click the 'Edit' link at the top",Instruction
+"Syllabus description:     Show Course Summary   Cancel Update syllabus   Course summary:       Date Details Due               Mon, 4 Apr 2022          Quiz  1",Not
+3 - Weeks 1+2 Learning Quiz                 due by 23:59     Assignment  1,Not
+"4 - Assignment 1: Environment Setup                 due by 23:59     Quiz  Syllabus Quiz                  due by 23:59              Mon, 11 Apr 2022          Assignment  2",Not
+1 - Assignment 2: Microservices Warm-Up                 due by 23:59     Assignment  Extra Credit: Microservices Case Study                 due by 23:59     Assignment  2,Not
+"2 - Team Signup                 due by 23:59              Mon, 18 Apr 2022          Quiz  3",Not
+3 - Sprint 1 Learning Quiz                 due by 23:59     Assignment  3,Not
+4 - Assignment 3: Project Plan & Sprint 1 Plan (for MVP)                 due by 23:59     Assignment  3,Not
+5 - Assignment 4: UI Design (for MVP)                 due by 23:59     Discussion topic  3,Not
+"6 - Request Feedback from Team (on UI Design)                 due by 23:59              Wed, 20 Apr 2022          Discussion topic  4",Not
+"1 - Discussion Post: Team Status Update                 due by 23:59              Mon, 25 Apr 2022          Discussion topic  4",Not
+2 - Discussion: Team Ground Rules                 due by 23:59     Discussion topic  4,Not
+3 - Discussion: Provide Team Feedback (on UI Design)                 due by 23:59     Discussion topic  4,Not
+"4 - Assignment 5: Minimum Viable Product (MVP) + Request Feedback from Team                 due by 23:59     Quiz  Extra Credit: Sprint 1 Feedback                 due by 23:59              Wed, 27 Apr 2022          Discussion topic  5",Not
+"2 - Discussion Post: Team Status Update                 due by 23:59              Mon, 2 May 2022          Discussion topic  5",Not
+3 - Discussion Post: Sprint 1 Retrospective                 due by 23:59     Discussion topic  5,Not
+4 - Discussion Post: Provide Team Feedback (on MVP)                 due by 23:59     Quiz  5,Not
+6 - Sprint 2 Learning Quiz                 due by 23:59     Discussion topic  5,Not
+"7 - Assignment 6: Sprint 2 Plan (for Microservice) + Publish Communication Contract to Team                 due by 23:59              Wed, 4 May 2022          Discussion topic  6",Not
+"1 - Discussion Post: Team Status Update                 due by 23:59              Mon, 9 May 2022          Discussion topic  6",Not
+2 - Discussion Post: Approve Teammate's Communication Contract (for Microservice)                 due by 23:59     Discussion topic  6,Not
+"3 - Assignment 7: Microservice Implementation + Request Feedback from Team                 due by 23:59     Assignment  Extra Credit: Pipe Spike                 due by 23:59              Wed, 11 May 2022          Discussion topic  7",Not
+"2 - Discussion Post: Team Status Update                 due by 23:59              Mon, 16 May 2022          Discussion topic  7",Not
+3 - Discussion Post: Provide Team Feedback (on Microservice)                 due by 23:59     Discussion topic  7,Not
+4 - Discussion Post: Sprint 2 Retrospective                 due by 23:59     Quiz  7,Not
+6 - Sprint 3 Learning Quiz                  due by 23:59     Discussion topic  7,Not
+"7 - Assignment 8: Sprint 3 Plan (for Integration) + Publish Integration Plan to Team                 due by 23:59              Wed, 18 May 2022          Discussion topic  8",Not
+"1 - Discussion Post: Team Status Update                 due by 23:59              Mon, 23 May 2022          Discussion topic  8",Not
+2 - Discussion Post: Request Feedback from Team (on Code Smells)                 due by 23:59     Assignment  8,Not
+"3 - Assignment 9: Integration                 due by 23:59     Quiz  Extra Credit: Sprint 3 Feedback                  due by 23:59              Wed, 25 May 2022          Discussion topic  9",Not
+"2 - Discussion Post: Team Status Update                 due by 23:59              Mon, 30 May 2022          Discussion topic  9",Not
+3 - Discussion Post: Provide Team Feedback (on Code Smells)                 due by 23:59     Discussion topic  9,Not
+4 - Discussion Post: Sprint 3 Retrospective                 due by 23:59     Quiz  9,Not
+6 - Sprint 4 Learning Quiz                 due by 23:59     Assignment  9,Not
+"7 - Assignment 10: Sprint 4 Plan (for Portfolio)                 due by 23:59              Fri, 3 Jun 2022          Discussion topic  10",Not
+1 - Discussion: Getting a Job                 due by 23:59     Discussion topic  10,Not
+2 - Discussion: Project Showcase                 due by 23:59     Quiz  Extra Credit: Course Feedback                 due by 23:59     Assignment  10,Not
+3 - Assignment 11: Portfolio                 due by 23:59                      View Course Stream               View Course Notifications          Prev month Next month  March 2023    3   Calendar                   Sunday                               Monday                               Tuesday                               Wednesday                               Thursday                               Friday                               Saturday                     27 February 2023                  27                Previous month Next month Today Click to view event details     28 February 2023                  28                Previous month Next month Today Click to view event details      1 March 2023                  1                Previous month Next month Today Click to view event details      2 March 2023                  2                Previous month Next month Today Click to view event details      3 March 2023                  3                Previous month Next month Today Click to view event details      4 March 2023                  4                Previous month Next month Today Click to view event details      5 March 2023                  5                Previous month Next month Today Click to view event details        6 March 2023                  6                Previous month Next month Today Click to view event details      7 March 2023                  7                Previous month Next month Today Click to view event details      8 March 2023                  8                Previous month Next month Today Click to view event details      9 March 2023                  9                Previous month Next month Today Click to view event details     10 March 2023                  10                Previous month Next month Today Click to view event details     11 March 2023                  11                Previous month Next month Today Click to view event details     12 March 2023                  12                Previous month Next month Today Click to view event details       13 March 2023                  13                Previous month Next month Today Click to view event details     14 March 2023                  14                Previous month Next month Today Click to view event details     15 March 2023                  15                Previous month Next month Today Click to view event details     16 March 2023                  16                Previous month Next month Today Click to view event details     17 March 2023                  17                Previous month Next month Today Click to view event details     18 March 2023                  18                Previous month Next month Today Click to view event details     19 March 2023                  19                Previous month Next month Today Click to view event details       20 March 2023                  20                Previous month Next month Today Click to view event details     21 March 2023                  21                Previous month Next month Today Click to view event details     22 March 2023                  22                Previous month Next month Today Click to view event details     23 March 2023                  23                Previous month Next month Today Click to view event details     24 March 2023                  24                Previous month Next month Today Click to view event details     25 March 2023                  25                Previous month Next month Today Click to view event details     26 March 2023                  26                Previous month Next month Today Click to view event details       27 March 2023                  27                Previous month Next month Today Click to view event details     28 March 2023                  28                Previous month Next month Today Click to view event details     29 March 2023                  29                Previous month Next month Today Click to view event details     30 March 2023                  30                Previous month Next month Today Click to view event details     31 March 2023                  31                Previous month Next month Today Click to view event details      1 April 2023                  1                Previous month Next month Today Click to view event details      2 April 2023                  2                Previous month Next month Today Click to view event details        3 April 2023                  3                Previous month Next month Today Click to view event details      4 April 2023                  4                Previous month Next month Today Click to view event details      5 April 2023                  5                Previous month Next month Today Click to view event details      6 April 2023                  6                Previous month Next month Today Click to view event details      7 April 2023                  7                Previous month Next month Today Click to view event details      8 April 2023                  8                Previous month Next month Today Click to view event details      9 April 2023                  9                Previous month Next month Today Click to view event details        Assignments are weighted by group:    Group Weight     Assignments 70%   Discussions 25%   Quizzes 5%   Extra Credit 1,Not
+5%   Total 101,Not
+5%            066c784c-8f8a-470b-a316-ecded7e6b4a9,Not
+1,Not
+Dashboard    SOFTWARE ENGINEERING I (CS_361_400_S2022) 1,Not
+4 - Assignment 1: Environment Setup           Immersive Reader        Skip to content    Dashboard                           Account                     Dashboard                       Courses                                    Groups                                  Calendar               Resources                      Inbox                                    History                                Commons                          My Media                               Help                                 Close          My dashboard  SOFTWARE ENGINEERING I (CS_361_400_S2022)Assignments1,Not
+4 - Assignment 1: Environment Setup             Immersive Reader        Spring 2022 HomeSyllabusAnnouncementsModulesEd DiscussionMicrosoft TeamsAssignmentsTutorMeMedia Gallery                      1,Not
+"4 - Assignment 1: Environment Setup                  Due   4 Apr 2022 by                  23:59    Points 25   Submitting a file upload       Instructions Download, complete, and submit assignment template as a",Not
+,Not
+Google Doc   Links to an external site,Not
+(first sign in to your OSU account to access) OR Word document   Actions   Preview Download Alternative formats   (docx)  Using the template is optional,Not
+Additional Resources Example submission: A1 sample,Not
+"pdf   Actions   Preview Download Alternative formats   Questions & Answers Am I required to use the template? No, but please label your responses clearly so that your graders can find them!    1649141940 04/04/2022 11:59pm     Rubric       true         1545817             Can't change a rubric once you've started using it",Not
+Find a rubric   Title:   Find rubric Keep in mind that 239 students have already been assessed using this rubric,Not
+Changing it will affect their evaluations,Not
+A1 Rubric         You've already rated students with this rubric,Not
+Any major changes could affect their assessment results,Not
+A1 Rubric     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  GitHub: Provided GitHub username  _5830    Range                             threshold:            pts                   Edit rating Delete rating    1 to >0,Not
+0 Pts                  Accept  blank           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  blank_2           Edit rating Delete rating    0 to >0 Pts                  Revise  692387_6463              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          1 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  GitHub: Provided GitHub screenshot of test commit that shows your GitHub username  _9615    Range                             threshold:            pts                   Edit rating Delete rating    2 to >0,Not
+0 Pts                  Accept  _2437           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _5820           Edit rating Delete rating    0 to >0 Pts                  Revise  692387_5313              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          2 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Spike: Stated at least three task management systems  680797_6301    Range                             threshold:            pts                   Edit rating Delete rating    2 to >0,Not
+0 Pts                  Accept  680797_4684           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  680797_3831           Edit rating Delete rating    0 to >0 Pts                  Revise  692387_7327              This area will be used by the assessor to leave comments related to this criterion,Not
+"pts              /          2 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Spike: Provided screenshot of ""CS361 Test Task"" in at least three different task management systems  680797_637    Range                             threshold:            pts                   Edit rating Delete rating    8 to >0",Not
+0 Pts                  Accept  680797_256           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  680797_7090           Edit rating Delete rating    0 to >0 Pts                  Revise  692387_7663              This area will be used by the assessor to leave comments related to this criterion,Not
+"pts              /          8 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Spike: Evaluated each task management system on ease of use, speed/responsiveness, feature set, and relevance/popularity (1+ sentence per criterion, 12+ sentences total)  680797_3419    Range                             threshold:            pts                   Edit rating Delete rating    8 to >0",Not
+0 Pts                  Accept  680797_7375           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  680797_7388           Edit rating Delete rating    0 to >0 Pts                  Revise  692387_2148              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          8 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Spike: Ranked each task management system relative to the others---on ALL FOUR CRITERIA,Not
+Used list or table format  680797_3792    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  680797_750           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  680797_5562           Edit rating Delete rating    0 to >0 Pts                  Revise  692387_8322              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          3 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Spike: Stated which system you ranked most highly,Not
+710432_5620    Range                             threshold:            pts                   Edit rating Delete rating    1 to >0,Not
+0 Pts                  Accept  710432_3823           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710432_8339           Edit rating Delete rating    0 to >0 Pts                  Revise  710432_5229              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          1 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --              Total points:                            25              out of 25                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                Description               Long description               Cancel Update criterion                   Additional comments:        Cancel Update comments        Additional comments:                Rating Score Rating max score  to >            Pts         Rating Title    Rating Description    Cancel Update Rating       Rubric                               Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric   Title         You've already rated students with this rubric,Not
+Title     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --             Total points:                            5              out of 5                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric             Previous             Previous: 1,Not
+3 - Weeks 1+2 Learning Quiz               Next Next Module: Week 2                  d4434bde-56e2-42ce-96dd-9cbb7b142ecd,Not
+2,Not
+"1 - Assignment 2: Microservices Warm-Up          To access this site, you must enable JavaScript",Not
+Dashboard    SOFTWARE ENGINEERING I (CS_361_400_S2022) 2,Not
+1 - Assignment 2: Microservices Warm-Up           Immersive Reader        Skip to content    Dashboard                           Account                     Dashboard                       Courses                                    Groups                                  Calendar               Resources                      Inbox                                    History                                Commons                          My Media                               Help                                 Close          My dashboard  SOFTWARE ENGINEERING I (CS_361_400_S2022)Assignments2,Not
+1 - Assignment 2: Microservices Warm-Up             Immersive Reader        Spring 2022 HomeSyllabusAnnouncementsModulesEd DiscussionMicrosoft TeamsAssignmentsTutorMeMedia Gallery                      2,Not
+1 - Assignment 2: Microservices Warm-Up                  Due   11 Apr 2022 by                  23:59    Points 100   Submitting a website url       Instructions Access and complete instructions on the,Not
+,Not
+Google Doc   Links to an external site,Not
+"(first sign in to your OSU account to access) OR Word document   Actions   Preview Download Alternative formats   (docx)  The instructions are the same, just different document types",Not
+Additional Resources Example Python pseudocode for getting started with Assignment 2: CS361-Assignment2-helper,Not
+"docx   Actions   Preview Download Alternative formats    Example submissions for Assignment 2:    (Thank you Ryan Bharat, Parker Carlson, and Matthew DeMichele for sharing these!) Questions & Answers I don't know how to make a GUI, what do I do? You can create a text/command-based UI like you might have done in earlier courses",Not
+"Can I have more than one button / user command if I want to? Yes! Do my processes have to run concurrently or can they run one at a time? Either! What do you mean by making a communication pipe? Nothing complicated! Have your programs communicate through text files, as described",Not
+You will need to be able to read and write text files,Not
+How do I make my program sleep in Python? See https://docs,Not
+python,Not
+org/3/library/time,Not
+html?highlight=sleep#time,Not
+sleep   Links to an external site,Not
+How do I read and write files in Python? See https://docs,Not
+org/3/tutorial/inputoutput,Not
+html#reading-and-writing-files   Links to an external site,Not
+"How do I get a list of images files in a directory, in Python? See https://docs",Not
+org/3/library/os,Not
+html#os,Not
+listdir   Links to an external site,Not
+How do I generate a random number in Python? See https://docs,Not
+org/3/library/random,Not
+html   Links to an external site,Not
+My program goes too fast to show the file contents before they get erased,Not
+"What should I do? Show the code that reads/writes the files and, for good measure, show that the file timestamps changed",Not
+Another option: Pause execution (e,Not
+g,Not
+", a ""sleep"" that lasts a few seconds) so that you have time to show the updated text file",Not
+1649746740 04/11/2022 11:59pm     Rubric       true         1545818             Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric Keep in mind that 235 students have already been assessed using this rubric,Not
+Changing it will affect their evaluations,Not
+A2 Rubric         You've already rated students with this rubric,Not
+Any major changes could affect their assessment results,Not
+"A2 Rubric     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows the UI, PRNG Service, and Image Service running in three different processes  _1023    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0",Not
+0 Pts                  Accept  blank           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_8209           Edit rating Delete rating    0 to >0 Pts                  Revise  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+"pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows that the UI, PRNG Service, and Image Service run without calling each other directly  _6294    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0",Not
+0 Pts                  Accept  _9101           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_3521           Edit rating Delete rating    0 to >0 Pts                  Revise  _6914              This area will be used by the assessor to leave comments related to this criterion,Not
+"pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows the UI writing the word ""run"" in prng-service",Not
+txt  _919    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0,Not
+0 Pts                  Accept  _1860           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_7428           Edit rating Delete rating    0 to >0 Pts                  Revise  _3124              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows the PRNG Service reads prng-service,Not
+"txt, erases it, and writes a pseudo-random number to it  _7393    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0",Not
+0 Pts                  Accept  _8223           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_9621           Edit rating Delete rating    0 to >0 Pts                  Revise  _7643              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows the UI reads prng-service,Not
+txt to get the pseudo-random number  _5751    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0,Not
+0 Pts                  Accept  _7973           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_6664           Edit rating Delete rating    0 to >0 Pts                  Revise  _6335              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows the UI writes the pseudo-random number to image-service,Not
+txt  _3764    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0,Not
+0 Pts                  Accept  _6815           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_873           Edit rating Delete rating    0 to >0 Pts                  Revise  _7836              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows Image Service reads image-service,Not
+"txt, erases it, and writes an image path to it  _8888    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0",Not
+0 Pts                  Accept  _754           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_1514           Edit rating Delete rating    0 to >0 Pts                  Revise  _3658              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows the UI reads image-service,Not
+"txt then displays the image to the user, or a path to the image  _5457    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0",Not
+0 Pts                  Accept  _4851           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_8784           Edit rating Delete rating    0 to >0 Pts                  Revise  _2316              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video is 5 minutes or less  _991    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0,Not
+0 Pts                  Accept  _1741           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_7299           Edit rating Delete rating    0 to >0 Pts                  Revise  _2393              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Video shows UI has a button or can receive user commands  692393_2830    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0,Not
+0 Pts                  Accept  692393_9868           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  692393_293           Edit rating Delete rating    0 to >0 Pts                  Revise  692393_8332              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --              Total points:                            100              out of 100                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                Description               Long description               Cancel Update criterion                   Additional comments:        Cancel Update comments        Additional comments:                Rating Score Rating max score  to >            Pts         Rating Title    Rating Description    Cancel Update Rating       Rubric                               Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric   Title         You've already rated students with this rubric,Not
+Title     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --             Total points:                            5              out of 5                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric             Previous             Previous Module: Week 1               Next Next: 2,Not
+2 - Team Signup                  d08782de-62d9-4595-8797-e0baca7338b0,Not
+3,Not
+"5 - Assignment 4: UI Design (for MVP)          To access this site, you must enable JavaScript",Not
+Dashboard    SOFTWARE ENGINEERING I (CS_361_400_S2022) 3,Not
+5 - Assignment 4: UI Design (for MVP)           Immersive Reader        Skip to content    Dashboard                           Account                     Dashboard                       Courses                                    Groups                                  Calendar               Resources                      Inbox                                    History                                Commons                          My Media                               Help                                 Close          My dashboard  SOFTWARE ENGINEERING I (CS_361_400_S2022)Assignments3,Not
+5 - Assignment 4: UI Design (for MVP)             Immersive Reader        Spring 2022 HomeSyllabusAnnouncementsModulesEd DiscussionMicrosoft TeamsAssignmentsTutorMeMedia Gallery                      3,Not
+"5 - Assignment 4: UI Design (for MVP)                Due   18 Apr 2022 by                  23:59    Points 45   Submitting a file upload       Instructions Download, complete, and submit assignment template as a",Not
+,Not
+Google Doc (first sign in to your OSU account to access) OR Word document (docx)  Using the template is optional,Not
+Additional Resources  GenderMag inclusive design catalog (has examples of how to support different facet values) Example of how to complete the assignment: Assignment-4-Example-Submission,Not
+"pdf Example cognitive style descriptions:   Your Instructor Lara  I'm mostly a Tim: I tend to leap into uncertainty, throw caution to the wind, and search for the path of least resistance (and use too many idioms)",Not
+"But in high-risk, high-reward situations, I become careful, detail-oriented, and try to figure out all the steps that'll lead to the outcome I want---I'm like Abi",Not
+"Overall, I often wish I was more like Abi so I wouldn't get into so much trouble",Not
+"then again, the Tim side of me is ok with mistakes! Two of my facet values are: Information Processing Style: I get dozens of work emails each day",Not
+"When they're from students, one of my bosses, or colleagues I work closely with, I'm like Abi (comprehensive)---I read the messages fully, carefully, and often multiple times",Not
+"For other emails, I'm like Tim (selective)---I skim the first couple sentences or bolded text to decide whether the email is worth looking at",Not
+"Attitude Toward Risk: I'm risk-tolerant about decisions, but risk-averse about time expenditure",Not
+"I got a pollution sensor recently, here's what I did at turbo speed: (1) Ripped the sensor out of the package, (2) threw the user manual across the room, (3) jammed the USB into my computer, (4) Google'd around for the sensor software",Not
+Google'd some more,Not
+Google'd,Not
+"couldn't find the software, (5) picked up the manual off the floor to get the URL for the sensor manufacturer website, (6) finally broke down and read a whole webpage and found the very poorly-labeled software download link",Not
+I see aspects of both Tim and Abi in there,Not
+Your TA  I identify with Pat’s facet values most of the time,Not
+"Occasionally, I might behave a bit more like Abi by being more process-oriented in my learning style",Not
+Two of my facet values are: Motivation: I’m very motivated by task completion,Not
+I rarely learn all the cool new features that are released when my device or app updates,Not
+"In fact, I’ll try to avoid updating as long as possible if my technology is allowing me to accomplish my task",Not
+Learning by Process vs,Not
+"Tinkering: Similar to Pat, I usually learn new technology by tinkering around with it",Not
+"Occasionally, I behave more like Abi if I think the hardware or software is more complex",Not
+"For instance, I learned how to use Slack by clicking on different icons and seeing what happened, but I walked through the tutorial to learn how to use my favorite IDE",Not
+Your TA  Two of my facet values: Motivation: It depends on what I'm using the software for,Not
+"If it is for work, I tend to be like Abi and use the technologies to accomplish my tasks",Not
+I may learn new technologies if I find it not too difficult or time-consuming,Not
+"On the other hand, if it is for my hobbies or something outside my job, I like to explore and see what's available for me and enjoy trying something new",Not
+Information Processing Style: Comprehensive like Abi and Pat,Not
+I want to ensure I read all the information I need to understand and see a clearer picture of what I am going to do before I get started,Not
+Your TA  I generally identify with Tim’s facet values,Not
+I enjoy learning technologies and learn best by tinkering,Not
+I share Tim’s qualities of being risk tolerant and I love to tinker and explore and can lose myself in finding out new things when I need to turn back to the tasks at hand,Not
+"However, I also share some qualities with Pat in that I will carefully examine where I have gone wrong if something is not having a desired outcome and am not so quick to blame the software creator",Not
+Two of my facet values: Attitude Toward Risk: I am tolerant of risking time and resources to spend on an idea or product that may or may not turn out as long as there is a potential for a large ROI (Return of Investment),Not
+I’m always looking for different ways to organize and automate the tasks I do to increase efficiency and with that sometimes there is the possibility of actually decreasing efficiency,Not
+It’s important I continue to recognize and utilize what works and stop using what doesn’t work and try other avenues,Not
+Information Processing Style: I very closely manage my time and try to increase efficiency,Not
+So in most areas I like to get to the main point of the topic,Not
+This can backfire if I don’t read enough ancillary details to understand the main point and need to go back and take those in,Not
+I very much dive headfirst into a project and work from the middle to the back and front,Not
+Your TA  I identify most with Pat,Not
+"However, sometimes my facet values become more like Tim's",Not
+I always want to learn all available functionalities on every tech device or appliance that I own,Not
+Two of my facet values: Computer Self-Efficacy: Medium confidence doing unfamiliar tech tasks,Not
+"For example, if I can't fix a problem in some new programming language, I will keep trying and if it's still not resolved, maybe seek help",Not
+Attitude Toward Risk: Risk-averse,Not
+"For example, before pushing code for production, I always read it multiple times although it's tested",Not
+1650351540 04/18/2022 11:59pm     Rubric       true         1580164             Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric Keep in mind that 233 students have already been assessed using this rubric,Not
+Changing it will affect their evaluations,Not
+A4 Rubric         You've already rated students with this rubric,Not
+Any major changes could affect their assessment results,Not
+A4 Rubric     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  1,Not
+a,Not
+Described your thoughts about the CSH reading (at least 1 paragraph)  _9822    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  blank           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_3833           Edit rating Delete rating    0 to >0 Pts                  Revise  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          3 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  1,Not
+b,Not
+Described two facet values you tend to use when interacting with technology (2+ sentences per facet value)  707031_6319    Range                             threshold:            pts                   Edit rating Delete rating    4 to >0,Not
+0 Pts                  Accept  707031_6184           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_1072           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_1819              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          4 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  1,Not
+c,Not
+Described a specific situation when one of your facet values might change; grader understands (2+ sentencces)  707031_3270    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  707031_936           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_1836           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_8624              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          3 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  2,Not
+"Paper prototype is clear, neat, and high resolution enough for the grader to understand it  707031_95    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0",Not
+0 Pts                  Accept  707031_7871           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_2833           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_5632              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  2,Not
+Paper prototype shows every screen / user-facing view of your UI  707031_2859    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0,Not
+0 Pts                  Accept  707031_1192           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_1637           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_8905              This area will be used by the assessor to leave comments related to this criterion,Not
+Grader understands what users can interact with  707031_2675    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0,Not
+0 Pts                  Accept  707031_816           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_2750           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_1563              This area will be used by the assessor to leave comments related to this criterion,Not
+Grader understands hows users can interact  707031_8581    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0,Not
+0 Pts                  Accept  707031_8875           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_3537           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_6920              This area will be used by the assessor to leave comments related to this criterion,Not
+Grader understands what happens when users interact  707031_8069    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0,Not
+0 Pts                  Accept  707031_9886           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_7797           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_4370              This area will be used by the assessor to leave comments related to this criterion,Not
+Grader sees no obvious CSH violations / opportunities  707031_4176    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0,Not
+0 Pts                  Accept  707031_5175           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_3743           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_8826              This area will be used by the assessor to leave comments related to this criterion,Not
+Described how your design reflects each of the 8 CSH; grader understands  707031_9793    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0,Not
+0 Pts                  Accept  707031_6305           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  707031_3712           Edit rating Delete rating    0 to >0 Pts                  Revise  707031_3123              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --              Total points:                            45              out of 45                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                Description               Long description               Cancel Update criterion                   Additional comments:        Cancel Update comments        Additional comments:                Rating Score Rating max score  to >            Pts         Rating Title    Rating Description    Cancel Update Rating       Rubric                               Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric   Title         You've already rated students with this rubric,Not
+Title     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --             Total points:                            5              out of 5                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                     cacc6c0e-1dd8-4541-8dfb-6cdd026ca311,Not
+3,Not
+"4 - Assignment 3: Project Plan & Sprint 1 Plan (for MVP)          To access this site, you must enable JavaScript",Not
+Dashboard    SOFTWARE ENGINEERING I (CS_361_400_S2022) 3,Not
+4 - Assignment 3: Project Plan & Sprint 1 Plan (for MVP)           Immersive Reader        Skip to content    Dashboard                           Account                     Dashboard                       Courses                                    Groups                                  Calendar               Resources                      Inbox                                    History                                Commons                          My Media                               Help                                 Close          My dashboard  SOFTWARE ENGINEERING I (CS_361_400_S2022)Assignments3,Not
+4 - Assignment 3: Project Plan & Sprint 1 Plan (for MVP)             Immersive Reader        Spring 2022 HomeSyllabusAnnouncementsModulesEd DiscussionMicrosoft TeamsAssignmentsTutorMeMedia Gallery                      3,Not
+"4 - Assignment 3: Project Plan & Sprint 1 Plan (for MVP)                Due   18 Apr 2022 by                  23:59    Points 50   Submitting a file upload       Instructions Download, complete, and submit assignment template as a",Not
+,Not
+Google Doc (first sign in to your OSU account to access) OR Word document (docx)  Using the template is optional,Not
+Additional Resources  200 examples of user stories List of system quality attributes  Questions & Answers Do I have to implement all the user stories I define in my Product Backlog? Nope!     1650351540 04/18/2022 11:59pm     Rubric       true         1545820             Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric Keep in mind that 233 students have already been assessed using this rubric,Not
+Changing it will affect their evaluations,Not
+A3 Rubric (1)         You've already rated students with this rubric,Not
+Any major changes could affect their assessment results,Not
+A3 Rubric (1)     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  1,Not
+Stated a task management system  _4175    Range                             threshold:            pts                   Edit rating Delete rating    1 to >0,Not
+0 Pts                  Accept  blank           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _7097           Edit rating Delete rating    0 to >0 Pts                  Revise  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          1 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  2,Not
+a,Not
+Stated a Product Goal; grader understands what you mean  _7529    Range                             threshold:            pts                   Edit rating Delete rating    1 to >0,Not
+0 Pts                  Accept  _2044           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _6435           Edit rating Delete rating    0 to >0 Pts                  Revise  _4932              This area will be used by the assessor to leave comments related to this criterion,Not
+b,Not
+Listed at least 20 user stories ,Instruction
+""" formats) and, as a set, they have no obvious INVEST violations  _3911    Range                             threshold:            pts                   Edit rating Delete rating    10 to >0",Not
+0 Pts                  Accept  _7321           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _1892           Edit rating Delete rating    0 to >0 Pts                  Revise  _2261              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          10 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  2,Not
+Screenshot shows at least some of your user stories in a task management system  _6619    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  _5049           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _9724           Edit rating Delete rating    0 to >0 Pts                  Revise  _1377              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          3 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  3,Not
+Stated three quality attributes  _9727    Range                             threshold:            pts                   Edit rating Delete rating    2 to >0,Not
+0 Pts                  Accept  _5086           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _7638           Edit rating Delete rating    0 to >0 Pts                  Revise  _9295              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          2 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  3,Not
+Each quality attribute is justified with at least 1 sentence and the grader understands your justification  _3777    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  _4092           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _2205           Edit rating Delete rating    0 to >0 Pts                  Revise  _4659              This area will be used by the assessor to leave comments related to this criterion,Not
+c,Not
+Each quality attribute is converted to a non-functional requirement  _1488    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  _9365           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _8753           Edit rating Delete rating    0 to >0 Pts                  Revise  _6906              This area will be used by the assessor to leave comments related to this criterion,Not
+Explained how each non-functional requirement is testable (1+ sentence each) and the grader understands + agrees  _5457    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  _7479           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  _6892           Edit rating Delete rating    0 to >0 Pts                  Revise  _5638              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          3 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  4,Not
+Stated Sprint Goal and grader understands what you mean  710429_906    Range                             threshold:            pts                   Edit rating Delete rating    1 to >0,Not
+0 Pts                  Accept  710429_3506           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_2041           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_8566              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          1 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  4,Not
+"Listed three user stories in ""As a",Not
+""" format  710429_9749    Range                             threshold:            pts                   Edit rating Delete rating    1 to >0",Not
+0 Pts                  Accept  710429_5524           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_7291           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_9109              This area will be used by the assessor to leave comments related to this criterion,Not
+Provided screenshot that shows user stories in a Sprint Backlog in your task management system  710429_7207    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  710429_8438           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_1576           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_2062              This area will be used by the assessor to leave comments related to this criterion,Not
+d,Not
+"Provided multiple screenshots of your task management system, each showing multiple tasks/subtasks per user story  710429_9797    Range                             threshold:            pts                   Edit rating Delete rating    4 to >0",Not
+0 Pts                  Accept  710429_7856           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_2061           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_9710              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          4 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  4,Not
+e,Not
+Each user story has at least four acceptance criteria  710429_2840    Range                             threshold:            pts                   Edit rating Delete rating    4 to >0,Not
+0 Pts                  Accept  710429_30           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_5159           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_7568              This area will be used by the assessor to leave comments related to this criterion,Not
+Each user story has acceptance criteria that cover your three quality attributes  710429_9233    Range                             threshold:            pts                   Edit rating Delete rating    4 to >0,Not
+0 Pts                  Accept  710429_84           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_5410           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_5978              This area will be used by the assessor to leave comments related to this criterion,Not
+"Each acceptance criterion correctly uses the ""Given",Not
+when,Not
+""" format  710429_3163    Range                             threshold:            pts                   Edit rating Delete rating    4 to >0",Not
+0 Pts                  Accept  710429_6309           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_615           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_9441              This area will be used by the assessor to leave comments related to this criterion,Not
+Provided screenshot of at least one Definition of Done in your task management system  710429_166    Range                             threshold:            pts                   Edit rating Delete rating    3 to >0,Not
+0 Pts                  Accept  710429_8315           Edit rating Delete rating    0 to >0,Not
+0 Pts                  Did not attempt (no revision allowed)  710429_9519           Edit rating Delete rating    0 to >0 Pts                  Revise  710429_7492              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          3 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --              Total points:                            50              out of 50                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                Description               Long description               Cancel Update criterion                   Additional comments:        Cancel Update comments        Additional comments:                Rating Score Rating max score  to >            Pts         Rating Title    Rating Description    Cancel Update Rating       Rubric                               Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric   Title         You've already rated students with this rubric,Not
+Title     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --             Total points:                            5              out of 5                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                     7b3330d3-3d34-4d02-925e-529b411f396b,Not
+3,Not
+"6 - Request Feedback from Team (on UI Design)          To access this site, you must enable JavaScript",Not
+Dashboard    SOFTWARE ENGINEERING I (CS_361_400_S2022) 3,Not
+6 - Request Feedback from Team (on UI Design)           Immersive Reader        Skip to content    Dashboard                           Account                     Dashboard                       Courses                                    Groups                                  Calendar                                  Inbox                                    History                                Commons                          My Media                               Help                                 Close          My dashboard  SOFTWARE ENGINEERING I (CS_361_400_S2022)Assignments3,Not
+6 - Request Feedback from Team (on UI Design)             Immersive Reader        Spring 2022 HomeSyllabusAnnouncementsModulesEd DiscussionMicrosoft TeamsAssignmentsTutorMeMedia Gallery                      3,Not
+6 - Request Feedback from Team (on UI Design)                Due   18 Apr 2022 by                  23:59    Points 5   Submitting a discussion post   Available          after 14 Apr 2022 at 23:59           InstructionsReply below with your Assignment 4 attached so that your teammates can see it,Not
+That's all you need to do for this discussion,Not
+You'll be asked to review your teammates' work as part of a later assignment,Not
+1650351540 04/18/2022 11:59pm     Rubric       true         1545800             Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric Keep in mind that 55 students have already been assessed using this rubric,Not
+Changing it will affect their evaluations,Not
+Sprint 2 Feedback Request         You've already rated students with this rubric,Not
+Any major changes could affect their assessment results,Not
+Sprint 2 Feedback Request     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Uploaded Assignment 4  _3136    Range                             threshold:            pts                   Edit rating Delete rating    5 to >0,Not
+0 Pts                  Did it  blank           Edit rating Delete rating    0 to >0 Pts                  Did not do it  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --               Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --              Total points:                            5              out of 5                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                Description               Long description               Cancel Update criterion                   Additional comments:        Cancel Update comments        Additional comments:                Rating Score Rating max score  to >            Pts         Rating Title    Rating Description    Cancel Update Rating       Rubric                               Can't change a rubric once you've started using it,Not
+Find a rubric   Title:   Find rubric   Title         You've already rated students with this rubric,Not
+Title     Criteria Ratings        Pts             Edit criterion description Delete criterion row     This criterion is linked to a learning outcome  Description of criterion      Range                             threshold:           5 pts                   Edit rating Delete rating    5 to >0 Pts                  Full marks  blank           Edit rating Delete rating    0 to >0 Pts                  No marks  blank_2              This area will be used by the assessor to leave comments related to this criterion,Not
+pts              /          5 pts     --              Total points:                            5              out of 5                  I'll write free-form comments when assessing students    Remove points from rubric    Don't post outcomes results to learning mastery gradebook    Use this rubric for assignment grading    Hide score total for assessment results    Cancel Create rubric                    b34dde66-3c4a-475e-a983-4dc197a6cefb,Not
